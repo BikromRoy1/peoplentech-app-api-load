@@ -1,0 +1,46 @@
+.Placement {
+  position: relative;
+  min-height: 350px;
+  overflow: hidden;
+}
+.Placement::before {
+  content: '';
+  background: linear-gradient(
+    180deg,
+    rgba(9, 9, 121, 0) 40%,
+    rgba(7, 7, 8, 1) 100%,
+    rgba(10, 11, 11, 1) 100%
+  );
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 10px;
+}
+.Placement img {
+  border-radius: 10px;
+}
+.success-list {
+  position: absolute;
+  left: 20px;
+  bottom: 15px;
+  z-index: 1;
+}
+.success-list h5 {
+  color: #fff;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1px;
+  text-transform: capitalize;
+}
+.success-list p {
+  color: #fff;
+  opacity: 0.5;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin-bottom: 3px;
+  text-transform: capitalize;
+  font-weight: 500;
+}

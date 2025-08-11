@@ -1,0 +1,20 @@
+.university-background {
+  z-index: 1;
+  background: #f2f4f7;
+  position: relative;
+  border: 1px solid #e0e5eb;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.shape-1 {
+  background: var(--primary-color);
+  opacity: 0.42;
+  filter: blur(125px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 431px;
+  height: 431px;
+  border-radius: 50%;
+  z-index: -1;
+}

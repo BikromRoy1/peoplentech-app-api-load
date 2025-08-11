@@ -1,0 +1,12 @@
+.diploma-background {
+  background: linear-gradient(to bottom, #071136, #292930);
+}
+.css-3xrm4{
+  background: linear-gradient(
+      90deg,
+      rgb(232, 85, 222) 25%,
+      rgb(4, 169, 255) 100%
+    )
+    text;
+  -webkit-text-fill-color: transparent;
+}

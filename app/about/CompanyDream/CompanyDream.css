@@ -1,0 +1,21 @@
+.companyDream-bg {
+  background: radial-gradient(
+    92.39% 92.39% at 36.15% 19.05%,
+    #ffd1b7 0,
+    hsla(0, 0%, 100%, 0) 100%
+  );
+}
+.banner-bg {
+  background: linear-gradient(
+    252.86deg,
+    rgba(241, 88, 30, 0.9) 0.98%,
+    rgba(255, 209, 183, 0.9) 98.43%
+  );
+  /* opacity: 0.8; */
+}
+.play-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

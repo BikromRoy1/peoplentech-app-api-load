@@ -1,0 +1,33 @@
+.team-two__single .team-two__img {
+  border: 5px solid #fff;
+  transition: all 500ms ease;
+}
+.team-two__single:hover .team-two__img {
+  border: 5px solid #9bddff;
+}
+
+.team-two__content {
+  position: relative;
+  display: block;
+  padding: 240px 30px 30px;
+  margin-top: -222px;
+  z-index: 1;
+}
+.team-two__content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background-color: #f2f4f7; */
+  background-color: rgb(218, 237, 237);
+  border-radius: 20px;
+  clip-path: polygon(0 0, 100% 37%, 100% 100%, 0% 100%);
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  z-index: -1;
+}
+.team-two__single:hover .team-two__content::before {
+  background-color: #9bddff;
+}

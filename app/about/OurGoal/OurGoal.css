@@ -1,0 +1,56 @@
+.OurGoal-bg {
+  background: linear-gradient(to left, #e5fbff 0%, #e0f1ff 30%, #fdf2ef 100%);
+}
+.join-us-style-one-item {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  background: rgba(255, 255, 255, 0.7);
+  border: 3px solid #fff;
+  border-radius: 30px;
+  padding: 50px;
+  padding-bottom: 0;
+  height: 100%;
+  gap: 50px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background-size: cover !important;
+}
+.join-us-style-one-item.active {
+  background: #0e2a47;
+}
+.join-us-style-one-item .shape {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  height: 70%;
+}
+.join-us-style-one-item .shape img {
+  height: 100%;
+}
+.join-us-style-one-item .thumb {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+@media only screen and (max-width: 767px) {
+  .join-us-style-one-item {
+    height: auto;
+    padding: 50px 30px;
+    grid-template-columns: 1fr;
+  }
+  .join-us-style-one-item .thumb {
+    display: none;
+  }
+  .join-us-style-one-item .shape {
+    height: 35%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .join-us-style-one-item {
+    margin-bottom: 30px;
+    height: auto;
+  }
+}

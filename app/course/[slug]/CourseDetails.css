@@ -1,0 +1,22 @@
+.benefits-bg {
+  background: linear-gradient(
+    216deg,
+    rgb(162, 228, 228) 0%,
+    rgb(28, 158, 246) 100%
+  );
+}
+.button-bg {
+  background: linear-gradient(
+    226.1deg,
+    rgb(8, 206, 51) 0%,
+    rgb(20, 156, 82) 101.24%
+  );
+}
+
+.certificate-bg {
+  background: linear-gradient(
+    216deg,
+    rgb(162, 228, 228) 0%,
+    rgb(28, 158, 246) 100%
+  );
+}
