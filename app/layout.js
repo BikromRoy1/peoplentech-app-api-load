@@ -3,6 +3,7 @@ import Navbar from '@/components/Navbar/Navbar';
 import TopBar from '@/components/TopBar/TopBar';
 import { Hind_Siliguri, Montserrat } from 'next/font/google';
 import NextTopLoader from 'nextjs-toploader';
+import { ToastContainer } from 'react-toastify';
 import './globals.css';
 
 const montserrat = Montserrat({
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
         <TopBar />
         <Navbar />
         {children}
+        <ToastContainer  autoClose={4000} theme='colored' />
         <Footer />
         <a
           href='https://wa.me/8801844944569'

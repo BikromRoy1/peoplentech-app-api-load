@@ -2,6 +2,7 @@
 
 import { API_BASE_URL } from '@/app/lib/config';
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 
 const SeminarRegistrationForm = ({ seminarId, courseId }) => {
   const [formData, setFormData] = useState({
@@ -68,14 +69,18 @@ const SeminarRegistrationForm = ({ seminarId, courseId }) => {
 
       if (!res.ok) throw new Error('Registration failed!');
 
-      setMessageText('✅ রেজিস্ট্রেশন সফল হয়েছে!');
+      toast.success('You have successfully registered', {
+        position: 'top-right',
+      });
       setFormData({ name: '', email: '', phone: '', message: '' });
     } catch (error) {
-      setMessageText('❌ রেজিস্ট্রেশন ব্যর্থ হয়েছে!');
+      toast.error('Registration Failed!', { position: 'top-right' });
     } finally {
       setLoading(false);
     }
   };
+
+  console.log(formData);
 
   return (
     <div className='border border-[#dee2e6] rounded-xl px-6 py-8'>

@@ -1,4 +1,6 @@
+import EmptyState from '@/components/EmptyState/EmptyState';
 import PageBanner from '@/components/PageBanner/PageBanner';
+import seminarAnimation from '@/public/image/content.json';
 import Link from 'next/link';
 import { BsFillAlarmFill } from 'react-icons/bs';
 import { FaPersonWalkingArrowLoopLeft } from 'react-icons/fa6';
@@ -142,12 +144,15 @@ const Seminars = async () => {
                 </div>
               </div>
             ))}
-            {seminars.length === 0 && (
-              <p className='text-center text-gray-500 col-span-full'>
-                No seminars available at the moment.
-              </p>
-            )}
           </div>
+          {seminars.length === 0 && (
+            <div>
+              <EmptyState
+                animationData={seminarAnimation}
+                message='No seminars available at the moment.'
+              />
+            </div>
+          )}
         </div>
       </div>
     </div>

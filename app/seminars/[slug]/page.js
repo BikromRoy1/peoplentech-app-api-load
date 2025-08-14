@@ -159,99 +159,23 @@ const SeminarDetails = async ({ params }) => {
 
                   <div>
                     <ul>
-                      <li className='pb-4'>
-                        <div className='flex items-center gap-2'>
-                          <div>
-                            <IoMdArrowDroprightCircle className='w-[22px] h-[22px] text-primary' />
+                      {singleSeminar?.description?.map((item, index) => (
+                        <li
+                          key={index}
+                          className={
+                            index === singleSeminar?.description.length - 1
+                              ? 'pb-0'
+                              : 'pb-4'
+                          }
+                        >
+                          <div className='flex items-center gap-2'>
+                            <div>
+                              <IoMdArrowDroprightCircle className='w-[22px] h-[22px] text-primary' />
+                            </div>
+                            <p className='text-base font-siliguri'>{item}</p>
                           </div>
-                          <p className='text-base  font-siliguri'>
-                            ৫টি লাইভ মাইক্রো প্রজেক্ট ডেভেলপমেন্ট: লাইভ কোডিং
-                            সেশনের মাধ্যমে ৫টি ইন্টারেস্টিং মাইক্রো প্রজেক্ট
-                            ডেভেলপমেন্ট!
-                          </p>
-                        </div>
-                      </li>
-                      <li className='pb-4'>
-                        <div className='flex items-center gap-2'>
-                          <div>
-                            <IoMdArrowDroprightCircle className='w-[22px] h-[22px] text-primary' />
-                          </div>
-                          <p className='text-base  font-siliguri'>
-                            Build as You Learn প্রসেস: লার্নিংয়ের পাশাপাশি
-                            প্রজেক্ট তৈরি হবে ডিরেক্ট এক্সপেরিয়েন্সে!
-                          </p>
-                        </div>
-                      </li>
-                      <li className='pb-4'>
-                        <div className='flex items-center gap-2'>
-                          <div>
-                            <IoMdArrowDroprightCircle className='w-[22px] h-[22px] text-primary' />
-                          </div>
-                          <p className='text-base  font-siliguri'>
-                            স্টেপ-বাই-স্টেপ লাইভ কোডিং: প্রতিটি প্রজেক্ট স্টেপ
-                            বাই স্টেপ ডেভেলপ করে দেখিয়ে দেওয়া হবে, যাতে আপনি
-                            সহজেই ফলো করতে পারেন।
-                          </p>
-                        </div>
-                      </li>
-                      <li className='pb-4'>
-                        <div className='flex items-center gap-2'>
-                          <div>
-                            <IoMdArrowDroprightCircle className='w-[22px] h-[22px] text-primary' />
-                          </div>
-                          <p className='text-base  font-siliguri'>
-                            পাইথন প্রবলেম সলভিং ফ্রেমওয়ার্ক: কীভাবে একটি
-                            প্রবলেমকে স্টেপ বাই স্টেপ সল্ভ করবেন, তার
-                            স্ট্র্যাটেজি।
-                          </p>
-                        </div>
-                      </li>
-                      <li className='pb-4'>
-                        <div className='flex items-center gap-2'>
-                          <div>
-                            <IoMdArrowDroprightCircle className='w-[22px] h-[22px] text-primary' />
-                          </div>
-                          <p className='text-base  font-siliguri'>
-                            প্রজেক্ট স্ট্রাকচারিং ও ডিবাগিং গাইড: প্রজেক্টকে
-                            সঠিকভাবে সাজানো এবং কোডের এরোর খুঁজে বের করার উপায়।
-                          </p>
-                        </div>
-                      </li>
-                      <li className='pb-4'>
-                        <div className='flex items-center gap-2'>
-                          <div>
-                            <IoMdArrowDroprightCircle className='w-[22px] h-[22px] text-primary' />
-                          </div>
-                          <p className='text-base  font-siliguri'>
-                            প্রজেক্ট স্ট্রাকচারিং ও ডিবাগিং গাইড: প্রজেক্টকে
-                            সঠিকভাবে সাজানো এবং কোডের এরোর খুঁজে বের করার উপায়।
-                          </p>
-                        </div>
-                      </li>
-                      <li className='pb-4'>
-                        <div className='flex items-center gap-2'>
-                          <div>
-                            <IoMdArrowDroprightCircle className='w-[22px] h-[22px] text-primary' />
-                          </div>
-                          <p className='text-base  font-siliguri'>
-                            Python শেখা সহজ, কোড লেখা ঝামেলাবিহীন ফলে কম সময়ে
-                            স্কিলড হয়ে দ্রুত ক্যারিয়ার শুরু করা যায়।
-                          </p>
-                        </div>
-                      </li>
-                      <li className=''>
-                        <div className='flex items-center gap-2'>
-                          <div>
-                            <IoMdArrowDroprightCircle className='w-[22px] h-[22px] text-primary' />
-                          </div>
-                          <p className='text-base  font-siliguri'>
-                            Python দিয়ে শুধু ওয়েব ডেভেলপমেন্ট না, সহজেই
-                            ক্যারিয়ার শিফট করতে পারবেন Data Science, AI,
-                            Automation, DevOps এবং Data Analytics-এর মতো
-                            হাই-ডিমান্ড সেক্টরে।
-                          </p>
-                        </div>
-                      </li>
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </div>
