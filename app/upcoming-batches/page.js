@@ -1,6 +1,7 @@
 import EmptyState from '@/components/EmptyState/EmptyState';
 import PageBanner from '@/components/PageBanner/PageBanner';
 import seminarAnimation from '@/public/image/content.json';
+import Link from 'next/link';
 import { FaStar, FaUsers } from 'react-icons/fa';
 import { FaRegClone, FaRegFileLines } from 'react-icons/fa6';
 import { RiTimerLine } from 'react-icons/ri';
@@ -106,7 +107,7 @@ const UpcomingBatches = async () => {
                         </span>
                         {course?.discount_price && (
                           <del className='ml-3 font-medium text-[15px] text-neutral-600'>
-                            ৳ {course.course_fee}
+                            ৳ {course?.course_fee}
                           </del>
                         )}
                       </h3>
@@ -138,13 +139,13 @@ const UpcomingBatches = async () => {
                       <FaRegClone className='text-[#6C706F]' />
 
                       <span className='text-[#6C706F] text-[14px] font-medium'>
-                        Projects - 08+
+                        Projects - {course?.project || 0}
                       </span>
                     </div>
                     <div className='flex items-center gap-1.5 '>
                       <FaUsers className='text-[#6C706F]' />
                       <span className='text-[#6C706F] text-[14px] font-medium'>
-                        Student Joined - 25
+                        Student Joined - {course?.total_student || 0}
                       </span>
                     </div>
                   </div>
@@ -157,12 +158,12 @@ const UpcomingBatches = async () => {
                   >
                     Registration
                   </a>
-                  <a
+                  <Link
                     className='text-[#162726] border border-[#E0E5EB] font-semibold text-[15px] rounded-full py-[5px] px-[20px] hover:border-primary transition-all duration-300 ease-in-out'
-                    href='#'
+                    href={`/course/${course.slug}`}
                   >
-                    View Details{' '}
-                  </a>
+                    View Details
+                  </Link>
                 </div>
               </div>
             ))}
