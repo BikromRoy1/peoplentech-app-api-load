@@ -1,33 +1,27 @@
+import { API_BASE_URL } from '@/app/lib/config';
+import CourseModules from '@/components/CourseModules/CourseModules';
 import DetailsAbout from '@/components/DetailsAbout/DetailsAbout';
+import FeedbackCourse from '@/components/FeedbackCourse/FeedbackCourse';
 import Image from 'next/image';
 import Link from 'next/link';
-import { BsFillShieldLockFill } from 'react-icons/bs';
-import { FaFacebookF, FaQuoteRight } from 'react-icons/fa';
+import { FaFacebookF } from 'react-icons/fa';
 import { FaLinkedinIn, FaRegClone, FaRegFileLines } from 'react-icons/fa6';
-import { LiaCertificateSolid, LiaToolsSolid } from 'react-icons/lia';
-import { LuBookAudio } from 'react-icons/lu';
-import {
-  MdOutlineOndemandVideo,
-  MdOutlineSlowMotionVideo,
-} from 'react-icons/md';
-import { PiVideo } from 'react-icons/pi';
-import { RiTimerFlashLine, RiTimerLine } from 'react-icons/ri';
+import { HiOutlineUserGroup } from 'react-icons/hi';
+import { RiTimerLine } from 'react-icons/ri';
 import { SiReaddotcv } from 'react-icons/si';
-import { VscWorkspaceTrusted } from 'react-icons/vsc';
 import './CourseDetails.css';
 
 async function getCourse(slug) {
-  const res = await fetch(
-    `https://erp.peoplentech.com.bd/api/v1/course/${slug}`,
-    { cache: 'no-store' }
-  );
+  const res = await fetch(`${API_BASE_URL}/course/${slug}`, {
+    cache: 'no-store',
+  });
   if (!res.ok) throw new Error('Failed to fetch course data');
   const data = await res.json();
   return data.data;
 }
 
 export async function generateStaticParams() {
-  const res = await fetch('https://erp.peoplentech.com.bd/api/v1/courses');
+  const res = await fetch(`${API_BASE_URL}/courses`);
   const data = await res.json();
 
   return data?.data?.data?.map((course) => ({
@@ -37,10 +31,9 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const res = await fetch(
-    `https://erp.peoplentech.com.bd/api/v1/course/${slug}`,
-    { cache: 'no-store' }
-  );
+  const res = await fetch(`${API_BASE_URL}/course/${slug}`, {
+    cache: 'no-store',
+  });
   const data = await res.json();
   const course = data.data;
 
@@ -58,7 +51,6 @@ export async function generateMetadata({ params }) {
 const CourseDetails = async ({ params }) => {
   const { slug } = await params;
   const course = await getCourse(slug);
-
 
   return (
     <section>
@@ -117,36 +109,34 @@ const CourseDetails = async ({ params }) => {
                   </li>
                 </ul>
                 <h4 className='text-2xl lg:text-4xl font-semibold mt-4 capitalize text-white'>
-                  {course?.name}
+                  {course?.name || 'Course Name'}
                 </h4>
                 <p className='text-gray-300 mt-4 text-[16px] leading-7 font-medium'>
-                  Are you passionate about software testing and quality
-                  assurance? Our course on software testing & quality assurance
-                  can be your best choice. The Software Testing and Quality
-                  Assurance training course at PeopleNTech provides participants
-                  with comprehensive insights into the principles and practices
-                  of software testing. Covering a range of topics from testing
-                  methodologies to quality assurance processes, this course
-                  equips individuals with the skills needed to ensure the
-                  delivery of high-quality software products.
+                  {course?.short_description || 'Not Available'}
                 </p>
                 <div className='flex items-center gap-4 mt-6 flex-wrap'>
                   <div className='flex items-center gap-2 rounded-full bg-[#1f2838] px-6 py-2'>
                     <FaRegFileLines className='text-primary' />
                     <span className='text-white font-semibold text-[15px]'>
-                      Class - 50
+                      Class - {course?.total_class || 0}
                     </span>
                   </div>
                   <div className='flex items-center gap-2 rounded-full bg-[#1f2838] px-6 py-2'>
                     <RiTimerLine className='text-primary' />
                     <span className='text-white font-semibold text-[15px]'>
-                      Duration - 6 Month
+                      Duration - {course?.duration || 0}
                     </span>
                   </div>
                   <div className='flex items-center gap-2 rounded-full bg-[#1f2838] px-6 py-2'>
                     <FaRegClone className='text-primary' />
                     <span className='text-white font-semibold text-[15px]'>
-                      Projects - 04+
+                      Projects - {course?.total_project || 0}
+                    </span>
+                  </div>
+                  <div className='flex items-center gap-2 rounded-full bg-[#1f2838] px-6 py-2'>
+                    <HiOutlineUserGroup className='text-primary' />
+                    <span className='text-white font-semibold text-[15px]'>
+                      Joined - {course?.student_joined || 0}
                     </span>
                   </div>
                 </div>
@@ -156,21 +146,25 @@ const CourseDetails = async ({ params }) => {
               <div className='border-[7px] border-[#f3f4f6] rounded-[15px] overflow-hidden bg-white'>
                 <img
                   className='w-full rounded-[10px]'
-                  src='/image/course-details.jpg'
-                  alt='image'
+                  src={course?.image || '/image/default.jpg'}
+                  alt={course?.name}
                 />
                 <div className='p-4'>
                   <h3 className='mt-1 mb-3'>
                     <span className='text-secondary font-bold text-[23px]'>
-                      ৳ 30,000
+                      ৳ {course?.offline_discount_price || 0}
                     </span>
-                    <del className='ml-3 font-semibold text-[17px] text-neutral-600'>
-                      ৳ 40,000
-                    </del>
+                    {course?.offline_discount_price && (
+                      <del className='ml-3 font-semibold text-[17px] text-neutral-600'>
+                        ৳ {course?.offline_price || 0}
+                      </del>
+                    )}
                   </h3>
-                  <button className='bg-primary rounded-md cursor-pointer px-8 py-2 whitespace-nowrap md:w-full text-white flex items-center justify-center text-md font-semibold capitalize'>
-                    Register for Discount
-                  </button>
+                  <a href={course?.registration_link} target='_blank'>
+                    <button className='bg-primary rounded-md cursor-pointer px-8 py-2 whitespace-nowrap md:w-full text-white flex items-center justify-center text-md font-semibold capitalize'>
+                      Register for Discount
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -183,285 +177,39 @@ const CourseDetails = async ({ params }) => {
         <div className='mx-auto px-4 sm:px-6 container lg:px-8'>
           <div className='grid grid-cols-1 gap-4 md:grid-cols-7 md:gap-9'>
             <div className='md:col-span-5'>
-              <DetailsAbout />
-              <div className='mt-10'>
-                <div className='border border-[#dee2e6] rounded-xl p-6'>
-                  <h2 className='mb-5 text-2xl font-semibold capitalize leading-[30px] text-[#003384]'>
-                    Course Modules
-                  </h2>
-                  <div className='collapse collapse-plus bg-base-100 border border-[#e2e8ec] rounded-lg'>
-                    <input type='radio' name='my-accordion-3' defaultChecked />
-                    <div className='collapse-title font-semibold'>
-                      Module-01 : Introduction to Website Development?
-                    </div>
-                    <div className='collapse-content text-sm'>
-                      <ul>
-                        <li className='border-b border-b-[#e5e8ef] border-dashed pb-3'>
-                          <div className='flex items-center justify-between'>
-                            <div className='flex items-center gap-2'>
-                              <div>
-                                <PiVideo className='w-[22px] h-[22px] text-neutral-600' />
-                              </div>
-                              <p className='text-[16px] font-medium text-neutral-600'>
-                                What is web development?
-                              </p>
-                            </div>
-                            <div className='w-[30px] h-[30px] bg-[#f1f4f9] text-[#00305c] rounded-full flex items-center justify-center'>
-                              <BsFillShieldLockFill className='text-[#00305c] opacity-70 text-[18px]' />
-                            </div>
-                          </div>
-                        </li>
-                        <li className='border-b border-b-[#e5e8ef] border-dashed py-3'>
-                          <div className='flex items-center justify-between'>
-                            <div className='flex items-center gap-2'>
-                              <div>
-                                <PiVideo className='w-[22px] h-[22px] text-neutral-600' />
-                              </div>
-                              <p className='text-[16px] font-medium text-neutral-600'>
-                                How to connect web application with database on
-                                the web
-                              </p>
-                            </div>
-                            <div className='w-[30px] h-[30px] bg-[#f1f4f9] text-[#00305c] rounded-full flex items-center justify-center'>
-                              <BsFillShieldLockFill className='text-[#00305c] opacity-70 text-[18px]' />
-                            </div>
-                          </div>
-                        </li>
-                        <li className='py-3'>
-                          <div className='flex items-center justify-between'>
-                            <div className='flex items-center gap-2'>
-                              <div>
-                                <PiVideo className='w-[22px] h-[22px] text-neutral-600' />
-                              </div>
-                              <p className='text-[16px] font-medium text-neutral-600'>
-                                Basics of Web Development
-                              </p>
-                            </div>
-                            <div className='w-[30px] h-[30px] bg-[#f1f4f9] text-[#00305c] rounded-full flex items-center justify-center'>
-                              <BsFillShieldLockFill className='text-[#00305c] opacity-70 text-[18px]' />
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className='collapse collapse-plus bg-base-100 border border-[#e2e8ec] rounded-lg mt-4'>
-                    <input type='radio' name='my-accordion-3' />
-                    <div className='collapse-title font-semibold'>
-                      Module-02 : Let&apos;s Dive into MySQL Database?
-                    </div>
-                    <div className='collapse-content text-sm'>
-                      <ul>
-                        <li className='border-b border-b-[#e5e8ef] border-dashed pb-3'>
-                          <div className='flex items-center justify-between'>
-                            <div className='flex items-center gap-2'>
-                              <div>
-                                <PiVideo className='w-[22px] h-[22px] text-neutral-600' />
-                              </div>
-                              <p className='text-[16px] font-medium text-neutral-600'>
-                                MySQL Intro – How, when and where to use
-                              </p>
-                            </div>
-                            <div className='w-[30px] h-[30px] bg-[#f1f4f9] text-[#00305c] rounded-full flex items-center justify-center'>
-                              <BsFillShieldLockFill className='text-[#00305c] opacity-70 text-[18px]' />
-                            </div>
-                          </div>
-                        </li>
-                        <li className='border-b border-b-[#e5e8ef] border-dashed py-3'>
-                          <div className='flex items-center justify-between'>
-                            <div className='flex items-center gap-2'>
-                              <div>
-                                <PiVideo className='w-[22px] h-[22px] text-neutral-600' />
-                              </div>
-                              <p className='text-[16px] font-medium text-neutral-600'>
-                                MySQL Connect – How to get connected
-                              </p>
-                            </div>
-                            <div className='w-[30px] h-[30px] bg-[#f1f4f9] text-[#00305c] rounded-full flex items-center justify-center'>
-                              <BsFillShieldLockFill className='text-[#00305c] opacity-70 text-[18px]' />
-                            </div>
-                          </div>
-                        </li>
-                        <li className='py-3'>
-                          <div className='flex items-center justify-between'>
-                            <div className='flex items-center gap-2'>
-                              <div>
-                                <PiVideo className='w-[22px] h-[22px] text-neutral-600' />
-                              </div>
-                              <p className='text-[16px] font-medium text-neutral-600'>
-                                CREATE Database – How to Create Database
-                              </p>
-                            </div>
-                            <div className='w-[30px] h-[30px] bg-[#f1f4f9] text-[#00305c] rounded-full flex items-center justify-center'>
-                              <BsFillShieldLockFill className='text-[#00305c] opacity-70 text-[18px]' />
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className='collapse collapse-plus bg-base-100 border border-[#e2e8ec] rounded-lg mt-4'>
-                    <input type='radio' name='my-accordion-3' />
-                    <div className='collapse-title font-semibold'>
-                      Module-01 : Basics of PHP
-                    </div>
-                    <div className='collapse-content text-sm'>
-                      <ul>
-                        <li className='border-b border-b-[#e5e8ef] border-dashed pb-3'>
-                          <div className='flex items-center justify-between'>
-                            <div className='flex items-center gap-2'>
-                              <div>
-                                <PiVideo className='w-[22px] h-[22px] text-neutral-600' />
-                              </div>
-                              <p className='text-[16px] font-medium text-neutral-600'>
-                                Syntax, Print / Echo – Basic concepts on PHP
-                              </p>
-                            </div>
-                            <div className='w-[30px] h-[30px] bg-[#f1f4f9] text-[#00305c] rounded-full flex items-center justify-center'>
-                              <BsFillShieldLockFill className='text-[#00305c] opacity-70 text-[18px]' />
-                            </div>
-                          </div>
-                        </li>
-                        <li className='border-b border-b-[#e5e8ef] border-dashed py-3'>
-                          <div className='flex items-center justify-between'>
-                            <div className='flex items-center gap-2'>
-                              <div>
-                                <PiVideo className='w-[22px] h-[22px] text-neutral-600' />
-                              </div>
-                              <p className='text-[16px] font-medium text-neutral-600'>
-                                Variables, Data Types, Constants – Data Types
-                                and Variables in PHP
-                              </p>
-                            </div>
-                            <div className='w-[30px] h-[30px] bg-[#f1f4f9] text-[#00305c] rounded-full flex items-center justify-center'>
-                              <BsFillShieldLockFill className='text-[#00305c] opacity-70 text-[18px]' />
-                            </div>
-                          </div>
-                        </li>
-                        <li className='py-3'>
-                          <div className='flex items-center justify-between'>
-                            <div className='flex items-center gap-2'>
-                              <div>
-                                <PiVideo className='w-[22px] h-[22px] text-neutral-600' />
-                              </div>
-                              <p className='text-[16px] font-medium text-neutral-600'>
-                                Operators – Operators in PHP Programming
-                              </p>
-                            </div>
-                            <div className='w-[30px] h-[30px] bg-[#f1f4f9] text-[#00305c] rounded-full flex items-center justify-center'>
-                              <BsFillShieldLockFill className='text-[#00305c] opacity-70 text-[18px]' />
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <DetailsAbout course={course} />
+
+              <CourseModules course={course} />
               <div className='mt-10'>
                 <div className='border border-[#dee2e6] rounded-xl p-6'>
                   <h2 className='mb-5 text-2xl font-semibold capitalize leading-[30px] text-[#003384]'>
                     What you will learn
                   </h2>
+                  {course?.tools?.length === 0 && (
+                    <p className='text-gray-500 italic'>
+                      No Working Tools available.
+                    </p>
+                  )}
                   <div className='grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4'>
-                    <div className='border border-[#d9ddef] rounded-lg px-5 py-3 text-center transition-shadow duration-300 hover:shadow-[0_10px_14px_rgba(0,0,0,0.05)]'>
-                      <div className='w-[50px] h-[50px] mx-auto flex items-center justify-center'>
-                        <Image
-                          width={40}
-                          height={40}
-                          className='object-cover'
-                          src='/image/icons/Analytics.png'
-                          alt='icons'
-                        />
+                    {course?.tools.map((tool, index) => (
+                      <div
+                        key={index}
+                        className='border border-[#d9ddef] rounded-lg px-5 py-3 text-center transition-shadow duration-300 hover:shadow-[0_10px_14px_rgba(0,0,0,0.05)]'
+                      >
+                        <div className='w-[50px] h-[50px] mx-auto flex items-center justify-center'>
+                          <Image
+                            width={40}
+                            height={40}
+                            className='object-cover'
+                            src={tool?.icon || '/image/icons/chatGPT.png'}
+                            alt={tool?.name}
+                          />
+                        </div>
+                        <h4 className='font-semibold mt-2 pb-1 text-[15px]'>
+                          {tool?.name}
+                        </h4>
                       </div>
-                      <h4 className='font-semibold mt-2 pb-1 text-[15px]'>
-                        Google Analytics 4
-                      </h4>
-                    </div>
-                    <div className='border border-[#d9ddef] rounded-lg px-5 py-3 text-center transition-shadow duration-300 hover:shadow-[0_10px_14px_rgba(0,0,0,0.05)]'>
-                      <div className='w-[50px] h-[50px] mx-auto flex items-center justify-center'>
-                        <Image
-                          width={40}
-                          height={40}
-                          className='object-cover'
-                          src='/image/icons/chatGPT.png'
-                          alt='icons'
-                        />
-                      </div>
-                      <h4 className='font-semibold mt-2 pb-1 text-[15px]'>
-                        ChatGPT
-                      </h4>
-                    </div>
-                    <div className='border border-[#d9ddef] rounded-lg px-5 py-3 text-center transition-shadow duration-300 hover:shadow-[0_10px_14px_rgba(0,0,0,0.05)]'>
-                      <div className='w-[50px] h-[50px] mx-auto flex items-center justify-center'>
-                        <Image
-                          width={40}
-                          height={40}
-                          className='object-cover'
-                          src='/image/icons/Manager.png'
-                          alt='icons'
-                        />
-                      </div>
-                      <h4 className='font-semibold mt-2 pb-1 text-[15px]'>
-                        Google Tag Manager
-                      </h4>
-                    </div>
-                    <div className='border border-[#d9ddef] rounded-lg px-5 py-3 text-center transition-shadow duration-300 hover:shadow-[0_10px_14px_rgba(0,0,0,0.05)]'>
-                      <div className='w-[50px] h-[50px] mx-auto flex items-center justify-center'>
-                        <Image
-                          width={40}
-                          height={40}
-                          className='object-cover'
-                          src='/image/icons/linkdin.png'
-                          alt='icons'
-                        />
-                      </div>
-                      <h4 className='font-semibold mt-2 pb-1 text-[15px]'>
-                        Linkedin Ads
-                      </h4>
-                    </div>
-                    <div className='border border-[#d9ddef] rounded-lg px-5 py-3 text-center transition-shadow duration-300 hover:shadow-[0_10px_14px_rgba(0,0,0,0.05)]'>
-                      <div className='w-[50px] h-[50px] mx-auto flex items-center justify-center'>
-                        <Image
-                          width={40}
-                          height={40}
-                          className='object-cover'
-                          src='/image/icons/vscode.png'
-                          alt='icons'
-                        />
-                      </div>
-                      <h4 className='font-semibold mt-2 pb-1 text-[15px]'>
-                        VS Code
-                      </h4>
-                    </div>
-                    <div className='border border-[#d9ddef] rounded-lg px-5 py-3 text-center transition-shadow duration-300 hover:shadow-[0_10px_14px_rgba(0,0,0,0.05)]'>
-                      <div className='w-[50px] h-[50px] mx-auto flex items-center justify-center'>
-                        <Image
-                          width={40}
-                          height={40}
-                          className='object-cover'
-                          src='/image/icons/DATA-Studio.png'
-                          alt='icons'
-                        />
-                      </div>
-                      <h4 className='font-semibold mt-2 pb-1 text-[15px]'>
-                        Google Data Studio
-                      </h4>
-                    </div>
-                    <div className='border border-[#d9ddef] rounded-lg px-5 py-3 text-center transition-shadow duration-300 hover:shadow-[0_10px_14px_rgba(0,0,0,0.05)]'>
-                      <div className='w-[50px] h-[50px] mx-auto flex items-center justify-center'>
-                        <Image
-                          width={40}
-                          height={40}
-                          className='object-cover'
-                          src='/image/icons/server.png'
-                          alt='icons'
-                        />
-                      </div>
-                      <h4 className='font-semibold mt-2 pb-1 text-[15px]'>
-                        Window Server
-                      </h4>
-                    </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -470,258 +218,70 @@ const CourseDetails = async ({ params }) => {
                   <h2 className='mb-5 text-2xl font-semibold capitalize leading-[30px] text-[#003384]'>
                     Course Instructor
                   </h2>
-                  <div className='grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3'>
-                    <div>
-                      <div className='flex items-center gap-3'>
-                        <div className='w-[70px] h-[70] rounded-[10px]'>
-                          <Image
-                            width={70}
-                            height={70}
-                            className='object-cover rounded-[10px]'
-                            src='/image/icons/pic4.jpg'
-                            alt='Instructor'
-                          />
+                  {course?.courseTeachers?.length > 0 ? (
+                    <div className='grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3'>
+                      {course?.courseTeachers?.map((teacher) => (
+                        <div key={teacher?.id}>
+                          <div className='flex items-center gap-3'>
+                            <div className='w-[70px] h-[70px] rounded-[10px] overflow-hidden'>
+                              <Image
+                                width={70}
+                                height={70}
+                                className='object-cover rounded-[10px] border border-[#d9ddef]'
+                                src={teacher?.image || '/image/icons/pic4.jpg'}
+                                alt={teacher?.name}
+                              />
+                            </div>
+                            <div>
+                              <h4 className='text-[17px] font-semibold text-[#162726] mb-1'>
+                                {teacher?.name}
+                              </h4>
+                              <p className='text-[14px] text-primary font-medium'>
+                                {teacher?.designation || 'Instructor'}
+                              </p>
+                            </div>
+                          </div>
                         </div>
-                        <div>
-                          <h4 className='text-[17px] font-semibold text-[#162726] mb-1'>
-                            Yeasin Arafat
-                          </h4>
-                          <p className='text-[14px] text-primary font-medium'>
-                            Lead Instructor
-                          </p>
-                        </div>
-                      </div>
+                      ))}
                     </div>
-                    <div>
-                      <div className='flex items-center gap-3'>
-                        <div className='w-[70px] h-[70] rounded-[10px]'>
-                          <Image
-                            width={70}
-                            height={70}
-                            className='object-cover rounded-[10px]'
-                            src='/image/icons/pic3.jpg'
-                            alt='Instructor'
-                          />
-                        </div>
-                        <div>
-                          <h4 className='text-[17px]  font-semibold text-[#162726] mb-1'>
-                            Al Rabby Siemens
-                          </h4>
-                          <p className='text-[14px] text-primary font-medium'>
-                            Lead Instructor
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div className='flex items-center gap-3'>
-                        <div className='w-[70px] h-[70] rounded-[10px]'>
-                          <Image
-                            width={70}
-                            height={70}
-                            className='object-cover rounded-[10px]'
-                            src='/image/icons/pic2.jpg'
-                            alt='Instructor'
-                          />
-                        </div>
-                        <div>
-                          <h4 className='text-[17px] capitalize font-semibold text-[#162726] mb-1'>
-                            Jafar Imam
-                          </h4>
-                          <p className='text-[14px] text-primary font-medium'>
-                            Support Instructor
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div className='flex items-center gap-3'>
-                        <div className='w-[70px] h-[70] rounded-[10px]'>
-                          <Image
-                            width={70}
-                            height={70}
-                            className='object-cover rounded-[10px]'
-                            src='/image/icons/pic8.jpg'
-                            alt='Instructor'
-                          />
-                        </div>
-                        <div>
-                          <h4 className='text-[17px] capitalize font-semibold text-[#162726] mb-1'>
-                            Jannatul Bushra
-                          </h4>
-                          <p className='text-[14px] text-primary font-medium'>
-                            Support Instructor
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div className='flex items-center gap-3'>
-                        <div className='w-[70px] h-[70] rounded-[10px]'>
-                          <Image
-                            width={70}
-                            height={70}
-                            className='object-cover rounded-[10px]'
-                            src='/image/icons/pic9.jpg'
-                            alt='Instructor'
-                          />
-                        </div>
-                        <div>
-                          <h4 className='text-[17px] capitalize font-semibold text-[#162726] mb-1'>
-                            Kathleen Moreno
-                          </h4>
-                          <p className='text-[14px] text-primary font-medium'>
-                            Support Instructor
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  ) : (
+                    <p className='text-gray-500 italic text-base capitalize'>
+                      No instructor found.
+                    </p>
+                  )}
                 </div>
               </div>
-              <div className='mt-10'>
-                <div className='border border-[#dee2e6] rounded-xl p-6'>
-                  <h2 className='mb-5 text-2xl font-semibold capitalize leading-[30px] text-[#003384]'>
-                    Student Feedback
-                  </h2>
-                  <div className='grid grid-cols-1 gap-5 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2'>
-                    <div className='rounded-[10px] p-[25px] relative border border-[#E0E5EB]'>
-                      <div className='mb-5'>
-                        <p className='text-neutral-700 font-siliguri text-base'>
-                          &quot;এই কোর্সটি আমার জীবনে এক বিশাল পরিবর্তন এনেছে।
-                          প্রতিটি লেকচার পরিষ্কারভাবে উপস্থাপন করা হয়েছে এবং
-                          প্র্যাকটিক্যাল প্রজেক্টগুলো শেখাকে আরও সহজ করে তুলেছে।
-                          কোর্সটি শেষ করার পর আমি ফ্রিল্যান্সিং শুরু করেছি এবং
-                          ইতিমধ্যে কয়েকটি প্রজেক্ট পেয়েছি। শিক্ষকদের সাপোর্টও
-                          দারুণ ছিল। আমি সবাইকে এই কোর্সটি পরামর্শ &quot;
-                        </p>
-                      </div>
-                      <div className='flex items-center gap-3'>
-                        <Image
-                          width={50}
-                          height={50}
-                          className='object-cover rounded-full'
-                          src='/image/icons/user-06.webp'
-                          alt='users'
-                        />
-                        <div>
-                          <h4 className='text-[15px] leading-7 font-semibold text-[#162726]'>
-                            Tahiya Faiza
-                          </h4>
-                          <p className='text-[13px] text-primary font-medium'>
-                            MERN Stack Web Development
-                          </p>
-                        </div>
-                      </div>
-                      <div>
-                        <FaQuoteRight className='text-[#2490eb] text-[54px] leading-[62px] absolute right-[30px] bottom-[30px] opacity-[0.1]' />
-                      </div>
-                    </div>
-                    <div className='rounded-[10px] p-[25px] relative border border-[#E0E5EB]'>
-                      <div className='mb-5'>
-                        <p className='text-neutral-700 font-siliguri text-base'>
-                          &quot;অনেক দিন ধরেই এমন একটি কোর্স খুঁজছিলাম যেটা
-                          আমাকে শূন্য থেকে শুরু করে একদম প্রফেশনাল লেভেল পর্যন্ত
-                          নিয়ে যাবে—এটাই সেই কোর্স! প্রতিটি মডিউল সুন্দরভাবে
-                          সাজানো, ভিডিও কোয়ালিটি চমৎকার, আর ইনস্ট্রাক্টরের
-                          এক্সপ্লেনেশন ছিল অত্যন্ত পরিষ্কার। আমি এখন নিজের একটা
-                          প্রজেক্টে কাজ করছি, যেটা এক মাস আগেও অসম্ভব মনে
-                          হতো।&quot;
-                        </p>
-                      </div>
-                      <div className='flex items-center gap-3'>
-                        <Image
-                          width={50}
-                          height={50}
-                          className='object-cover rounded-full'
-                          src='/image/icons/user-14.jpg'
-                          alt='users'
-                        />
-                        <div>
-                          <h4 className='text-[15px] leading-7 font-semibold text-[#162726]'>
-                            Miftahul Jannat
-                          </h4>
-                          <p className='text-[13px] text-primary font-medium'>
-                            Professional Graphic Design
-                          </p>
-                        </div>
-                      </div>
-                      <div>
-                        <FaQuoteRight className='text-[#2490eb] text-[54px] leading-[62px] absolute right-[30px] bottom-[30px] opacity-[0.1]' />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <FeedbackCourse course={course} />
               <div className='mt-10'>
                 <div className='border border-[#dee2e6] rounded-xl p-6'>
                   <h2 className='mb-5 text-2xl font-semibold capitalize leading-[30px] text-[#003384]'>
                     Frequently Asked Questions
                   </h2>
-                  <div className='collapse collapse-plus bg-base-100 border border-[#e2e8ec] rounded-lg'>
-                    <input type='radio' name='my-accordion-3' defaultChecked />
-                    <div className='collapse-title font-semibold font-siliguri'>
-                      প্রশ্ন-০১ : কেমন সময় দেয়া লাগবে এ প্রোগ্রামে?
-                    </div>
-                    <div className='collapse-content text-sm font-siliguri'>
-                      এটা তো আসলে ব্যক্তিবিশেষে আলাদা – কারো কম সময় লাগবে, কারো
-                      বেশি সময় লাগবে! তবে আশা করা যায়ঃ প্রতি সপ্তাহে গড়ে ১০-১৫
-                      ঘণ্টা করে সময় দিলে আপনি পুরো সিলেবাস শিখে ফেলতে পারবেন।
-                    </div>
-                  </div>
-                  <div className='collapse collapse-plus bg-base-100 border border-[#e2e8ec] rounded-lg mt-4'>
-                    <input type='radio' name='my-accordion-3' />
-                    <div className='collapse-title font-semibold font-siliguri'>
-                      প্রশ্ন-০২ : সবগুলো প্রজেক্ট কি ৬ মাসেই শেষ করতে হবে?
-                    </div>
-                    <div className='collapse-content text-sm font-siliguri'>
-                      হ্যাঁ, ৬ মাসেই শেষ করতে হবে। তা না হলে আমাদের পক্ষে
-                      প্রজেক্ট রিভিউ ও স্কোর করা সম্ভব হবে না। অর্থাৎ
-                      সার্টিফিকেটও দেওয়া হবে না ৬ মাস পর। তবে আপনি চাইলে নিজ
-                      উদ্যোগে ৬ মাস পরও প্রজেক্ট প্র্যাকটিস করতে পারেন।
-                    </div>
-                  </div>
-                  <div className='collapse collapse-plus bg-base-100 border border-[#e2e8ec] rounded-lg mt-4'>
-                    <input type='radio' name='my-accordion-3' />
-                    <div className='collapse-title font-semibold font-siliguri'>
-                      প্রশ্ন-০৩ : সার্টিফিকেট পাওয়া যাবে?
-                    </div>
-                    <div className='collapse-content text-sm font-siliguri'>
-                      হ্যাঁ, অবশ্যই। কোর্স শেষে সার্টিফিকেট তো থাকছেই। তবে এজন্য
-                      ৬ মাসের ভেতর কোর্স শেষ করতে হবে। কারণ প্রজেক্ট রিভিউর মতো
-                      ব্যাপারগুলো এ ৬ মাস পর থাকবে না।
-                    </div>
-                  </div>
-                  <div className='collapse collapse-plus bg-base-100 border border-[#e2e8ec] rounded-lg mt-4'>
-                    <input type='radio' name='my-accordion-3' />
-                    <div className='collapse-title font-semibold font-siliguri'>
-                      প্রশ্ন-০৪ : কোর্স কোন সময় করবো? নির্দিষ্ট কোনো সময়ে ক্লাস
-                      হবে কি না?
-                    </div>
-                    <div className='collapse-content text-sm font-siliguri'>
-                      আমাদের প্রতিটা কোর্সের আপকামিং সিডিউল দেওয়া আছে। আপকামিং
-                      সিডিউল দেখে আপনি ভর্তি কনফার্ম করতে পারেন অথবা আপনার
-                      ফ্লেক্সিবিলিটি অনুযায়ী কোর্স করতে পারবেন।
-                    </div>
-                  </div>
-                  <div className='collapse collapse-plus bg-base-100 border border-[#e2e8ec] rounded-lg mt-4'>
-                    <input type='radio' name='my-accordion-3' />
-                    <div className='collapse-title font-semibold font-siliguri'>
-                      প্রশ্ন-০৫ : শিক্ষাগত যোগ্যতা? নন-টেকনিক্যাল
-                      ব্যাকগ্রাউন্ডের মানুষ এটি করতে পারবে?
-                    </div>
-                    <div className='collapse-content text-sm font-siliguri'>
-                      নির্দিষ্ট কোনো ডিগ্রি রিকোয়্যারমেন্ট নেই। তবে কমপক্ষে
-                      এইচএসসি বা সমমানের যোগ্যতা থাকা উচিত। এছাড়া, STEM
-                      (Science, Technology, Engineering, Mathematics)
-                      ব্যাকগ্রাউন্ডের শিক্ষার্থীদের জন্য এ কোর্স তুলনামূলকভাবে
-                      সহজ হবে। অবশ্য নন-টেকনিক্যাল (যেমন, কমার্স কিংবা আর্টস)
-                      ব্যাকগ্রাউন্ডের মানুষরাও এ কোর্স করতে পারবে। পাশাপাশি
-                      কয়েকটি বেসিক বিষয় জানতে হবে। যেমন, Basic Algebra সম্পর্কে
-                      ভাল ধারণা থাকা। আবার কম্পিউটার চালানো এবং ইন্টারনেট
-                      ব্রাউজার ব্যবহারে কমফোর্টেবল হতে হবে। এছাড়া, গুগলে সার্চ
-                      করে কোনো টপিক ঘেঁটে দেখার মতো অভ্যাস থাকা উচিত।
-                    </div>
+                  <div className='space-y-4'>
+                    {course?.faqs && course.faqs.length > 0 ? (
+                      course.faqs.map((faq, index) => (
+                        <div
+                          key={index}
+                          className='collapse collapse-plus bg-base-100 border border-[#e2e8ec] rounded-lg'
+                        >
+                          <input
+                            type='radio'
+                            name='course-faq'
+                            defaultChecked={index === 0} // প্রথম টা খোলা থাকবে
+                          />
+                          <div className='collapse-title font-semibold font-siliguri'>
+                            প্রশ্ন-{index + 1} : {faq.question}
+                          </div>
+                          <div className='collapse-content text-sm font-siliguri'>
+                            {faq.answer}
+                          </div>
+                        </div>
+                      ))
+                    ) : (
+                      <p className='text-gray-500 italic font-siliguri font-normal'>
+                        ❌ কোনো FAQ পাওয়া যায়নি।
+                      </p>
+                    )}
                   </div>
                 </div>
               </div>
@@ -829,64 +389,35 @@ const CourseDetails = async ({ params }) => {
                   <h2 className='mb-4 text-xl font-semibold'>
                     Course Features
                   </h2>
-                  <div>
-                    <div className='flex items-center mb-3 leading-5'>
-                      <MdOutlineSlowMotionVideo className='text-[#334155] h-[18px] w-[18px] ' />
-                      <h4 className='mb-0 inline-block pl-3 text-[#334155] text-[15px] font-medium'>
-                        Online and Offline Support
-                      </h4>
-                    </div>
-                  </div>
-                  <div>
-                    <div className='flex items-center mb-3 leading-5'>
-                      <LiaToolsSolid className='text-[#334155] h-[18px] w-[18px] ' />
-                      <h4 className='mb-0 inline-block pl-3 text-[#334155] text-[15px] font-medium'>
-                        Tools, Templates and Book Suggestions
-                      </h4>
-                    </div>
-                  </div>
-                  <div>
-                    <div className='flex items-center mb-3 leading-5'>
-                      <LiaCertificateSolid className='text-[#334155] h-[18px] w-[18px] ' />
-
-                      <h4 className='mb-0 inline-block pl-3 text-[#334155] text-[15px] font-medium'>
-                        Assessment and Certificate
-                      </h4>
-                    </div>
-                  </div>
-                  <div>
-                    <div className='flex items-center mb-3 leading-5'>
-                      <LuBookAudio className='text-[#334155] h-[18px] w-[18px] ' />
-                      <h4 className='mb-0 inline-block pl-3 text-[#334155] text-[15px] font-medium'>
-                        40+ Classes
-                      </h4>
-                    </div>
-                  </div>
-                  <div>
-                    <div className='flex items-center mb-3 leading-5'>
-                      <MdOutlineOndemandVideo className='text-[#334155] h-[18px] w-[18px] ' />
-                      <h4 className='mb-0 inline-block pl-3 text-[#334155] text-[15px] font-medium'>
-                        40+ Recorded Videos
-                      </h4>
-                    </div>
-                  </div>
-                  <div>
-                    <div className='flex items-center mb-3 leading-5'>
-                      <VscWorkspaceTrusted className='text-[#334155] h-[18px] w-[18px] ' />
-
-                      <h4 className='mb-0 inline-block pl-3 text-[#334155] text-[15px] font-medium'>
-                        Job Placement Support
-                      </h4>
-                    </div>
-                  </div>
-                  <div>
-                    <div className='flex items-center mb-1 leading-5'>
-                      <RiTimerFlashLine className='text-[#334155] h-[18px] w-[18px] ' />
-                      <h4 className='mb-0 inline-block pl-3 text-[#334155] text-[15px] font-medium'>
-                        Total 120 Hours
-                      </h4>
-                    </div>
-                  </div>
+                  {course?.features && course.features.length > 0 ? (
+                    course.features.map((feature, index) => (
+                      <div key={feature.id}>
+                        <div
+                          className={`flex items-center leading-5 ${
+                            index === course.features.length - 1
+                              ? 'mb-0'
+                              : 'mb-3'
+                          }`}
+                        >
+                          <div className='inline-block h-[20px] w-[20px]'>
+                            <Image
+                              width={20}
+                              height={20}
+                              src={feature.icon}
+                              alt={feature.title}
+                            />
+                          </div>
+                          <h4 className='mb-0 inline-block pl-3 text-[#334155] text-[15px] font-medium'>
+                            {feature.title}
+                          </h4>
+                        </div>
+                      </div>
+                    ))
+                  ) : (
+                    <p className='text-gray-500 text-[15px]'>
+                      No features available for this course.
+                    </p>
+                  )}
                 </div>
               </div>
               <div className='mt-6'>
