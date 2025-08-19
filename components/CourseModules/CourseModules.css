@@ -1,7 +1,24 @@
 .course-module-topic ul li {
-  margin-left: 20px;
-  margin-bottom: 10px;
+  list-style: none;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  position: relative;
 }
-.course-module-topic {
-  margin-bottom: 13px;
+.course-module-topic ul li::before {
+  content: '✅';
+  position: absolute;
+  left: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 700;
+  font-size: 14px;
+  color: #04a9ff;
+  line-height: 1;
+}
+.course-module-topic h6 {
+  color: #334155;
+  margin-bottom: 10px;
+  font-weight: 600;
+  margin-top: 15px;
+  font-size: 16px;
 }

@@ -97,7 +97,7 @@ const UpcomingBatches = async () => {
                     </span>
                   </div>
                   <h4 className='text-[19px] leading-7 font-semibold mb-[15px] hover:text-primary transition-all duration-300 ease-in-out'>
-                    <a href='#'>{course?.name}</a>
+                    <Link href={`/course/${course.slug}`}>{course?.name}</Link>
                   </h4>
                   <div className='flex items-center justify-between'>
                     <div>
@@ -124,13 +124,13 @@ const UpcomingBatches = async () => {
                       <FaRegFileLines className='text-[#6C706F]' />
 
                       <span className='text-[#6C706F] text-[14px] font-medium'>
-                        Class - {course?.total_class}
+                        Class - {course?.total_class || 0}
                       </span>
                     </div>
                     <div className='flex items-center gap-1.5 '>
                       <RiTimerLine className='text-[#6C706F]' />
                       <span className='text-[#6C706F] text-[14px] font-medium'>
-                        Duration - {course?.duration}
+                        Duration - {course?.duration || 0}
                       </span>
                     </div>
                   </div>

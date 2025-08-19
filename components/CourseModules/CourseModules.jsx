@@ -34,25 +34,25 @@ const CourseModules = ({ course }) => {
                 name='course-modules-accordion'
                 defaultChecked={index === 0}
               />
-              <div className='collapse-title font-semibold'>
+              <div className='collapse-title font-semibold bg-[#f0f8ff]'>
                 Module-{index + 1} : {module.module_name}
                 <div>
                   <div className='flex items-center gap-4 mt-[5px]'>
                     <div className='flex items-center gap-1.5'>
-                      <FaRegFileLines className='text-orange-600' />
-                      <span className='text-orange-600 text-[14px] font-medium'>
+                      <FaRegFileLines className='text-[#0498e6]' />
+                      <span className='text-[#0498e6] text-[14px] font-medium'>
                         Class - {module.class || '0'}
                       </span>
                     </div>
                     <div className='flex items-center gap-1.5'>
-                      <MdOutlineRequestQuote className='text-orange-600' />
-                      <span className='text-orange-600 text-[14px] font-medium'>
+                      <MdOutlineRequestQuote className='text-[#0498e6]' />
+                      <span className='text-[#0498e6] text-[14px] font-medium'>
                         Quiz - {module.quiz || '0'}
                       </span>
                     </div>
                     <div className='flex items-center gap-1.5'>
-                      <GrDocumentStore className='text-orange-600' />
-                      <span className='text-orange-600 text-[14px] font-medium'>
+                      <GrDocumentStore className='text-[#0498e6]' />
+                      <span className='text-[#0498e6] text-[14px] font-medium'>
                         Assignment - {module.assignment || '0'}
                       </span>
                     </div>
