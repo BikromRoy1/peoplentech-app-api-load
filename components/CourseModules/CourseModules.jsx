@@ -4,6 +4,8 @@ import { FaRegFileLines } from 'react-icons/fa6';
 import { GrDocumentStore } from 'react-icons/gr';
 import { MdOutlineRequestQuote } from 'react-icons/md';
 
+import './CourseModules.css';
+
 const CourseModules = ({ course }) => {
   const [showAll, setShowAll] = useState(false);
   const modules = course?.courseModules || [];
@@ -61,7 +63,7 @@ const CourseModules = ({ course }) => {
               <div className='collapse-content text-sm'>
                 {module?.topic ? (
                   <div
-                    className='whitespace-pre-line text-[15px] text-neutral-700 leading-relaxed'
+                    className='whitespace-pre-line text-[15px] text-neutral-700 leading-relaxed course-module-topic'
                     dangerouslySetInnerHTML={{ __html: module.topic }}
                   ></div>
                 ) : (
