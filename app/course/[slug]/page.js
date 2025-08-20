@@ -433,9 +433,11 @@ const CourseDetails = async ({ params }) => {
                     <h3 className='font-bold max-w-xs text-white text-xl md:text-2xl mb-4'>
                       Download the Guidelines for FREE!
                     </h3>
-                    <button className='button-bg rounded-md cursor-pointer px-8 py-2 whitespace-nowrap md:w-full text-white flex items-center justify-center text-md font-semibold capitalize'>
-                      Download Course Module
-                    </button>
+                    <Link target='_blank' href={course?.module_download_link}>
+                      <button className='button-bg rounded-md cursor-pointer px-8 py-2 whitespace-nowrap md:w-full text-white flex items-center justify-center text-md font-semibold capitalize'>
+                        Download Course Module
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
