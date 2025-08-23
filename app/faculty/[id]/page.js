@@ -94,219 +94,49 @@ const FacultyDetails = async ({ params }) => {
                   Specialized Area
                 </h2>
                 <div className='border border-[#ddd] rounded-[10px] p-8'>
-                  <div className='grid grid-cols-1 gap-5 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2'>
-                    <div>
-                      <div className='flex items-center gap-3'>
-                        <svg
-                          width='24'
-                          height='24'
-                          viewBox='0 0 24 24'
-                          fill='none'
-                          xmlns='http://www.w3.org/2000/svg'
-                          style={{ color: '#04a9ff' }}
-                        >
-                          <rect
-                            width='24'
-                            height='24'
-                            rx='12'
-                            fill='currentColor'
-                          ></rect>
-                          <path
-                            fillRule='evenodd'
-                            clipRule='evenodd'
-                            d='M9.81818 18L4 12.2993L6.05091 10.2898L9.81818 13.9667L17.9491 6L20 8.02375L9.81818 18Z'
-                            fill='white'
-                          ></path>
-                        </svg>
-                        <p className='text-[#2e2f32] text-[16px] font-medium'>
-                          Corporate & Brand Design
-                        </p>
-                      </div>
-                      <div className='flex items-center gap-3 mt-2.5'>
-                        <svg
-                          width='24'
-                          height='24'
-                          viewBox='0 0 24 24'
-                          fill='none'
-                          xmlns='http://www.w3.org/2000/svg'
-                          style={{ color: '#04a9ff' }}
-                        >
-                          <rect
-                            width='24'
-                            height='24'
-                            rx='12'
-                            fill='currentColor'
-                          ></rect>
-                          <path
-                            fillRule='evenodd'
-                            clipRule='evenodd'
-                            d='M9.81818 18L4 12.2993L6.05091 10.2898L9.81818 13.9667L17.9491 6L20 8.02375L9.81818 18Z'
-                            fill='white'
-                          ></path>
-                        </svg>
-                        <p className='text-[#2e2f32] text-[16px] font-medium'>
-                          Marketing Material Design
-                        </p>
-                      </div>
-                      <div className='flex items-center gap-3 mt-2.5'>
-                        <svg
-                          width='24'
-                          height='24'
-                          viewBox='0 0 24 24'
-                          fill='none'
-                          xmlns='http://www.w3.org/2000/svg'
-                          style={{ color: '#04a9ff' }}
-                        >
-                          <rect
-                            width='24'
-                            height='24'
-                            rx='12'
-                            fill='currentColor'
-                          ></rect>
-                          <path
-                            fillRule='evenodd'
-                            clipRule='evenodd'
-                            d='M9.81818 18L4 12.2993L6.05091 10.2898L9.81818 13.9667L17.9491 6L20 8.02375L9.81818 18Z'
-                            fill='white'
-                          ></path>
-                        </svg>
-                        <p className='text-[#2e2f32] text-[16px] font-medium'>
-                          Packaging Design
-                        </p>
-                      </div>
-                      <div className='flex items-center gap-3 mt-2.5'>
-                        <svg
-                          width='24'
-                          height='24'
-                          viewBox='0 0 24 24'
-                          fill='none'
-                          xmlns='http://www.w3.org/2000/svg'
-                          style={{ color: '#04a9ff' }}
-                        >
-                          <rect
-                            width='24'
-                            height='24'
-                            rx='12'
-                            fill='currentColor'
-                          ></rect>
-                          <path
-                            fillRule='evenodd'
-                            clipRule='evenodd'
-                            d='M9.81818 18L4 12.2993L6.05091 10.2898L9.81818 13.9667L17.9491 6L20 8.02375L9.81818 18Z'
-                            fill='white'
-                          ></path>
-                        </svg>
-                        <p className='text-[#2e2f32] text-[16px] font-medium'>
-                          Visual Design
-                        </p>
-                      </div>
-                    </div>
-                    <div>
-                      <div className='flex items-center gap-3'>
-                        <svg
-                          width='24'
-                          height='24'
-                          viewBox='0 0 24 24'
-                          fill='none'
-                          xmlns='http://www.w3.org/2000/svg'
-                          style={{ color: '#04a9ff' }}
-                        >
-                          <rect
-                            width='24'
-                            height='24'
-                            rx='12'
-                            fill='currentColor'
-                          ></rect>
-                          <path
-                            fillRule='evenodd'
-                            clipRule='evenodd'
-                            d='M9.81818 18L4 12.2993L6.05091 10.2898L9.81818 13.9667L17.9491 6L20 8.02375L9.81818 18Z'
-                            fill='white'
-                          ></path>
-                        </svg>
-                        <p className='text-[#2e2f32] text-[16px] font-medium'>
-                          Story Boarding
-                        </p>
-                      </div>
-                      <div className='flex items-center gap-3 mt-2.5'>
-                        <svg
-                          width='24'
-                          height='24'
-                          viewBox='0 0 24 24'
-                          fill='none'
-                          xmlns='http://www.w3.org/2000/svg'
-                          style={{ color: '#04a9ff' }}
-                        >
-                          <rect
-                            width='24'
-                            height='24'
-                            rx='12'
-                            fill='currentColor'
-                          ></rect>
-                          <path
-                            fillRule='evenodd'
-                            clipRule='evenodd'
-                            d='M9.81818 18L4 12.2993L6.05091 10.2898L9.81818 13.9667L17.9491 6L20 8.02375L9.81818 18Z'
-                            fill='white'
-                          ></path>
-                        </svg>
-                        <p className='text-[#2e2f32] text-[16px] font-medium'>
-                          Packaging & Label Design
-                        </p>
-                      </div>
-                      <div className='flex items-center gap-3 mt-2.5'>
-                        <svg
-                          width='24'
-                          height='24'
-                          viewBox='0 0 24 24'
-                          fill='none'
-                          xmlns='http://www.w3.org/2000/svg'
-                          style={{ color: '#04a9ff' }}
-                        >
-                          <rect
-                            width='24'
-                            height='24'
-                            rx='12'
-                            fill='currentColor'
-                          ></rect>
-                          <path
-                            fillRule='evenodd'
-                            clipRule='evenodd'
-                            d='M9.81818 18L4 12.2993L6.05091 10.2898L9.81818 13.9667L17.9491 6L20 8.02375L9.81818 18Z'
-                            fill='white'
-                          ></path>
-                        </svg>
-                        <p className='text-[#2e2f32] text-[16px] font-medium'>
-                          Brand Identity Design
-                        </p>
-                      </div>
-                      <div className='flex items-center gap-3 mt-2.5'>
-                        <svg
-                          width='24'
-                          height='24'
-                          viewBox='0 0 24 24'
-                          fill='none'
-                          xmlns='http://www.w3.org/2000/svg'
-                          style={{ color: '#04a9ff' }}
-                        >
-                          <rect
-                            width='24'
-                            height='24'
-                            rx='12'
-                            fill='currentColor'
-                          ></rect>
-                          <path
-                            fillRule='evenodd'
-                            clipRule='evenodd'
-                            d='M9.81818 18L4 12.2993L6.05091 10.2898L9.81818 13.9667L17.9491 6L20 8.02375L9.81818 18Z'
-                            fill='white'
-                          ></path>
-                        </svg>
-                        <p className='text-[#2e2f32] text-[16px] font-medium'>
-                          Marketing & Advertising
-                        </p>
-                      </div>
-                    </div>
+                  {teacherData?.specialized_area?.length === 0 && (
+                    <p className='text-gray-500 italic'>
+                      No Specialized Area information available.
+                    </p>
+                  )}
+                  <div className='grid grid-cols-1 gap-x-5 gap-y-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2'>
+                    {Array.isArray(teacherData?.specialized_area) ? (
+                      teacherData.specialized_area.map((area, index) => (
+                        <div key={index}>
+                          <div className='flex items-center gap-3 mt-2'>
+                            <svg
+                              width='24'
+                              height='24'
+                              viewBox='0 0 24 24'
+                              fill='none'
+                              xmlns='http://www.w3.org/2000/svg'
+                              style={{ color: '#04a9ff' }}
+                            >
+                              <rect
+                                width='24'
+                                height='24'
+                                rx='12'
+                                fill='currentColor'
+                              ></rect>
+                              <path
+                                fillRule='evenodd'
+                                clipRule='evenodd'
+                                d='M9.81818 18L4 12.2993L6.05091 10.2898L9.81818 13.9667L17.9491 6L20 8.02375L9.81818 18Z'
+                                fill='white'
+                              ></path>
+                            </svg>
+                            <p className='text-[#2e2f32] text-[16px] font-medium'>
+                              {area}
+                            </p>
+                          </div>
+                        </div>
+                      ))
+                    ) : (
+                      <span className='text-gray-500 italic'>
+                        {teacherData?.specialized_area ||
+                          'Specialized Area not available'}
+                      </span>
+                    )}
                   </div>
                 </div>
               </div>
@@ -482,75 +312,51 @@ const FacultyDetails = async ({ params }) => {
               <div className='mt-9'>
                 <div className='bg-white card-shadow  rounded-xl p-6'>
                   <h2 className='mb-4 text-xl font-bold capitalize leading-[30px] text-[#17171d]'>
-                    Work Place
+                    Work Place And Experience
                   </h2>
-                  <div className='grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3'>
-                    <div className='border border-[#d9ddef] rounded-lg px-5 py-3 text-center transition-shadow duration-300 hover:shadow-[0_10px_14px_rgba(0,0,0,0.05)]'>
-                      <div className='w-[120px] h-[120px] mx-auto flex items-center justify-center'>
-                        <Image
-                          width={100}
-                          height={100}
-                          className='object-cover'
-                          src='/image/icons/Work-1.png'
-                          alt='icons'
-                        />
+                  {teacherData?.experiences?.length === 0 && (
+                    <p className='text-gray-500 italic'>
+                      No Work Place information available.
+                    </p>
+                  )}
+                  <div className='grid grid-cols-1 gap-5 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2'>
+                    {teacherData?.experiences.map((item) => (
+                      <div
+                        key={item?.id}
+                        className='border border-[#d9ddef] rounded-lg px-5 py-4 text-center transition-shadow duration-300 hover:shadow-[0_10px_14px_rgba(0,0,0,0.05)]'
+                      >
+                        <div className='w-[120px] h-[120px] mx-auto flex items-center justify-center'>
+                          <Image
+                            width={120}
+                            height={120}
+                            className='object-contain rounded-xl'
+                            src={
+                              item?.company_logo || '/image/icons/Work-1.png'
+                            }
+                            alt={
+                              item?.company
+                                ? `${item?.company} logo`
+                                : 'Company logo'
+                            }
+                          />
+                        </div>
+
+                        <div className='mt-4'>
+                          <h3 className='text-base font-semibold text-gray-800'>
+                            {item?.title}
+                          </h3>
+                          <p className='text-sm text-gray-500'>
+                            {item?.company}
+                          </p>
+                        </div>
+
+                        <div className='mt-4'>
+                          <span className='inline-block text-xs px-3 py-1 rounded-full bg-[#1bb57b]/10 text-[#1bb57b]'>
+                            Experience
+                          </span>
+                        </div>
                       </div>
-                    </div>
-                    <div className='border border-[#d9ddef] rounded-lg px-5 py-3 text-center transition-shadow duration-300 hover:shadow-[0_10px_14px_rgba(0,0,0,0.05)]'>
-                      <div className='w-[120px] h-[120px] mx-auto flex items-center justify-center'>
-                        <Image
-                          width={100}
-                          height={100}
-                          className='object-cover'
-                          src='/image/icons/Work-2.png'
-                          alt='icons'
-                        />
-                      </div>
-                    </div>
-                    <div className='border border-[#d9ddef] rounded-lg px-5 py-3 text-center transition-shadow duration-300 hover:shadow-[0_10px_14px_rgba(0,0,0,0.05)]'>
-                      <div className='w-[120px] h-[120px] mx-auto flex items-center justify-center'>
-                        <Image
-                          width={100}
-                          height={100}
-                          className='object-cover'
-                          src='/image/icons/Work-3.png'
-                          alt='icons'
-                        />
-                      </div>
-                    </div>
-                    <div className='border border-[#d9ddef] rounded-lg px-5 py-3 text-center transition-shadow duration-300 hover:shadow-[0_10px_14px_rgba(0,0,0,0.05)]'>
-                      <div className='w-[120px] h-[120px] mx-auto flex items-center justify-center'>
-                        <Image
-                          width={100}
-                          height={100}
-                          className='object-cover'
-                          src='/image/icons/Work-4.png'
-                          alt='icons'
-                        />
-                      </div>
-                    </div>
-                    <div className='border border-[#d9ddef] rounded-lg px-5 py-3 text-center transition-shadow duration-300 hover:shadow-[0_10px_14px_rgba(0,0,0,0.05)]'>
-                      <div className='w-[120px] h-[120px] mx-auto flex items-center justify-center'>
-                        <Image
-                          width={100}
-                          height={100}
-                          className='object-cover'
-                          src='/image/icons/Work-5.png'
-                          alt='icons'
-                        />
-                      </div>
-                    </div>
-                    <div className='border border-[#d9ddef] rounded-lg px-5 py-3 text-center transition-shadow duration-300 hover:shadow-[0_10px_14px_rgba(0,0,0,0.05)]'>
-                      <div className='w-[120px] h-[120px] mx-auto flex items-center justify-center'>
-                        <Image
-                          width={100}
-                          height={100}
-                          className='object-cover'
-                          src='/image/icons/Work-6.png'
-                          alt='icons'
-                        />
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 </div>
               </div>
