@@ -5,7 +5,7 @@ const University = () => {
   return (
     <section className='pb-[100px]'>
       <div className='mx-auto px-4 sm:px-6 container lg:px-8'>
-        <div className='university-background py-16 rounded-[10px] px-12'>
+        <div className='university-background py-6 md:py-12 lg:py-16 rounded-[10px] px-5 md:px-8 lg:px-12'>
           <div className='shape-1'></div>
           <div className='grid grid-cols-1 gap-4 md:grid-cols-5 md:items-center md:gap-8'>
             <div className='md:col-span-3'>
@@ -20,7 +20,7 @@ const University = () => {
               <div className='bg-white p-[30px] rounded-[10px]'>
                 <div>
                   <span></span>
-                  <h2 className='text-[22px] font-semibold leading-tight mb-3'>
+                  <h2 className='text-[18px] md:text-[20px] lg:text-[22px] font-semibold leading-tight mb-3'>
                     Global Academic Collaboration with WUST
                   </h2>
                   <p className='text-[14px] text-[#6C706F] mb-5'>
@@ -31,7 +31,7 @@ const University = () => {
                     countries through innovation and research-based education.
                   </p>
                 </div>
-                <div className='border-b border-[#E0E5EB] pb-[15px] mb-[25px] flex items-center justify-between gap-3'>
+                <div className='border-b border-[#E0E5EB] pb-[15px] mb-[25px] flex items-center justify-between flex-wrap gap-3'>
                   <ul>
                     <li className='text-[#162726] mb-[10px] font-medium text-[15px] flex items-center gap-1.5'>
                       <RiVerifiedBadgeFill className='text-primary' />
@@ -53,7 +53,7 @@ const University = () => {
                     </li>
                   </ul>
                 </div>
-                <div className='flex items-center justify-between gap-2'>
+                <div className='flex items-center justify-start md:justify-between lg:justify-between gap-2 flex-wrap'>
                   <div className='bg-[#F2F4F7] border border-[#E0E5EB] rounded-[10px] w-[100px] h-[70px] flex justify-center items-center'>
                     <img
                       src='/image/certificate/wust-1.png'

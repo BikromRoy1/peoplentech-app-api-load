@@ -123,3 +123,28 @@
     transform: translateY(-10px);
   }
 }
+@media screen and (max-width: 768px) {
+  .hero-title-2 {
+    font-size: 26px;
+  }
+  .hero1-content__desc-2 {
+    font-size: 15px;
+    line-height: 26px;
+  }
+  .primary-btn {
+    background-color: var(--primary-color);
+    color: var(--contrast-color);
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    padding: 14px 20px;
+    border-radius: 100px;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    text-transform: capitalize;
+    position: relative;
+    z-index: 1;
+  }
+}

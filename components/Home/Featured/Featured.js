@@ -119,7 +119,7 @@ const Featured = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className='mb-0 text-[23px] leading-7 font-semibold text-[#162726] hover:text-primary transition-all duration-300 ease-in-out'>
+                    <h3 className='mb-0 text-[18px] md:text-[20px] lg:text-[23px] leading-7 font-semibold text-[#162726] hover:text-primary transition-all duration-300 ease-in-out'>
                       {benefit.title}
                     </h3>
                   </div>

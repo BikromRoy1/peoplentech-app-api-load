@@ -96,7 +96,10 @@ const Navbar = () => {
           </li>
 
           <li>
-            <Link href='/login' className='btn-primary hover-up-2'>
+            <Link
+              href='https://erp.peoplentech.com.bd/login'
+              className='btn-primary hover-up-2'
+            >
               Sign Up
             </Link>
           </li>
@@ -128,12 +131,7 @@ const Navbar = () => {
               <div className='p-5 bg-white border rounded shadow-sm'>
                 <div className='flex items-center justify-between mb-4'>
                   <div>
-                    <Link
-                      href='/'
-                      aria-label=' iTesser-act'
-                      title=' iTesser-act'
-                      className='inline-flex items-center'
-                    >
+                    <Link href='/' className='inline-flex items-center'>
                       <img
                         className='w-48'
                         src='/image/PNT-orginal-PNG.png'
@@ -163,16 +161,24 @@ const Navbar = () => {
                       <Link
                         href='/'
                         aria-label='Home'
-                        className='font-semibold tracking-wide text-[15px]  transition-colors duration-200 text-gray-700 hover:text-primary'
+                        className={`font-semibold tracking-wide text-[15px] transition-colors duration-200 ${
+                          pathname === '/'
+                            ? 'text-primary font-bold'
+                            : 'text-gray-700 hover:text-primary'
+                        }`}
                       >
                         Home
                       </Link>
                     </li>
                     <li>
                       <Link
-                        href='/live'
+                        href='/about'
                         aria-label='live'
-                        className='font-semibold tracking-wide text-[15px]  transition-colors duration-200 text-gray-700 hover:text-primary'
+                        className={`font-semibold tracking-wide text-[15px] transition-colors duration-200 ${
+                          pathname === '/about'
+                            ? 'text-primary font-bold'
+                            : 'text-gray-700 hover:text-primary'
+                        }`}
                       >
                         About Us
                       </Link>
@@ -180,25 +186,37 @@ const Navbar = () => {
                     <li>
                       <Link
                         href='/course'
-                        className='font-semibold tracking-wide text-[15px]  transition-colors duration-200 text-gray-700 hover:text-primary'
+                        className={`font-semibold tracking-wide text-[15px] transition-colors duration-200 ${
+                          pathname === '/course'
+                            ? 'text-primary font-bold'
+                            : 'text-gray-700 hover:text-primary'
+                        }`}
                       >
                         <p> Courses</p>
                       </Link>
                     </li>
                     <li>
                       <Link
-                        href='/team'
-                        className='font-semibold tracking-wide text-[15px]  transition-colors duration-200 text-gray-700 hover:text-primary'
+                        href='/upcoming-batches'
+                        className={`font-semibold tracking-wide text-[15px] transition-colors duration-200 ${
+                          pathname === '/upcoming-batches'
+                            ? 'text-primary font-bold'
+                            : 'text-gray-700 hover:text-primary'
+                        }`}
                       >
                         Upcoming Batch
                       </Link>
                     </li>
                     <li>
                       <Link
-                        href='/blogs'
-                        aria-label='Blog '
-                        title=' ব্লগ '
-                        className='font-semibold tracking-wide text-[15px]  transition-colors duration-200 text-gray-700 hover:text-primary'
+                        href='/seminars'
+                        aria-label='Seminars'
+                        title=' Seminars '
+                        className={`font-semibold tracking-wide text-[15px] transition-colors duration-200 ${
+                          pathname === '/seminars'
+                            ? 'text-primary font-bold'
+                            : 'text-gray-700 hover:text-primary'
+                        }`}
                       >
                         Join Seminars
                       </Link>
@@ -206,14 +224,21 @@ const Navbar = () => {
                     <li>
                       <Link
                         href='/contact'
-                        className='font-semibold tracking-wide text-[15px]  transition-colors duration-200 text-gray-700 hover:text-primary'
+                        className={`font-semibold tracking-wide text-[15px] transition-colors duration-200 ${
+                          pathname === '/contact'
+                            ? 'text-primary font-bold'
+                            : 'text-gray-700 hover:text-primary'
+                        }`}
                       >
                         Contact
                       </Link>
                     </li>
                     <li>
-                      <Link href='/login' className='btn-primary hover-up-2'>
-                        Log In
+                      <Link
+                        href='https://erp.peoplentech.com.bd/login'
+                        className='btn-primary hover-up-2'
+                      >
+                        Sign Up
                       </Link>
                     </li>
                   </ul>
