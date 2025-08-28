@@ -84,6 +84,20 @@ const Navbar = () => {
           </li>
           <li>
             <Link
+              href='/polytechnic'
+              aria-label='polytechnic'
+              title=' Polytechnic '
+              className={`font-semibold tracking-wide text-[15px] transition-colors duration-200 ${
+                pathname === '/polytechnic'
+                  ? 'text-primary font-bold'
+                  : 'text-gray-700 hover:text-primary'
+              }`}
+            >
+              Polytechnic
+            </Link>
+          </li>
+          <li>
+            <Link
               href='/contact'
               className={`font-semibold tracking-wide text-[15px] transition-colors duration-200 ${
                 pathname === '/contact'
@@ -219,6 +233,20 @@ const Navbar = () => {
                         }`}
                       >
                         Join Seminars
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href='/polytechnic'
+                        aria-label='polytechnic'
+                        title=' Polytechnic '
+                        className={`font-semibold tracking-wide text-[15px] transition-colors duration-200 ${
+                          pathname === '/polytechnic'
+                            ? 'text-primary font-bold'
+                            : 'text-gray-700 hover:text-primary'
+                        }`}
+                      >
+                        Polytechnic
                       </Link>
                     </li>
                     <li>

@@ -505,7 +505,7 @@ export default function CoursePagination({ courses }) {
                       className='text-[#162726] border border-[#E0E5EB] font-semibold text-[15px] rounded-full py-[5px] px-[20px] hover:border-primary transition-all duration-300 ease-in-out'
                       href={`/course/${course?.slug}`}
                     >
-                      View Details{' '}
+                      Details
                     </Link>
                   </div>
                 </div>
