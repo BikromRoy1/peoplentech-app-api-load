@@ -26,8 +26,8 @@ const UpcomingCourse = async () => {
     <section className='pb-[100px] pt-[100px] bg-[#F2F4F7]'>
       <div className='mx-auto px-4 sm:px-6 container lg:px-8'>
         <SectionTitle
-          title='Upcoming & Ongoing Courses'
-          subtitle='Skills Courses'
+          title='Our  Upcoming Batch'
+          subtitle='Upcoming  Courses'
         />
         <div className='grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3'>
           {courses?.slice(0, 9)?.map((course) => (
@@ -153,7 +153,7 @@ const UpcomingCourse = async () => {
                   href={course?.registration_link}
                   className='text-white bg-primary border border-primary font-semibold text-[15px] rounded-full py-[5px] px-[20px] hover:border-primary transition-all duration-300 ease-in-out'
                 >
-                  Registration
+                  Enroll Now
                 </a>
                 <Link
                   className='text-[#162726] border border-[#E0E5EB] font-semibold text-[15px] rounded-full py-[5px] px-[20px] hover:border-primary transition-all duration-300 ease-in-out'

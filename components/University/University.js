@@ -9,9 +9,10 @@ const University = () => {
           <div className='shape-1'></div>
           <div className='grid grid-cols-1 gap-4 md:grid-cols-5 md:items-center md:gap-8'>
             <div className='md:col-span-3'>
-              <div className='mb-[5px]'>
+              <div className='mb-[15px]'>
                 <a target='_blank' href='https://www.wust.edu/'>
                   <img
+                    className='w-2/5'
                     src='/image/certificate/accrediated.png'
                     alt='certificate'
                   />
@@ -88,7 +89,7 @@ const University = () => {
               </div>
             </div>
             <div className='md:col-span-2'>
-              <div className='bg-white h-[445px] w-full p-[5px] rounded-[15px]'>
+              <div className='bg-white h-[455px] w-full p-[5px] rounded-[15px]'>
                 <img
                   className='rounded-[10px] w-full h-full object-cover'
                   src='/image/background/cta-img.jpg'

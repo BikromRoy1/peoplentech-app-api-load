@@ -29,7 +29,7 @@ const DiplomaCourse = async () => {
       />
       <div className='mx-auto px-4 sm:px-6 container lg:px-8 relative z-10'>
         <SectionTitle
-          title='Post Graduate Diploma Courses'
+          title='Post Graduate & Professional Diploma Programs'
           subtitle='Diploma Programs Courses'
           className='css-3xrm4'
         />

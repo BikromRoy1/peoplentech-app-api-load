@@ -15,7 +15,7 @@ async function getVideoTestimonials() {
 
 const SuccessStoryVideo = async () => {
   const videos = await getVideoTestimonials();
-  const topThree = videos.slice(0, 3); // Get the first three videos
+  const topThree = videos.slice(0, 6); // Get the first three videos
 
   return (
     <section className='pb-[100px]'>

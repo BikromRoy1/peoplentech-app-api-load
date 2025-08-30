@@ -1,9 +1,9 @@
 import EmptyState from '@/components/EmptyState/EmptyState';
 import PageBanner from '@/components/PageBanner/PageBanner';
 import seminarAnimation from '@/public/image/content.json';
+import Image from 'next/image';
 import Link from 'next/link';
 import { BsFillAlarmFill } from 'react-icons/bs';
-import { FaPersonWalkingArrowLoopLeft } from 'react-icons/fa6';
 import { API_BASE_URL } from '../lib/config';
 
 export const metadata = {
@@ -77,12 +77,25 @@ const Seminars = async () => {
       <PageBanner title='Schedule of free seminars' subtitle='Free Seminars' />
       <div className='pb-[80px] pt-[80px]'>
         <div className='mx-auto px-4 sm:px-6 container lg:px-8'>
-          <div className='grid grid-cols-1 gap-5 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2'>
+          <div className='grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3'>
             {seminars.map((seminar) => (
               <div key={seminar.id} className='project'>
-                <div className='group rounded-[20px] border-2 border-red-300 bg-white px-4 py-6 transition hover:border-primary hover:bg-primary/10 sm:p-[30px]'>
+                <div className='group rounded-[20px] border-2 border-red-300 bg-white px-3 py-4 transition hover:border-primary hover:bg-primary/10 sm:p-[20px]'>
                   <div>
-                    <h6 className='mb-4 text-base font-black uppercase text-secondary'>
+                    <div className=''>
+                      <div className='w-full h-auto overflow-hidden rounded-[10px]'>
+                        <Link href={`/seminars/${seminar.slug}`}>
+                          <Image
+                            width={326}
+                            height={183}
+                            className=' w-full h-full object-cover'
+                            src={seminar?.image || '/image/seminars.webp'}
+                            alt={seminar?.title}
+                          />
+                        </Link>
+                      </div>
+                    </div>
+                    <h6 className='mb-2 mt-5 text-base font-black uppercase text-secondary'>
                       {new Date(seminar.seminar_date).toLocaleDateString(
                         'en-GB',
                         {
@@ -92,7 +105,7 @@ const Seminars = async () => {
                         }
                       )}
                     </h6>
-                    <h4 className='mb-8 text-xl font-extrabold capitalize text-black '>
+                    <h4 className='mb-5 text-lg font-extrabold capitalize text-black  sm:text-xl'>
                       <Link href={`/seminars/${seminar.slug}`}>
                         {seminar?.title}
                       </Link>
@@ -111,7 +124,7 @@ const Seminars = async () => {
                             {seminar?.seminar_time}
                           </div>
                         </div>
-                        <div className='flex items-center gap-2'>
+                        {/* <div className='flex items-center gap-2'>
                           <FaPersonWalkingArrowLoopLeft className='text-primary' />
                           <div className='font-bold text-black capitalize sm:text-base'>
                             {getDaysLeft(seminar.seminar_date)} Day
@@ -120,7 +133,7 @@ const Seminars = async () => {
                               : ''}{' '}
                             left
                           </div>
-                        </div>
+                        </div> */}
                       </div>
                       <Link
                         href={`/seminars/${seminar.slug}`}

@@ -156,7 +156,7 @@ const UpcomingBatches = async () => {
                     href={course?.registration_link}
                     className='text-white bg-primary border border-primary font-semibold text-[15px] rounded-full py-[5px] px-[20px] hover:border-primary transition-all duration-300 ease-in-out'
                   >
-                    Registration
+                    Enroll Now
                   </a>
                   <Link
                     className='text-[#162726] border border-[#E0E5EB] font-semibold text-[15px] rounded-full py-[5px] px-[20px] hover:border-primary transition-all duration-300 ease-in-out'

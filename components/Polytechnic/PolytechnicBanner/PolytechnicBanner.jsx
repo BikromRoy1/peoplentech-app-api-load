@@ -15,26 +15,26 @@ const PolytechnicBanner = () => {
       <div className='mx-auto px-4 sm:px-6 container lg:px-8'>
         <div className='grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 items-center'>
           <div className='poly-hero-content'>
-            <h1 class='mb-6 font-siliguri'>
+            <h1 className='mb-6 font-siliguri'>
               পিপলএনটেক ইনস্টিটিউটের <br />
-              <span class='text-primary'>পলিটেকনিক প্রোগ্রাম</span>
+              <span className='text-primary'>পলিটেকনিক প্রোগ্রাম</span>
             </h1>
-            <p class='mb-4 md:mb-6 font-siliguri text-[#4b5563]'>
+            <p className='mb-4 md:mb-6 font-siliguri text-[#4b5563]'>
               গত ০৮ বছর ধরে লক্ষ লক্ষ শিক্ষার্থীকে পড়ানোর অভিজ্ঞতা নিয়ে এবার
               আমরা সামনাসামনি পড়াবো। এখন, আপনি অত্যাধুনিক মাল্টিমিডিয়া ক্লাসরুমে
               বসে, দেশের সেরা শিক্ষকদের কাছ থেকে সরাসরি শিখতে পারবেন Graduate
               Diploma এবং নিতে পারবেন JOBS’র জন্য কমপ্লিট প্রস্তুতি।
             </p>
-            <div class='hero-buttons'>
+            <div className='hero-buttons'>
               <a
                 href='#about'
-                class='btn btn-primary-poly me-0 sm:me-2 mx-1 font-siliguri'
+                className='btn btn-primary-poly me-0 sm:me-2 mx-1 font-siliguri'
               >
                 আমাদের কোর্স সমূহ
               </a>
               <a
                 href='https://www.youtube.com/watch?v=VSU7YTi-5Mw'
-                class='btn btn-link mt-2 sm:mt-0 glightbox'
+                className='btn btn-link mt-2 sm:mt-0 glightbox'
               >
                 <FaRegCirclePlay className='w-6 h-6' />
                 Play Video
@@ -76,7 +76,7 @@ const PolytechnicBanner = () => {
                   loading='lazy'
                   src='/image/polytechnic/slider-01.jpg'
                   alt='Hero Image'
-                  class='img-fluid size-full'
+                  className='img-fluid size-full'
                 />
               </SwiperSlide>
               <SwiperSlide>
@@ -84,7 +84,7 @@ const PolytechnicBanner = () => {
                   loading='lazy'
                   src='/image/polytechnic/slider-02.jpg'
                   alt='Hero Image'
-                  class='img-fluid size-full'
+                  className='img-fluid size-full'
                 />
               </SwiperSlide>
               <SwiperSlide>
@@ -92,7 +92,7 @@ const PolytechnicBanner = () => {
                   loading='lazy'
                   src='/image/polytechnic/slider-03.jpg'
                   alt='Hero Image'
-                  class='img-fluid size-full'
+                  className='img-fluid size-full'
                 />
               </SwiperSlide>
               <SwiperSlide>
@@ -100,7 +100,7 @@ const PolytechnicBanner = () => {
                   loading='lazy'
                   src='/image/polytechnic/slider-04.jpg'
                   alt='Hero Image'
-                  class='img-fluid size-full'
+                  className='img-fluid size-full'
                 />
               </SwiperSlide>
             </Swiper>
