@@ -1,0 +1,113 @@
+.service-item {
+  padding: 30px;
+  border: 2px solid #153c331a;
+  border-radius: 30px;
+  height: calc(100% - 30px);
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.service-item:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  border-radius: 0px;
+  background-color: #38bdf8;
+  transition: all 0.4s ease-in-out;
+  height: 100%;
+  /* z-index: -1; */
+}
+
+.service-item:hover:before {
+  top: 0;
+}
+.service-item .icon-box {
+  background-color: #d3eaf6;
+  height: 52px;
+  width: 52px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  /* z-index: 1; */
+}
+.service-item .icon-box::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  border-radius: 0px;
+  background-color: #ffffff;
+  transition: all 0.5s ease-in-out;
+  height: 100%;
+}
+
+.service-item:hover .icon-box::before {
+  top: 0;
+}
+.service-item .icon-box img {
+  position: relative;
+  /* z-index: 1; */
+  max-width: 30px;
+}
+.service-item .service-body {
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+.service-item .service-body h3 {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  transition: all 0.5s ease-in-out;
+}
+.service-item:hover .service-body h3 {
+  color: #fff;
+}
+.service-item .service-body p {
+  margin: 0;
+  transition: all 0.5s ease-in-out;
+  color: #4b5563;
+}
+.service-item:hover .service-body p {
+  color: #fff;
+}
+.service-item .service-footer a {
+  background-color: #153c33;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.service-item .service-footer a:hover {
+  background-color: #153c33b3;
+}
+
+.service-cta-item {
+  padding: 40px 100px;
+  text-align: center;
+}
+
+.service-cta-item .icon-box {
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.service-cta-item:hover .service-cta-btn .btn-default:after {
+  width: 100%;
+}
+
+.service-cta-item:hover .service-cta-btn .btn-default:before {
+  background-color: #619e90;
+}
