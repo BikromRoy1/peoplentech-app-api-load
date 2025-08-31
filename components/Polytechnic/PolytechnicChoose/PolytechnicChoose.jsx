@@ -1,7 +1,7 @@
 import DepartmentSectionTitle from '@/components/DepartmentSectionTitle/DepartmentSectionTitle';
-import './PolytechnicWhychoose.css';
+import './PolytechnicChoose.css';
 
-const PolytechnicWhyChoose = () => {
+const PolytechnicChoose = () => {
   return (
     <section className='pb-[80px] pt-[20px] bg-[#ffffff] why-choose-us'>
       <div className='mx-auto px-4 sm:px-6 container lg:px-8'>
@@ -116,4 +116,4 @@ const PolytechnicWhyChoose = () => {
   );
 };
 
-export default PolytechnicWhyChoose;
+export default PolytechnicChoose;
