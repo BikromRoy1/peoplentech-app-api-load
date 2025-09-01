@@ -1,0 +1,23 @@
+.poly-videos .poly-videos {
+  border-radius: 20px;
+  background: linear-gradient(
+    252.86deg,
+    rgba(30, 121, 241, 0.9) 0.98%,
+    rgba(136, 198, 240, 0.9) 98.43%
+  );
+  opacity: 0.8;
+  padding: 10px;
+  position: relative;
+}
+.poly-videos .poly-videos .videos-banner {
+  border-radius: 20px;
+}
+.poly-videos .poly-videos .play-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.poly-videos .poly-videos .play-icons img {
+  width: 120px;
+}
