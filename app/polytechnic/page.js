@@ -8,7 +8,13 @@ import PolytechnicSuccess from '@/components/Polytechnic/PolytechnicSuccess/Poly
 import PolytechnicSuccessVideo from '@/components/Polytechnic/PolytechnicSuccessVideo/PolytechnicSuccessVideo';
 import PolytechnicVideos from '@/components/Polytechnic/PolytechnicVideos/PolytechnicVideos';
 
-const page = () => {
+export const metadata = {
+  title: ' Polytechnic  - PeopleNTech',
+  description:
+    'We PeopleNTech is offering professional IT training course &amp; job placement facility for students. We are affiliating with top notch IT company in Bangladesh..',
+};
+
+const Polytechnic = () => {
   return (
     <div>
       <PolytechnicBanner />
@@ -24,4 +30,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Polytechnic;
