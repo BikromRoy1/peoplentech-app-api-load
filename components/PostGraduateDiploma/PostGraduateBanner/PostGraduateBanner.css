@@ -1,0 +1,189 @@
+.pp-theme-btn {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 19px 24px;
+  position: relative;
+  overflow: hidden;
+  transition: all 700ms ease;
+  z-index: 99;
+  color: #fff;
+  border-radius: 100px;
+}
+
+.pp-theme-btn i {
+  margin-left: 10px;
+}
+
+.pp-theme-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s, border 0.5s;
+}
+
+.pp-theme-btn::after {
+  content: '';
+  position: absolute;
+  top: 1%;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  background-color: #1a192e;
+  border-color: transparent;
+  border-radius: 50%;
+  transform: translate(-10px, -70px) scale(0.1);
+  opacity: 0;
+  z-index: -1;
+  transition: transform 0.5s, opacity 0.5s, background-color 0.5s;
+}
+
+.pp-theme-btn.style-3 {
+  background: #7b1fe4;
+}
+.pp-theme-btn:hover {
+  color: #000000;
+}
+.pp-theme-btn:hover::after {
+  opacity: 1;
+  transform: scaleX(1.5) scaleY(1.5);
+}
+
+.pp-hero-1 {
+  position: relative;
+  padding: 150px 0 0;
+  z-index: 9;
+}
+@media (max-width: 1199px) {
+  .pp-hero-1 {
+    padding: 150px 0 100px;
+    margin-top: 0;
+  }
+}
+@media (max-width: 991px) {
+  .pp-hero-1 {
+    padding: 140px 0 80px;
+  }
+}
+@media (max-width: 575px) {
+  .pp-hero-1 {
+    margin: 0 15px;
+  }
+}
+.pp-hero-1::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  /* background: linear-gradient(270deg, #a121ca 0%, #7b1fe4 100%); */
+  background: linear-gradient(270deg, #04a9ff 0%, #0b6a9c 100%);
+  z-index: -1;
+  top: -15%;
+  border-radius: 48px;
+}
+@media (max-width: 1199px) {
+  .pp-hero-1::before {
+    top: initial;
+  }
+}
+.pp-hero-1 .top-shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.pp-hero-1 .top-shape img {
+  width: 100%;
+  height: 100%;
+}
+.pp-hero-1 .pp-hero-content {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.pp-hero-1 .pp-hero-content h1 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 112%;
+}
+.pp-hero-1 .pp-hero-content p {
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 1025px;
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.pp-hero-1 .pp-hero-content .pp-hero-button {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 48px;
+  justify-content: center;
+}
+@media (max-width: 1199px) {
+  .pp-hero-1 .pp-hero-content .pp-hero-button {
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+}
+.pp-hero-1 .pp-hero-content .pp-hero-button .pp-theme-btn {
+  background: transparent;
+  border: 1px solid #fff;
+}
+.pp-hero-1 .pp-hero-content .pp-hero-button .pp-theme-btn::after {
+  background: #fff;
+}
+.pp-hero-1 .pp-hero-content .pp-hero-button .pp-theme-btn:hover {
+  border: 1px solid transparent;
+  color: black;
+}
+
+.pp-hero-1 .pp-hero-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  border: 1px solid #cccbd13d;
+  box-shadow: 0 0.3rem 0.7rem rgba(65, 198, 251, 0.2);
+  padding: 15px;
+}
+@media (max-width: 1399px) {
+  .pp-hero-1 .pp-hero-content h1 {
+    font-size: 60px;
+  }
+}
+@media (max-width: 1199px) {
+  .pp-hero-1 .pp-hero-content h1 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 991px) {
+  .pp-hero-1 .pp-hero-content h1 {
+    font-size: 45px;
+  }
+}
+@media (max-width: 767px) {
+  .pp-hero-1 .pp-hero-content h1 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 575px) {
+  .pp-hero-1 .pp-hero-content h1 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 470px) {
+  .pp-hero-1 .pp-hero-content h1 {
+    font-size: 30px;
+  }
+}
