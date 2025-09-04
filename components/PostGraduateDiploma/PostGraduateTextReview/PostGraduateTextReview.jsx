@@ -11,10 +11,10 @@ const PostGraduateTextReview = () => {
           subtitle='ট্রেনিং সাফল্য'
           text='আমাদের কোর্সগুলি থেকে যারা শিক্ষা গ্রহণ করেছেন এবং বিভিন্ন জায়গায় চাকরি/ইন্টার্নশিপ পেয়েছেন তাদের কিছু ব্যক্তির প্রোফাইল নীচে দেওয়া হল।'
         />
-        <div class='testimonial-masonry'>
-          <div class='testimonial-item' data-aos='fade-up'>
-            <div class='testimonial-content'>
-              <div class='quote-pattern'>
+        <div className='testimonial-masonry'>
+          <div className='testimonial-item' data-aos='fade-up'>
+            <div className='testimonial-content'>
+              <div className='quote-pattern'>
                 <FaQuoteLeft className='text-primary' />
               </div>
               <p className='font-siliguri'>
@@ -25,13 +25,13 @@ const PostGraduateTextReview = () => {
                 সবসময় পাশে ছিল, যা আমাকে আত্মবিশ্বাসী করে চাকরির বাজারে এগিয়ে
                 যেতে সাহায্য করেছে।
               </p>
-              <div class='client-info'>
-                <div class='client-image'>
+              <div className='client-info'>
+                <div className='client-image'>
                   <img src='/image/icons/user-14.jpg' alt='Client' />
                 </div>
-                <div class='client-details'>
+                <div className='client-details'>
                   <h3>Arif Hossain</h3>
-                  <span class='position'>
+                  <span className='position'>
                     Software Engineer at TechSolutions
                   </span>
                 </div>
@@ -40,12 +40,12 @@ const PostGraduateTextReview = () => {
           </div>
 
           <div
-            class='testimonial-item highlight'
+            className='testimonial-item highlight'
             data-aos='fade-up'
             data-aos-delay='100'
           >
-            <div class='testimonial-content'>
-              <div class='quote-pattern'>
+            <div className='testimonial-content'>
+              <div className='quote-pattern'>
                 <FaQuoteLeft className='text-primary' />
               </div>
               <p className='font-siliguri'>
@@ -56,21 +56,25 @@ const PostGraduateTextReview = () => {
                 প্রস্তুত করেছে। কোর্সের সাপোর্ট টিম সবসময় সাহায্য করেছে, যা
                 অভিজ্ঞতাকে আরও সমৃদ্ধ করেছে।
               </p>
-              <div class='client-info'>
-                <div class='client-image'>
+              <div className='client-info'>
+                <div className='client-image'>
                   <img src='/image/icons/user-13.jpg' alt='Client' />
                 </div>
-                <div class='client-details'>
+                <div className='client-details'>
                   <h3>Nusrat Jahan</h3>
-                  <span class='position'>HR Executive at GlobalCorp</span>
+                  <span className='position'>HR Executive at GlobalCorp</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class='testimonial-item' data-aos='fade-up' data-aos-delay='200'>
-            <div class='testimonial-content'>
-              <div class='quote-pattern'>
+          <div
+            className='testimonial-item'
+            data-aos='fade-up'
+            data-aos-delay='200'
+          >
+            <div className='testimonial-content'>
+              <div className='quote-pattern'>
                 <FaQuoteLeft className='text-primary' />
               </div>
               <p className='font-siliguri'>
@@ -80,13 +84,13 @@ const PostGraduateTextReview = () => {
                 আমি আত্মবিশ্বাসের সঙ্গে চাকরির বাজারে প্রবেশ করতে পারলাম এবং
                 সফলভাবে প্রথম কাজ শুরু করেছি।
               </p>
-              <div class='client-info'>
-                <div class='client-image'>
+              <div className='client-info'>
+                <div className='client-image'>
                   <img src='/image/icons/user-06.webp' alt='Client' />
                 </div>
-                <div class='client-details'>
+                <div className='client-details'>
                   <h3>Emma Thompson</h3>
-                  <span class='position'>
+                  <span className='position'>
                     Frontend Developer at CreativeSoft
                   </span>
                 </div>
@@ -94,9 +98,13 @@ const PostGraduateTextReview = () => {
             </div>
           </div>
 
-          <div class='testimonial-item' data-aos='fade-up' data-aos-delay='300'>
-            <div class='testimonial-content'>
-              <div class='quote-pattern'>
+          <div
+            className='testimonial-item'
+            data-aos='fade-up'
+            data-aos-delay='300'
+          >
+            <div className='testimonial-content'>
+              <div className='quote-pattern'>
                 <FaQuoteLeft className='text-primary' />
               </div>
               <p className='font-siliguri'>
@@ -106,25 +114,25 @@ const PostGraduateTextReview = () => {
                 সবসময় আমার প্রশ্নের উত্তর দিয়েছে, যা শেখার অভিজ্ঞতাকে আরও উন্নত
                 করেছে।
               </p>
-              <div class='client-info'>
-                <div class='client-image'>
+              <div className='client-info'>
+                <div className='client-image'>
                   <img src='/image/icons/user-12.jpg' alt='Client' />
                 </div>
-                <div class='client-details'>
+                <div className='client-details'>
                   <h3>Sabina Akter</h3>
-                  <span class='position'>Data Analyst at InfoTech Ltd</span>
+                  <span className='position'>Data Analyst at InfoTech Ltd</span>
                 </div>
               </div>
             </div>
           </div>
 
           <div
-            class='testimonial-item highlight'
+            className='testimonial-item highlight'
             data-aos='fade-up'
             data-aos-delay='400'
           >
-            <div class='testimonial-content'>
-              <div class='quote-pattern'>
+            <div className='testimonial-content'>
+              <div className='quote-pattern'>
                 <FaQuoteLeft className='text-primary' />
               </div>
               <p className='font-siliguri'>
@@ -134,13 +142,13 @@ const PostGraduateTextReview = () => {
                 প্রশিক্ষকরা আমাকে প্রতিটি সমস্যার সমাধান দেখিয়েছেন। এই কোর্স
                 আমার ক্যারিয়ারকে নতুন মাত্রা দিয়েছে।
               </p>
-              <div class='client-info'>
-                <div class='client-image'>
+              <div className='client-info'>
+                <div className='client-image'>
                   <img src='/image/icons/pic4.jpg' alt='Client' />
                 </div>
-                <div class='client-details'>
+                <div className='client-details'>
                   <h3>Olivia Carter</h3>
-                  <span class='position'>
+                  <span className='position'>
                     Full Stack Developer at CodeCrafters
                   </span>
                 </div>
@@ -148,9 +156,13 @@ const PostGraduateTextReview = () => {
             </div>
           </div>
 
-          <div class='testimonial-item' data-aos='fade-up' data-aos-delay='500'>
-            <div class='testimonial-content'>
-              <div class='quote-pattern'>
+          <div
+            className='testimonial-item'
+            data-aos='fade-up'
+            data-aos-delay='500'
+          >
+            <div className='testimonial-content'>
+              <div className='quote-pattern'>
                 <FaQuoteLeft className='text-primary' />
               </div>
               <p className='font-siliguri'>
@@ -160,13 +172,15 @@ const PostGraduateTextReview = () => {
                 অর্জনে সাহায্য করেছে। আমি এখন আত্মবিশ্বাসের সঙ্গে নতুন
                 চ্যালেঞ্জের মুখোমুখি হতে পারি।
               </p>
-              <div class='client-info'>
-                <div class='client-image'>
+              <div className='client-info'>
+                <div className='client-image'>
                   <img src='/image/icons/pic8.jpg' alt='Client' />
                 </div>
-                <div class='client-details'>
+                <div className='client-details'>
                   <h3>Nathan Brooks</h3>
-                  <span class='position'>HR Coordinator at GlobalReach</span>
+                  <span className='position'>
+                    HR Coordinator at GlobalReach
+                  </span>
                 </div>
               </div>
             </div>
