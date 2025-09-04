@@ -144,11 +144,24 @@ const CourseDetails = async ({ params }) => {
             </div>
             <div className='md:col-span-2 text-white'>
               <div className='border-[7px] border-[#f3f4f6] rounded-[15px] overflow-hidden bg-white'>
-                <img
-                  className='w-full rounded-[10px]'
-                  src={course?.image || '/image/default.jpg'}
-                  alt={course?.name}
-                />
+                <div className='relative'>
+                  <img
+                    className='w-full rounded-[10px]'
+                    src={course?.image || '/image/default.jpg'}
+                    alt={course?.name}
+                  />
+                  <div className='flex items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10'>
+                    <a href='#'>
+                      <Image
+                        width={60}
+                        height={60}
+                        className='w-[70px] h-[70px]'
+                        src='/image/icons/play_icon_2 1.svg'
+                        alt='play icon'
+                      />
+                    </a>
+                  </div>
+                </div>
                 <div className='p-4'>
                   <h3 className='mt-1 mb-3'>
                     <span className='text-secondary font-bold text-[23px]'>

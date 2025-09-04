@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
         <TopBar />
         <Navbar />
         {children}
-        <ToastContainer  autoClose={4000} theme='colored' />
+        <ToastContainer autoClose={4000} theme='colored' />
         <Footer />
         <a
           href='https://wa.me/8801844944569'

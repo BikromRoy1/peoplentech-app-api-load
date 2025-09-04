@@ -84,8 +84,7 @@ export default function VideoTestimonialsClient() {
 
                 <div className='flex items-center justify-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-10'>
                   <a
-                    href={video.video_url}
-                    target='_blank'
+                    href='https://www.youtube.com/watch?v=GFSQYBZ7-yU'
                     rel='noopener noreferrer'
                   >
                     <img
