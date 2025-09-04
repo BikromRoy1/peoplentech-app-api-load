@@ -153,7 +153,7 @@ const UpcomingBatches = async () => {
                 <div className='flex items-center justify-between px-[20px] pb-[20px]'>
                   <a
                     target='_blank'
-                    href={course?.registration_link}
+                    href={course?.enroll_link}
                     className='text-white bg-primary border border-primary font-semibold text-[15px] rounded-full py-[5px] px-[20px] hover:border-primary transition-all duration-300 ease-in-out'
                   >
                     Enroll Now
