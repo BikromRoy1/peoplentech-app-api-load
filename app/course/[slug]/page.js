@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { FaFacebookF } from 'react-icons/fa';
 import { FaLinkedinIn, FaRegClone, FaRegFileLines } from 'react-icons/fa6';
 import { HiOutlineUserGroup } from 'react-icons/hi';
+import { MdTimeline } from 'react-icons/md';
 import { RiTimerLine } from 'react-icons/ri';
 import { SiReaddotcv } from 'react-icons/si';
 import './CourseDetails.css';
@@ -356,42 +357,75 @@ const CourseDetails = async ({ params }) => {
               </div>
 
               <div className='mt-10'>
-                <div className='border border-[#dee2e6] rounded-xl p-6'>
-                  <h2 className='mb-5 text-2xl font-semibold capitalize leading-[30px] text-[#003384]'>
-                    Any more query?
-                  </h2>
-                  <div className='flex w-full items-center justify-start'>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='28'
-                      height='28'
-                      fill='none'
-                      viewBox='0 0 29 28'
-                      className='w-[17px] h-[17px] md:w-6 md:h-6'
-                    >
-                      <path
-                        stroke='#04a9ff'
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        strokeWidth='2.223'
-                        d='M17.246 2.917a9.298 9.298 0 018.213 8.204M17.246 7.05a5.164 5.164 0 014.083 4.083'
-                      ></path>
-                      <path
-                        stroke='#04a9ff'
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        strokeWidth='2.223'
-                        d='M13.37 14.551c4.655 4.653 5.71-.73 8.673 2.231 2.857 2.856 4.5 3.428.88 7.047-.454.364-3.334 4.748-13.457-5.373C-.658 8.335 3.722 5.451 4.086 4.998c3.629-3.628 4.193-1.977 7.05.879 2.961 2.962-2.42 4.022 2.235 8.674z'
-                        clipRule='evenodd'
-                      ></path>
-                    </svg>
-                    <h3 className='ml-2 text-md font-medium md:text-lg text-[#04a9ff]'>
-                      Call For Any Information Regarding The Course
-                      <span className='text-[#04a9ff]'>
-                        {' '}
-                        +880179-944-6655 (09 AM to 09 PM)
-                      </span>
-                    </h3>
+                <div className='border border-[#eeeeee] rounded-xl p-7 query-card bg-white relative w-full'>
+                  <div className=' lg:flex lg:flex-row justify-between bg-cover items-center flex-col gap-5'>
+                    <div className='max-w-lg relative z-10'>
+                      <h3 className='font-bold text-white text-2xl md:text-2xl mb-3'>
+                        Any more query?
+                      </h3>
+                      <p className='text-base text-white/70 mb-7 capitalize'>
+                        Call For Any Information Regarding The Course. Our team
+                        is always ready to assist you with guidance, support,
+                        and detailed course information.
+                      </p>
+                      <div>
+                        <div className='flex items-center gap-3 mb-3'>
+                          <div>
+                            <div className=''>
+                              <svg
+                                xmlns='http://www.w3.org/2000/svg'
+                                width='28'
+                                height='28'
+                                fill='none'
+                                viewBox='0 0 29 28'
+                                className='w-[17px] h-[17px] md:w-6 md:h-6'
+                              >
+                                <path
+                                  stroke='#fff'
+                                  strokeLinecap='round'
+                                  strokeLinejoin='round'
+                                  strokeWidth='2.223'
+                                  d='M17.246 2.917a9.298 9.298 0 018.213 8.204M17.246 7.05a5.164 5.164 0 014.083 4.083'
+                                ></path>
+                                <path
+                                  stroke='#fff'
+                                  strokeLinecap='round'
+                                  strokeLinejoin='round'
+                                  strokeWidth='2.223'
+                                  d='M13.37 14.551c4.655 4.653 5.71-.73 8.673 2.231 2.857 2.856 4.5 3.428.88 7.047-.454.364-3.334 4.748-13.457-5.373C-.658 8.335 3.722 5.451 4.086 4.998c3.629-3.628 4.193-1.977 7.05.879 2.961 2.962-2.42 4.022 2.235 8.674z'
+                                  clipRule='evenodd'
+                                ></path>
+                              </svg>
+                            </div>
+                          </div>
+                          <h4 className='text-[15px] font-semibold text-[#fff]'>
+                            +880179-944-6655
+                          </h4>
+                        </div>
+
+                        <div className='flex items-center gap-3'>
+                          <div>
+                            <div className=''>
+                              <MdTimeline size={24} className='text-white' />
+                            </div>
+                          </div>
+                          <h4 className='text-[15px] font-semibold text-[#fff]'>
+                            09 AM to 09 PM
+                          </h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div className=' overflow-hidden  hidden lg:block'>
+                        <Image
+                          width={280}
+                          height={280}
+                          src='/image/background/media-65.png'
+                          className='hidden lg:block relative z-10 rounded-[10px]'
+                          alt='certificate'
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
