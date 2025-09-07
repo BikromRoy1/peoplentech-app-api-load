@@ -38,7 +38,7 @@
   right: 0;
   top: 0;
   bottom: 0;
-  border-radius: 12px;
+  border-radius: 20px;
   z-index: -1;
 }
 .query-card:after {
@@ -47,7 +47,7 @@
   z-index: -1;
   width: 100%;
   height: 100%;
-  border-radius: 0.5rem;
+  border-radius: 20px;
   /* background-image: linear-gradient(
     to right,
     rgba(88, 155, 255, 0.9) 30%,

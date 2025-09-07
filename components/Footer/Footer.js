@@ -78,7 +78,10 @@ const Footer = () => {
               <nav>
                 <ul className='space-y-4'>
                   <li>
-                    <a href='#' className='font-medium text-base text-white'>
+                    <a
+                      href='/about'
+                      className='font-medium text-base text-white'
+                    >
                       About Us
                     </a>
                   </li>
@@ -118,14 +121,20 @@ const Footer = () => {
               <nav>
                 <ul className='space-y-4'>
                   <li>
-                    <a href='#' className='font-medium text-base text-white'>
+                    <Link
+                      href='/seminars'
+                      className='font-medium text-base text-white'
+                    >
                       Join Free Seminars
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href='#' className='font-medium text-base text-white'>
+                    <Link
+                      href='/success-stories'
+                      className='font-medium text-base text-white'
+                    >
                       Success Story
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a href='#' className='font-medium text-base text-white'>
@@ -143,9 +152,12 @@ const Footer = () => {
                     </a>
                   </li>
                   <li>
-                    <a href='#' className='font-medium text-base text-white'>
+                    <Link
+                      href='/blog'
+                      className='font-medium text-base text-white'
+                    >
                       Blog
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </nav>

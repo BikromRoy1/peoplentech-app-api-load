@@ -357,7 +357,7 @@ const CourseDetails = async ({ params }) => {
               </div>
 
               <div className='mt-10'>
-                <div className='border border-[#eeeeee] rounded-xl p-7 query-card bg-white relative w-full'>
+                <div className='border border-[#eeeeee] rounded-[20px] p-7 query-card bg-white relative w-full'>
                   <div className=' lg:flex lg:flex-row justify-between bg-cover items-center flex-col gap-5'>
                     <div className='max-w-lg relative z-10'>
                       <h3 className='font-bold text-white text-2xl md:text-2xl mb-3'>
