@@ -1,3 +1,4 @@
+import VideosModal from '@/components/VideosModal/VideosModal';
 import './PolytechnicVideos.css';
 
 const PolytechnicVideos = () => {
@@ -7,20 +8,17 @@ const PolytechnicVideos = () => {
         <div className='grid grid-cols-1 md:grid-cols-12 md:items-center'>
           <div className='md:col-span-8 md:col-start-3'>
             <div className='poly-videos'>
-              <a
-                href='https://www.youtube.com/watch?v=VSU7YTi-5Mw'
-                className='glightbox'
-              >
+              <label htmlFor='video_modal' className='cursor-pointer'>
                 <img
                   src='https://img.youtube.com/vi/VSU7YTi-5Mw/maxresdefault.jpg'
                   loading='lazy'
                   className='img-fluid videos-banner'
                   alt='PeopleTech Institute of IT'
                 />
-              </a>
-              <a
-                href='https://www.youtube.com/watch?v=VSU7YTi-5Mw'
-                className='glightbox play-icons'
+              </label>
+              <label
+                htmlFor='video_modal'
+                className=' play-icons cursor-pointer'
               >
                 <img
                   src='/image/icons/play_icon_2 1.svg'
@@ -28,11 +26,15 @@ const PolytechnicVideos = () => {
                   alt='playing-icons'
                   loading='lazy'
                 />
-              </a>
+              </label>
             </div>
           </div>
         </div>
       </div>
+      <VideosModal
+        video_url='https://www.youtube.com/embed/VSU7YTi-5Mw?si=PYFD0vUNE_v4KU4h'
+        video_title='Industry Skills For Global Career'
+      />
     </section>
   );
 };

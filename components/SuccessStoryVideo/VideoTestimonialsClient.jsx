@@ -2,6 +2,7 @@
 
 import { API_BASE_URL } from '@/app/lib/config';
 import { useEffect, useState } from 'react';
+import VideosModal from '../VideosModal/VideosModal';
 
 function getYouTubeId(url) {
   const match = url.match(/(?:v=|youtu\.be\/)([^&\n?#]+)/);
@@ -69,31 +70,27 @@ export default function VideoTestimonialsClient() {
               : '/images/default-video-thumb.jpg';
             return (
               <div key={video.id} className='relative successStudents-items'>
-                <a
-                  href={video.video_url}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='block'
-                >
+                <label htmlFor='video_modal' className='block cursor-pointer'>
                   <img
                     className='w-full h-full object-cover rounded-[10px] cursor-pointer'
                     src={thumbnail}
                     alt='success story'
                   />
-                </a>
+                </label>
 
                 <div className='flex items-center justify-center absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-10'>
-                  <a
-                    href='https://www.youtube.com/watch?v=GFSQYBZ7-yU'
-                    rel='noopener noreferrer'
-                  >
+                  <label htmlFor='video_modal' className='cursor-pointer'>
                     <img
                       className='w-[70px] h-[70px]'
                       src='/image/icons/play_icon_2 1.svg'
                       alt='play icon'
                     />
-                  </a>
+                  </label>
                 </div>
+                <VideosModal
+                  video_url={video.video_url}
+                  video_title='Video Testimonial'
+                />
               </div>
             );
           })

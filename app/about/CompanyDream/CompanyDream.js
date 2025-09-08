@@ -1,3 +1,4 @@
+import VideosModal from '@/components/VideosModal/VideosModal';
 import Image from 'next/image';
 import './CompanyDream.css';
 
@@ -28,21 +29,15 @@ const CompanyDream = () => {
             </p>
           </div>
           <div className='banner-bg rounded-[20px] p-2.5 relative'>
-            <a
-              href='https://www.youtube.com/watch?v=nxSFNs00AkY'
-              className='glightbox'
-            >
+            <label htmlFor='video_modal' className='cursor-pointer'>
               <img
                 src='/image/about-bg.png'
                 loading='lazy'
                 className='w-full rounded-[20px] videos-banner'
                 alt='PeopleTech Institute of IT'
               />
-            </a>
-            <a
-              href='https://www.youtube.com/watch?v=nxSFNs00AkY'
-              className='glightbox play-icons'
-            >
+            </label>
+            <label htmlFor='video_modal' className=' play-icons cursor-pointer'>
               <Image
                 width={80}
                 height={80}
@@ -50,10 +45,14 @@ const CompanyDream = () => {
                 className='object-cover'
                 alt='playing-icons'
               />
-            </a>
+            </label>
           </div>
         </div>
       </div>
+      <VideosModal
+        video_url='https://www.youtube.com/embed/nxSFNs00AkY?si=SyEpPGAoXeFj31xZ'
+        video_title='PeopleTech Institute of IT'
+      />
     </section>
   );
 };

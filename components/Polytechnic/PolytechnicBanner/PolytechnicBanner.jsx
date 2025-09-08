@@ -7,6 +7,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+import VideosModal from '@/components/VideosModal/VideosModal';
 import { Autoplay, Pagination } from 'swiper/modules';
 import './PolytechnicBanner.css';
 const PolytechnicBanner = () => {
@@ -32,13 +33,13 @@ const PolytechnicBanner = () => {
               >
                 আমাদের কোর্স সমূহ
               </a>
-              <a
-                href='https://www.youtube.com/watch?v=VSU7YTi-5Mw'
-                className='btn btn-link mt-2 sm:mt-0 glightbox'
+              <label
+                htmlFor='video_modal'
+                className='btn btn-link mt-2 sm:mt-0'
               >
                 <FaRegCirclePlay className='w-6 h-6' />
                 Play Video
-              </a>
+              </label>
             </div>
           </div>
           <div className='hero-image'>
@@ -107,6 +108,10 @@ const PolytechnicBanner = () => {
           </div>
         </div>
       </div>
+      <VideosModal
+        video_url='https://www.youtube.com/embed/VSU7YTi-5Mw?si=PYFD0vUNE_v4KU4h'
+        video_title='Industry Skills For Global Career'
+      />
     </section>
   );
 };

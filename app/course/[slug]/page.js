@@ -2,6 +2,7 @@ import { API_BASE_URL } from '@/app/lib/config';
 import CourseModules from '@/components/CourseModules/CourseModules';
 import DetailsAbout from '@/components/DetailsAbout/DetailsAbout';
 import FeedbackCourse from '@/components/FeedbackCourse/FeedbackCourse';
+import VideosModal from '@/components/VideosModal/VideosModal';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaFacebookF } from 'react-icons/fa';
@@ -52,6 +53,8 @@ export async function generateMetadata({ params }) {
 const CourseDetails = async ({ params }) => {
   const { slug } = await params;
   const course = await getCourse(slug);
+
+  console.log(course?.video_url);
 
   return (
     <section>
@@ -152,7 +155,7 @@ const CourseDetails = async ({ params }) => {
                     alt={course?.name}
                   />
                   <div className='flex items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10'>
-                    <a href='#'>
+                    <label htmlFor='video_modal' className='cursor-pointer'>
                       <Image
                         width={60}
                         height={60}
@@ -160,7 +163,7 @@ const CourseDetails = async ({ params }) => {
                         src='/image/icons/play_icon_2 1.svg'
                         alt='play icon'
                       />
-                    </a>
+                    </label>
                   </div>
                 </div>
                 <div className='p-4'>
@@ -185,6 +188,11 @@ const CourseDetails = async ({ params }) => {
           </div>
         </div>
       </section>
+
+      <VideosModal
+        video_url={course?.video_url || ''}
+        video_title={course?.name || ''}
+      />
 
       {/* More details */}
       <div className='pb-[60px] pt-[60px]'>
