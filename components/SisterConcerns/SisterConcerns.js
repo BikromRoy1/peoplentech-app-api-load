@@ -30,7 +30,7 @@ const SisterConcerns = () => {
       concerns.forEach((_, idx) => {
         setTimeout(() => {
           setVisibleIndexes((prev) => [...prev, idx]);
-        }, idx * 150); // প্রতিটি আইটেমের জন্য 150ms delay
+        }, idx * 150);
       });
     }
   }, [loading, concerns]);

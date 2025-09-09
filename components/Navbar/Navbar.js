@@ -82,7 +82,7 @@ const Navbar = () => {
               Join Seminars
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link
               href='/polytechnic'
               aria-label='polytechnic'
@@ -95,7 +95,7 @@ const Navbar = () => {
             >
               Polytechnic
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link
               href='/contact'
@@ -235,7 +235,7 @@ const Navbar = () => {
                         Join Seminars
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link
                         href='/polytechnic'
                         aria-label='polytechnic'
@@ -248,7 +248,7 @@ const Navbar = () => {
                       >
                         Polytechnic
                       </Link>
-                    </li>
+                    </li> */}
                     <li>
                       <Link
                         href='/contact'

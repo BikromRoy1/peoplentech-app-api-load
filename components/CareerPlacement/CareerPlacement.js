@@ -39,7 +39,7 @@ const CareerPlacement = () => {
           title=' Recent  Successful  Career Placements'
           subtitle='Career Placement'
         />
-
+ssss
         {loading ? (
           <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10'>
             <div className='relative successStudents-items animate-pulse'>

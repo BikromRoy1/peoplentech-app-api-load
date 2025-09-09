@@ -2,6 +2,7 @@ import { API_BASE_URL } from '@/app/lib/config';
 import Link from 'next/link';
 import { IoArrowForwardSharp } from 'react-icons/io5';
 import SectionTitle from '../SectionTitle/SectionTitle';
+import VideosModal from '../VideosModal/VideosModal';
 import './SuccessStoryVideo.css';
 
 async function getVideoTestimonials() {
@@ -32,30 +33,26 @@ const SuccessStoryVideo = async () => {
               : '/images/default-video-thumb.jpg';
             return (
               <div key={video.id} className='relative successStudents-items'>
-                <a
-                  href={video.video_url}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
+                <label htmlFor='video_modal' className='cursor-pointer'>
                   <img
                     className='w-full h-full object-cover rounded-[10px] cursor-pointer'
                     src={thumbnail}
                     alt='success story'
                   />
-                </a>
+                </label>
                 <div className='flex items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10'>
-                  <a
-                    href={video.video_url}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                  >
+                  <label htmlFor='video_modal' className='cursor-pointer'>
                     <img
                       className='w-[70px] h-[70px]'
                       src='/image/icons/play_icon_2 1.svg'
                       alt='play icon'
                     />
-                  </a>
+                  </label>
                 </div>
+                <VideosModal
+                  video_url={video.video_url}
+                  video_title='Video Testimonial'
+                />
               </div>
             );
           })}

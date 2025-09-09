@@ -26,7 +26,7 @@ const PostGraduateCourses = async () => {
           text='দক্ষতা বৃদ্ধি করে নিজের ক্যারিয়ার গড়তে বেঁছে নাও তোমার পছন্দের স্কিল অনলাইন এবং অফলাইন যেকোনো কোর্সে তোমার সুবিধামতো সময়ে ভর্তি হতে পারবে এখনই। চয়েস করো তোমার কোর্স ও ব্যাচের টাইম।'
         />
         <div className='grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3'>
-          {courses?.slice(0, 3)?.map((course) => (
+          {courses?.map((course) => (
             <div
               key={course?.id}
               className='bg-white rounded-[10px] border border-[#E0E5EB] pt-[20px] transition-transform duration-300 hover:-translate-y-[8px]'

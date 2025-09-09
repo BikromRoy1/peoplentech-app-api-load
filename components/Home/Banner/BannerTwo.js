@@ -1,5 +1,12 @@
+'use client';
+
 import Link from 'next/link';
 import { IoArrowForwardSharp } from 'react-icons/io5';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Autoplay, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import './Banner.css';
 const BannerTwo = () => {
   return (
@@ -40,13 +47,54 @@ const BannerTwo = () => {
             </div>
           </div>
           <div className='flex items-center'>
-            <div className='relative'>
-              <img
-                className='w-full banner-img'
-                src='/image/background/hero-2.webp'
-                alt='banner'
-              />
-            </div>
+            <Swiper
+              modules={[Pagination, Autoplay]}
+              spaceBetween={30}
+              autoplay={{
+                delay: 2000,
+                pauseOnMouseEnter: true,
+                disableOnInteraction: false,
+              }}
+              speed={400}
+              loop={true}
+              breakpoints={{
+                0: {
+                  slidesPerView: 1,
+                  spaceBetween: 10,
+                },
+                768: {
+                  slidesPerView: 1,
+                  spaceBetween: 15,
+                },
+                992: {
+                  slidesPerView: 1,
+                  spaceBetween: 15,
+                },
+                1200: {
+                  slidesPerView: 1,
+                  spaceBetween: 23,
+                },
+              }}
+            >
+              <SwiperSlide className=''>
+                <div className='relative'>
+                  <img
+                    className='w-[600px] banner-img mx-auto img-fluid'
+                    src='/image/background/hero-2.webp'
+                    alt='banner'
+                  />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className='relative'>
+                  <img
+                    className='w-[600px] banner-img mx-auto img-fluid'
+                    src='/image/background/hero-2.webp'
+                    alt='banner'
+                  />
+                </div>
+              </SwiperSlide>
+            </Swiper>
           </div>
         </div>
       </div>
