@@ -21,7 +21,7 @@ const Blogs = () => {
                 <Link href='/blog/Effective-Study-Habits-to-Boost-Your-Learning-Journey'>
                   <img
                     className='w-full'
-                    src='/image/blog/bg1-1.jpg'
+                    src='/image/blogs/blog-1.jpg'
                     alt='images'
                   />
                 </Link>
@@ -64,7 +64,7 @@ const Blogs = () => {
                 <a href='#'>
                   <img
                     className='w-full'
-                    src='/image/blog/bg1-2.jpg'
+                    src='/image/blogs/blog-2.jpg'
                     alt='images'
                   />
                 </a>
@@ -106,7 +106,7 @@ const Blogs = () => {
                 <a href='#'>
                   <img
                     className='w-full'
-                    src='/image/blog/bg1-3.jpg'
+                    src='/image/blogs/blog-3.jpg'
                     alt='images'
                   />
                 </a>
@@ -148,7 +148,7 @@ const Blogs = () => {
                 <a href='#'>
                   <img
                     className='w-full'
-                    src='/image/blog/bg1-4.jpg'
+                    src='/image/blogs/blog-4.jpg'
                     alt='images'
                   />
                 </a>
@@ -190,7 +190,7 @@ const Blogs = () => {
                 <a href='#'>
                   <img
                     className='w-full'
-                    src='/image/blog/bg1-5.jpg'
+                    src='/image/blogs/blog-5.jpg'
                     alt='images'
                   />
                 </a>
@@ -231,7 +231,7 @@ const Blogs = () => {
                 <a href='#'>
                   <img
                     className='w-full'
-                    src='/image/blog/bg1-6.jpg'
+                    src='/image/blogs/blog-6.jpg'
                     alt='images'
                   />
                 </a>
@@ -274,7 +274,7 @@ const Blogs = () => {
                 <a href='#'>
                   <img
                     className='w-full'
-                    src='/image/blog/bg1-7.jpg'
+                    src='/image/blogs/blog-7.jpg'
                     alt='images'
                   />
                 </a>
@@ -315,7 +315,7 @@ const Blogs = () => {
                 <a href='#'>
                   <img
                     className='w-full'
-                    src='/image/blog/bg1-8.jpg'
+                    src='/image/blogs/blog-8.jpg'
                     alt='images'
                   />
                 </a>
@@ -359,7 +359,7 @@ const Blogs = () => {
                 <a href='#'>
                   <img
                     className='w-full'
-                    src='/image/blog/bg1-9.jpg'
+                    src='/image/blogs/blog-9.jpg'
                     alt='images'
                   />
                 </a>
