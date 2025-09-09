@@ -1,4 +1,5 @@
 import PageBanner from '@/components/PageBanner/PageBanner';
+import Link from 'next/link';
 import { MdKeyboardDoubleArrowRight } from 'react-icons/md';
 import './Blogs.css';
 
@@ -17,13 +18,13 @@ const Blogs = () => {
           <div className='grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3'>
             <div className='blog-post bg-white rounded-[10px] p-[20px] mb-[30px] mt-[20px]'>
               <div className='wt-post-media mb-[40px] overflow-hidden mt-[-40px] rounded-[10px]'>
-                <a href='#'>
+                <Link href='/blog/Effective-Study-Habits-to-Boost-Your-Learning-Journey'>
                   <img
                     className='w-full'
                     src='/image/blog/bg1-1.jpg'
                     alt='images'
                   />
-                </a>
+                </Link>
               </div>
               <div className='relative z-10'>
                 <div className='wt-post-meta relative mb-[20px]'>
@@ -36,9 +37,9 @@ const Blogs = () => {
                 </div>
                 <div>
                   <h4 className='mb-[15px] capitalize text-lg font-semibold text-[#17171d] hover:text-primary'>
-                    <a href='#'>
+                    <Link href='/blog/Effective-Study-Habits-to-Boost-Your-Learning-Journey'>
                       Effective Study Habits to Boost Your Learning Journey
-                    </a>
+                    </Link>
                   </h4>
                 </div>
                 <div>
@@ -49,12 +50,12 @@ const Blogs = () => {
                   </p>
                 </div>
                 <div className='pb-1'>
-                  <a
+                  <Link
                     className='text-primary flex items-center gap-1.5 text-[15px] font-semibold hover:text-[#17171d] '
-                    href='#'
+                    href='/blog/Effective-Study-Habits-to-Boost-Your-Learning-Journey'
                   >
                     Read More <MdKeyboardDoubleArrowRight size={20} />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
