@@ -13,7 +13,7 @@ const BlogDetails = () => {
               <div>
                 <img
                   className='w-full object-cover rounded-[10px] h-[450px]'
-                  src='/image/blog/bg1-5.jpg'
+                  src='/image/blogs/blog-5.jpg'
                   alt='icons'
                 />
                 <div className='flex items-center gap-4 mt-[20px]'>
@@ -92,7 +92,7 @@ const BlogDetails = () => {
                       <a href='#'>
                         <img
                           className='w-[140px] object-cover rounded-[8px] h-[90px]'
-                          src='/image/blog/bg1-1.jpg'
+                          src='/image/blogs/blog-1.jpg'
                           alt='icons'
                         />
                       </a>
@@ -113,7 +113,7 @@ const BlogDetails = () => {
                       <a href='#'>
                         <img
                           className='w-[140px] object-cover rounded-[8px] h-[90px]'
-                          src='/image/blog/bg1-2.jpg'
+                          src='/image/blogs/blog-2.jpg'
                           alt='icons'
                         />
                       </a>
@@ -134,7 +134,7 @@ const BlogDetails = () => {
                       <a href='#'>
                         <img
                           className='w-[140px] object-cover rounded-[8px] h-[90px]'
-                          src='/image/blog/bg1-3.jpg'
+                          src='/image/blogs/blog-3.jpg'
                           alt='icons'
                         />
                       </a>
@@ -156,7 +156,7 @@ const BlogDetails = () => {
                       <a href='#'>
                         <img
                           className='w-[140px] object-cover rounded-[8px] h-[90px]'
-                          src='/image/blog/bg1-4.jpg'
+                          src='/image/blogs/blog-4.jpg'
                           alt='icons'
                         />
                       </a>
@@ -178,7 +178,7 @@ const BlogDetails = () => {
                       <a href='#'>
                         <img
                           className='w-[140px] object-cover rounded-[8px] h-[90px]'
-                          src='/image/blog/bg1-6.jpg'
+                          src='/image/blogs/blog-6.jpg'
                           alt='icons'
                         />
                       </a>
@@ -199,7 +199,7 @@ const BlogDetails = () => {
                       <a href='#'>
                         <img
                           className='w-[140px] object-cover rounded-[8px] h-[90px]'
-                          src='/image/blog/bg1-9.jpg'
+                          src='/image/blogs/blog-9.jpg'
                           alt='icons'
                         />
                       </a>
