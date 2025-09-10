@@ -67,7 +67,7 @@ export default function VideoTestimonialsClient() {
             const id = getYouTubeId(video.video_url);
             const thumbnail = id
               ? `https://img.youtube.com/vi/${id}/maxresdefault.jpg`
-              : '/images/default-video-thumb.jpg';
+              : '/image/default-video-thumb.jpg';
             return (
               <div key={video.id} className='relative successStudents-items'>
                 <label htmlFor='video_modal' className='block cursor-pointer'>

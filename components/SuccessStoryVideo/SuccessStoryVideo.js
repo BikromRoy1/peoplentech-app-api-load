@@ -30,7 +30,7 @@ const SuccessStoryVideo = async () => {
             const youtubeId = new URL(video.video_url).searchParams.get('v');
             const thumbnail = youtubeId
               ? `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`
-              : '/images/default-video-thumb.jpg';
+              : '/image/default-video-thumb.jpg';
             return (
               <div key={video.id} className='relative successStudents-items'>
                 <label htmlFor='video_modal' className='cursor-pointer'>
