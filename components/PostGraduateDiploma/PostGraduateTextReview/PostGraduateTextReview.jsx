@@ -1,8 +1,32 @@
+'use client';
 import DepartmentSectionTitle from '@/components/DepartmentSectionTitle/DepartmentSectionTitle';
+import { useEffect, useState } from 'react';
 import { FaQuoteLeft } from 'react-icons/fa6';
 import './PostGraduateTextReview.css';
 
 const PostGraduateTextReview = () => {
+  const [reviews, setReviews] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchReviews = async () => {
+      try {
+        const res = await fetch(
+          'https://erp.peoplentech.com.bd/api/v1/pgd/student-review'
+        );
+        const data = await res.json();
+        setReviews(data?.data || []);
+      } catch (error) {
+        console.error('Error fetching reviews:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchReviews();
+  }, []);
+
+  const highlightIndexes = [1, 4, 7, 10];
+
   return (
     <section className='pb-[80px] pt-[30px] testimonials'>
       <div className='mx-auto px-4 sm:px-6 container lg:px-8'>
@@ -11,7 +35,99 @@ const PostGraduateTextReview = () => {
           subtitle='ট্রেনিং সাফল্য'
           text='আমাদের কোর্সগুলি থেকে যারা শিক্ষা গ্রহণ করেছেন এবং বিভিন্ন জায়গায় চাকরি/ইন্টার্নশিপ পেয়েছেন তাদের কিছু ব্যক্তির প্রোফাইল নীচে দেওয়া হল।'
         />
-        <div className='testimonial-masonry'>
+
+        {loading ? (
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
+            <div className='relative successStudents-items animate-pulse'>
+              <div
+                className='w-full h-48 rounded-[10px]'
+                style={{ backgroundColor: '#04a9ff33' }}
+              />
+              <div className='mt-4'>
+                <div
+                  className='h-4 rounded w-3/4 mb-2'
+                  style={{ backgroundColor: '#04a9ff33' }}
+                />
+                <div
+                  className='h-3 rounded w-1/2'
+                  style={{ backgroundColor: '#04a9ff33' }}
+                />
+              </div>
+            </div>
+            <div className='relative successStudents-items animate-pulse'>
+              <div
+                className='w-full h-48 rounded-[10px]'
+                style={{ backgroundColor: '#04a9ff33' }}
+              />
+              <div className='mt-4'>
+                <div
+                  className='h-4 rounded w-3/4 mb-2'
+                  style={{ backgroundColor: '#04a9ff33' }}
+                />
+                <div
+                  className='h-3 rounded w-1/2'
+                  style={{ backgroundColor: '#04a9ff33' }}
+                />
+              </div>
+            </div>
+            <div className='relative successStudents-items animate-pulse'>
+              <div
+                className='w-full h-48 rounded-[10px]'
+                style={{ backgroundColor: '#04a9ff33' }}
+              />
+              <div className='mt-4'>
+                <div
+                  className='h-4 rounded w-3/4 mb-2'
+                  style={{ backgroundColor: '#04a9ff33' }}
+                />
+                <div
+                  className='h-3 rounded w-1/2'
+                  style={{ backgroundColor: '#04a9ff33' }}
+                />
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div className='testimonial-masonry'>
+            {reviews.map((review, index) => {
+              const isHighlight = highlightIndexes.includes(index);
+
+              return (
+                <div
+                  key={review.id || index}
+                  className={`testimonial-item ${
+                    isHighlight ? 'highlight' : ''
+                  }`}
+                  data-aos='fade-up'
+                  data-aos-delay={index * 100}
+                >
+                  <div className='testimonial-content'>
+                    <div className='quote-pattern'>
+                      <FaQuoteLeft className='text-primary' />
+                    </div>
+                    <p className='font-siliguri'>{review?.review}</p>
+                    <div className='client-info'>
+                      <div className='client-image'>
+                        <img
+                          src={review?.image || '/image/icons/user-14.jpg'}
+                          alt={review?.name}
+                        />
+                      </div>
+                      <div className='client-details'>
+                        <h3>{review?.name || 'Anonymous'}</h3>
+                        <span className='position'>
+                          {review?.job_title || 'No Job'}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
+
+        {/* <div className='testimonial-masonry'>
           <div className='testimonial-item' data-aos='fade-up'>
             <div className='testimonial-content'>
               <div className='quote-pattern'>
@@ -185,7 +301,7 @@ const PostGraduateTextReview = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
