@@ -89,7 +89,16 @@ const BannerTwo = () => {
                 <div className='relative'>
                   <img
                     className='w-[600px] banner-img mx-auto img-fluid'
-                    src='/image/background/hero-2.webp'
+                    src='/image/background/Hero-3.png'
+                    alt='banner'
+                  />
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className='relative'>
+                  <img
+                    className='w-[600px] banner-img mx-auto img-fluid'
+                    src='/image/background/Hero-4.png'
                     alt='banner'
                   />
                 </div>
