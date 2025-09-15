@@ -1,15 +1,38 @@
 'use client';
 
+import { useState } from 'react';
+
 const VideosModal = ({ video_url, video_title }) => {
+  const [videoSrc, setVideoSrc] = useState(video_url || '');
+
+  const handleClose = () => {
+    setVideoSrc(''); // modal close -> video বন্ধ
+  };
+
+  const handleOpen = () => {
+    setVideoSrc(video_url); // modal open -> আবার set করো
+  };
+
   return (
     <div>
-      {/* Modal toggle (hidden checkbox) */}
-      <input type='checkbox' id='video_modal' className='modal-toggle' />
+      {/* Modal toggle */}
+      <input
+        type='checkbox'
+        id='video_modal'
+        className='modal-toggle'
+        onChange={(e) => {
+          if (e.target.checked) {
+            handleOpen();
+          } else {
+            handleClose();
+          }
+        }}
+      />
 
       {/* Modal */}
       <div className='modal'>
         <div className='modal-box relative max-w-2xl bg-white rounded-2xl'>
-          {/* Close button at top-right */}
+          {/* Close button */}
           <label
             htmlFor='video_modal'
             className='btn btn-sm btn-circle absolute right-2 top-2 bg-primary border-0'
@@ -23,11 +46,11 @@ const VideosModal = ({ video_url, video_title }) => {
 
           {/* Video */}
           <div className='pt-3'>
-            {video_url ? (
+            {videoSrc ? (
               <iframe
                 width='100%'
                 height='315'
-                src={video_url}
+                src={videoSrc}
                 title='YouTube video player'
                 frameBorder='0'
                 allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
