@@ -5,7 +5,7 @@
   box-shadow: 0px 10px 25px rgba(56, 152, 226, 0.3);
 }
 .wt-post-meta ul li.post-date {
-  background-color: #7a98bf;
+  background-color: var(--color-secondary);
   color: #fff;
   font-size: 14px;
   line-height: 28px;
@@ -27,11 +27,11 @@
   height: 0;
   border-left: 9px solid transparent;
   border-right: 0px solid transparent;
-  border-top: 8px solid #6881a2;
+  border-top: 8px solid var(--color-secondary);
 }
 .wt-post-meta ul li.post-date:after {
   content: '';
-  background-color: #7a98bf;
+  background-color: var(--color-secondary);
   position: absolute;
   top: 0px;
   left: -30px;
