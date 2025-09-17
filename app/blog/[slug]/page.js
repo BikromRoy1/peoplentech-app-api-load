@@ -61,6 +61,7 @@ const BlogDetails = async ({ params }) => {
                   <h4 className='font-bold text-2xl'>{post?.title}</h4>
                 </div>
                 <div
+                  className='blogs-content'
                   dangerouslySetInnerHTML={{ __html: post?.description }}
                 ></div>
               </div>

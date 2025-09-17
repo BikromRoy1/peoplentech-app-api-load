@@ -1,3 +1,7 @@
 .Article-bg {
   background-color: #eff4f6;
 }
+
+.blogs-content p {
+  margin-bottom: 15px;
+}
