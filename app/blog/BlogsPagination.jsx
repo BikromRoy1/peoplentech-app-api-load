@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { API_BASE_URL } from '../lib/config';
 import BlogCard from './BlogCard';
 
 export default function BlogsPagination({ initialPage, lastPage }) {
@@ -11,9 +12,7 @@ export default function BlogsPagination({ initialPage, lastPage }) {
   const fetchPosts = async (pageNumber) => {
     setLoading(true);
     try {
-      const res = await fetch(
-        `https://erp.peoplentech.com.bd/api/v1/posts?page=${pageNumber}`
-      );
+      const res = await fetch(`${API_BASE_URL}/posts?page=${pageNumber}`);
       const data = await res.json();
       setPosts(data.data);
       setLoading(false);
