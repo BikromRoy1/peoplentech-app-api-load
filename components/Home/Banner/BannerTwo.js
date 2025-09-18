@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import { IoArrowForwardSharp } from 'react-icons/io5';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -9,18 +10,28 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import './Banner.css';
 const BannerTwo = () => {
+  const [sliders, setSliders] = useState([]);
+
+  useEffect(() => {
+    const fetchSliders = async () => {
+      try {
+        const res = await fetch(
+          'https://erp.peoplentech.com.bd/api/v1/sliders'
+        );
+        const data = await res.json();
+        if (data.success) {
+          setSliders(data.data);
+        }
+      } catch (error) {
+        console.error('Error fetching sliders:', error);
+      }
+    };
+
+    fetchSliders();
+  }, []);
+
   return (
     <section className='banner-background-color banner-two relative  flex items-center '>
-      {/* <img
-        className='img-fluid banner-bg-01'
-        src='/image/background/bg-3.webp'
-        alt='image'
-      />
-      <img
-        className='img-fluid banner-bg-02'
-        src='/image/background/bg-4.webp'
-        alt='image'
-      /> */}
       <div className='mx-auto px-4 sm:px-6 container lg:px-8'>
         <div className='grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 items-center'>
           <div>
@@ -76,33 +87,27 @@ const BannerTwo = () => {
                 },
               }}
             >
-              <SwiperSlide className=''>
-                <div className='relative'>
+              {sliders.length > 0 ? (
+                sliders.map((slide) => (
+                  <SwiperSlide key={slide?.id}>
+                    <div className='relative'>
+                      <img
+                        className='w-[600px] banner-img mx-auto img-fluid'
+                        src={slide?.image || '/image/background/hero-2.webp'}
+                        alt={slide?.title || 'slider'}
+                      />
+                    </div>
+                  </SwiperSlide>
+                ))
+              ) : (
+                <SwiperSlide>
                   <img
                     className='w-[600px] banner-img mx-auto img-fluid'
                     src='/image/background/hero-2.webp'
-                    alt='banner'
+                    alt='Default banner'
                   />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className='relative'>
-                  <img
-                    className='w-[600px] banner-img mx-auto img-fluid'
-                    src='/image/background/Hero-3.png'
-                    alt='banner'
-                  />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className='relative'>
-                  <img
-                    className='w-[600px] banner-img mx-auto img-fluid'
-                    src='/image/background/Hero-4.png'
-                    alt='banner'
-                  />
-                </div>
-              </SwiperSlide>
+                </SwiperSlide>
+              )}
             </Swiper>
           </div>
         </div>

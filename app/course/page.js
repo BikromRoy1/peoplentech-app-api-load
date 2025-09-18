@@ -21,7 +21,7 @@ const AllCourse = async () => {
   return (
     <div>
       <PageBanner title='Our All Courses' subtitle='Courses' />
-      <div className='pt-[100px] pb-[100px]'>
+      <div className='pt-[100px] pb-[100px] bg-[#f8fafc]'>
         <div className='mx-auto px-4 sm:px-6 container lg:px-8'>
           <CoursePagination courses={courses} />
         </div>

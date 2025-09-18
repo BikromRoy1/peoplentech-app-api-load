@@ -30,13 +30,13 @@ const UpcomingBatches = async () => {
   return (
     <div>
       <PageBanner title='Join Our Upcoming Batch' subtitle='Upcoming Batch' />
-      <section className='pb-[80px] pt-[80px]'>
+      <section className='pb-[80px] pt-[80px] bg-[#f8fafc]'>
         <div className='mx-auto px-4 sm:px-6 container lg:px-8'>
           <div className='grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3'>
             {courses?.map((course) => (
               <div
                 key={course.id}
-                className='bg-white rounded-[10px] border border-[#E0E5EB] pt-[20px] transition-transform duration-300 hover:-translate-y-[8px]'
+                className='bg-white rounded-[10px] border border-[#E0E5EB] shadow-sm pt-[20px] transition-transform duration-300 hover:-translate-y-[8px]'
               >
                 <div className='px-[20px]'>
                   <div className='w-full h-auto overflow-hidden rounded-[10px]'>
