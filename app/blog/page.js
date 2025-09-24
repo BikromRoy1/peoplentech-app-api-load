@@ -5,7 +5,7 @@ import BlogsPagination from './BlogsPagination';
 export const metadata = {
   title: 'Blogs - PeopleNTech',
   description:
-    'Join our free seminars and enhance your skills with PeopleNTech experts.',
+    'We PeopleNTech is offering professional IT training course &amp; job placement facility for students. We are affiliating with top notch IT company in Bangladesh..',
 };
 
 // Fetch initial page server-side

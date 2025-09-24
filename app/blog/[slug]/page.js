@@ -1,32 +1,65 @@
+import { API_BASE_URL } from '@/app/lib/config';
 import PageBanner from '@/components/PageBanner/PageBanner';
 import Link from 'next/link';
 import { FaRegCalendarAlt, FaUserLock } from 'react-icons/fa';
 import './BlogDetails.css';
 
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+
+  // API call to get single blog
+  const res = await fetch(`${API_BASE_URL}/post/${slug}`, {
+    cache: 'no-store',
+  });
+
+  if (!res.ok) {
+    return {
+      title: 'Blog Not Found',
+      description: 'The blog you are looking for does not exist.',
+    };
+  }
+
+  const data = await res.json();
+  const post = data?.data;
+
+  return {
+    title: post?.meta_title || post?.title,
+    description: post?.meta_description || post?.description?.slice(0, 150),
+    keywords: post?.meta_keywords || 'blog, article, learning, education',
+    openGraph: {
+      title: post?.meta_title || post?.title,
+      description: post?.meta_description || post?.description?.slice(0, 150),
+      url: `https://erp.peoplentech.com.bd/blog/${post?.slug}`,
+      images: [
+        {
+          url: post?.image,
+          width: 800,
+          height: 600,
+          alt: post?.title,
+        },
+      ],
+    },
+  };
+}
+
 const BlogDetails = async ({ params }) => {
-  const { slug } = params;
+  const { slug } = await params;
 
   // API call
-  const res = await fetch(
-    `https://erp.peoplentech.com.bd/api/v1/post/${slug}`,
-    {
-      cache: 'no-store', // always fresh data
-    }
-  );
+  const res = await fetch(`${API_BASE_URL}/post/${slug}`, {
+    cache: 'no-store', // always fresh data
+  });
 
   if (!res.ok) {
     return <div>Failed to load blog details.</div>;
   }
 
   const data = await res.json();
-  const post = data?.data; // depends on API response structure
+  const post = data?.data;
 
-  const resArticle = await fetch(
-    'https://erp.peoplentech.com.bd/api/v1/posts',
-    {
-      cache: 'no-store', // always fresh data
-    }
-  );
+  const resArticle = await fetch(`${API_BASE_URL}/posts`, {
+    cache: 'no-store', // always fresh data
+  });
   const dataArticle = await resArticle.json();
   const posts = dataArticle?.data || [];
 

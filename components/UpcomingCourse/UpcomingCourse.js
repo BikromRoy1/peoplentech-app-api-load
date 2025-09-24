@@ -3,7 +3,6 @@ import { FaRegClone, FaRegFileLines } from 'react-icons/fa6';
 import { IoArrowForwardSharp } from 'react-icons/io5';
 import { RiTimerLine } from 'react-icons/ri';
 import SectionTitle from '../SectionTitle/SectionTitle';
-
 import { API_BASE_URL } from '@/app/lib/config';
 import Link from 'next/link';
 import { FaUsers } from 'react-icons/fa';
