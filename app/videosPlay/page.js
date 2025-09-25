@@ -80,7 +80,7 @@ const VideosPlaying = () => {
           <div className='col-span-full w-full space-y-8 transition-all lg:col-span-2'>
             <div className='flex items-center gap-2 lg:gap-4'>
               <h4 className='font-bold text-[#124265] text-[16px] md:text-[20px] leading-[28px]'>
-                {title} & {slug}
+               Bikrom Roy ssssssssssssss
               </h4>
             </div>
 
