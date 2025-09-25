@@ -12,9 +12,7 @@ import './VideoPlayer.css';
 const VideosPlaying = () => {
   const searchParams = useSearchParams();
   const slug = searchParams.get('slug');
-  const titleCourseName = searchParams.get('courseName');
-
-
+  const courseName = searchParams.get('courseName');
 
   const videoData = [
     {
@@ -86,7 +84,8 @@ const VideosPlaying = () => {
           <div className='col-span-full w-full space-y-8 transition-all lg:col-span-2'>
             <div className='flex items-center gap-2 lg:gap-4'>
               <h4 className='font-bold text-[#124265] text-[16px] md:text-[20px] leading-[28px]'>
-                {titleCourseName}
+                <h1>Course: {courseName}</h1>
+                <p>Slug: {slug}</p>
               </h4>
             </div>
 
