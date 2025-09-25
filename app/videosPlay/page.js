@@ -1,15 +1,21 @@
 'use client';
-
 import { MediaPlayer, MediaProvider } from '@vidstack/react';
 import {
   DefaultVideoLayout,
   defaultLayoutIcons,
 } from '@vidstack/react/player/layouts/default';
 
+import { useSearchParams } from 'next/navigation';
 import { useRef, useState } from 'react';
 import './VideoPlayer.css';
 
 const VideosPlaying = () => {
+  const searchParams = useSearchParams();
+  const slug = searchParams.get('slug');
+  const titleCourseName = searchParams.get('courseName');
+
+
+
   const videoData = [
     {
       id: 1,
@@ -80,7 +86,7 @@ const VideosPlaying = () => {
           <div className='col-span-full w-full space-y-8 transition-all lg:col-span-2'>
             <div className='flex items-center gap-2 lg:gap-4'>
               <h4 className='font-bold text-[#124265] text-[16px] md:text-[20px] leading-[28px]'>
-               Bikrom Roy ssssssssssssss
+                {titleCourseName}
               </h4>
             </div>
 
