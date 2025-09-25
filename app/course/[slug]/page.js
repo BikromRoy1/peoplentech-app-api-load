@@ -500,15 +500,7 @@ const CourseDetails = async ({ params }) => {
                       <h3 className='font-bold max-w-xs text-white text-xl md:text-2xl mb-4 text-center font-siliguri'>
                         আমাদের প্ল্যাটফর্মে রয়েছে বেশ কিছু ফ্রী কোর্স মডিউল!
                       </h3>
-                      <Link
-                        href={{
-                          pathname: '/videosPlay',
-                          query: {
-                            slug: course.slug,
-                            title: course.name,
-                          },
-                        }}
-                      >
+                      <Link href={'/'}>
                         <button className='button-bg-2 rounded-md cursor-pointer px-8 py-2 whitespace-nowrap md:w-full text-white flex items-center justify-center text-md font-semibold capitalize'>
                           Watching Free Videos
                         </button>
