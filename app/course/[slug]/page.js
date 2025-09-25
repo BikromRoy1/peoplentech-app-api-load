@@ -488,11 +488,11 @@ const CourseDetails = async ({ params }) => {
               </div>
               {course?.slug && course?.name && (
                 <div className='mt-6'>
-                  <div className='benefits-bg rounded-xl p-6 overflow-hidden'>
+                  <div className='benefits-bg-2 rounded-xl p-6 overflow-hidden'>
                     <div>
                       <img
                         className='w-full h-60 object-contain'
-                        src='/image/icons/bn-2.svg'
+                        src='/image/icons/bn-1.svg'
                         alt='image'
                       />
                     </div>
@@ -509,7 +509,7 @@ const CourseDetails = async ({ params }) => {
                           },
                         }}
                       >
-                        <button className='button-bg-2 rounded-md cursor-pointer px-8 py-2 whitespace-nowrap md:w-full text-white flex items-center justify-center text-md font-semibold capitalize'>
+                        <button className='button-bg-2 rounded-lg cursor-pointer px-8 py-3 whitespace-nowrap md:w-full text-white flex items-center justify-center text-md font-semibold capitalize'>
                           Watching Free Videos
                         </button>
                       </Link>
