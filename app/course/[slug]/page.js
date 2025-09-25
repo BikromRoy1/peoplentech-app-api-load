@@ -177,11 +177,22 @@ const CourseDetails = async ({ params }) => {
                       </del>
                     )}
                   </h3>
-                  <a href={course?.registration_link} target='_blank'>
-                    <button className='bg-primary rounded-md cursor-pointer px-8 py-2 whitespace-nowrap md:w-full text-white flex items-center justify-center text-md font-semibold capitalize'>
-                      Register for Discount
-                    </button>
-                  </a>
+                  {course?.upcomingBatch?.batch_code ? (
+                    <a
+                      href={course?.upcomingBatch?.enroll_link}
+                      target='_blank'
+                    >
+                      <button className='bg-primary rounded-md cursor-pointer px-8 py-2 whitespace-nowrap md:w-full text-white flex items-center justify-center text-md font-semibold capitalize'>
+                        Enroll Now
+                      </button>
+                    </a>
+                  ) : (
+                    <a href={course?.registration_link} target='_blank'>
+                      <button className='bg-primary rounded-md cursor-pointer px-8 py-2 whitespace-nowrap md:w-full text-white flex items-center justify-center text-md font-semibold capitalize'>
+                        Register for Discount
+                      </button>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
