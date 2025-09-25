@@ -1,0 +1,87 @@
+.videosPlaying-section {
+  padding: 80px 0px;
+  background: #edeef3;
+}
+.media-player {
+  /* Player CSS variables (defaults shown). */
+  --media-font-family: sans-serif;
+  --media-controls-color: #f5f5f5;
+  --media-focus-ring: 0 0 0 3px rgb(78 156 246);
+}
+
+.vds-button {
+  /* CSS variables available for customization (defaults shown). */
+  --media-button-color: var(--media-controls-color, #f5f5f5);
+  --media-button-size: 40px;
+  --media-button-icon-size: 80%;
+  --media-button-padding: 0px;
+  --media-button-border-radius: 8px;
+  --media-button-hover-bg: rgb(255 255 255 / 0.2);
+  --media-button-hover-transform: scale(1);
+  --media-button-hover-transition: transform 0.2s ease-in;
+  --media-button-touch-hover-border-radius: 100%;
+  --media-button-touch-hover-bg: rgb(255 255 255 / 0.2);
+}
+
+.vds-button[data-active] .cc-off-icon,
+.vds-button:not([data-active]) .cc-on-icon {
+  display: none;
+}
+.hr-style {
+  border: 0;
+  border-top: 1px solid;
+  opacity: 0.35;
+}
+.videos-card-title {
+  background: #ffffff;
+  /* box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1); */
+  box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
+  padding: 25px 30px;
+  border-top: 2px solid #ffbb2c;
+  border-radius: 6px;
+}
+.videos-title {
+  border-bottom: 1px solid #dde0e3;
+  margin-bottom: 15px;
+}
+.videos-title h3 {
+  font-size: 26px;
+  line-height: 36px;
+  font-weight: 600;
+  letter-spacing: 0.20000000298023224px;
+  padding-bottom: 6px;
+}
+.videos-class-title {
+  line-height: normal;
+  letter-spacing: 0.20000000298023224px;
+}
+
+.btn-danger-soft {
+  height: 32px;
+  width: 32px;
+  line-height: 30px;
+  background-color: rgba(214, 41, 62, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.play-icons {
+  color: #d6293e;
+}
+.btn-danger-soft:hover {
+  background-color: #d6293e;
+}
+.btn-danger-soft:hover .play-icons {
+  color: #fff;
+}
+.videos-name-main:hover .btn-danger-soft {
+  background-color: #d6293e;
+}
+.videos-name-main:hover .play-icons {
+  color: #fff;
+}
+
+.custom-shadow {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}

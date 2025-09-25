@@ -12,6 +12,13 @@
     rgb(20, 156, 82) 101.24%
   );
 }
+.button-bg-2 {
+  background: linear-gradient(
+    226.1deg,
+    rgb(8, 206, 51) 0%,
+    rgb(20, 156, 82) 101.24%
+  );
+}
 
 .certificate-bg {
   background: linear-gradient(

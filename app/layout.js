@@ -4,6 +4,8 @@ import TopBar from '@/components/TopBar/TopBar';
 import { Hind_Siliguri, Montserrat } from 'next/font/google';
 import NextTopLoader from 'nextjs-toploader';
 import { ToastContainer } from 'react-toastify';
+import '@vidstack/react/player/styles/default/theme.css';
+import '@vidstack/react/player/styles/default/layouts/video.css';
 import './globals.css';
 
 const montserrat = Montserrat({
