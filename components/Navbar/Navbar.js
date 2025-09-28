@@ -46,9 +46,9 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              href='/course'
+              href='/courses'
               className={`font-semibold tracking-wide text-[15px] transition-colors duration-200 ${
-                pathname === '/course'
+                pathname === '/courses'
                   ? 'text-primary font-bold'
                   : 'text-gray-700 hover:text-primary'
               }`}
