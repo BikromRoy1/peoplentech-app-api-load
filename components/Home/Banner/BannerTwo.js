@@ -48,7 +48,7 @@ const BannerTwo = () => {
                 dynamic digital landscape
               </p>
               <div className='flex items-center gap-5'>
-                <Link href='/course' className='primary-btn'>
+                <Link href='/courses' className='primary-btn'>
                   Find The Course
                   <IoArrowForwardSharp className='ml-2' />
                 </Link>
