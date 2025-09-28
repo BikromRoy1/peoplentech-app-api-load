@@ -9,6 +9,7 @@ import {
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import './VideoPlayer.css';
+import { API_BASE_URL } from '../lib/config';
 
 const VideosPlayingClient = ({ slug, courseName }) => {
   const [modules, setModules] = useState([]);
@@ -20,9 +21,7 @@ const VideosPlayingClient = ({ slug, courseName }) => {
   useEffect(() => {
     const fetchVideos = async () => {
       try {
-        const res = await fetch(
-          `https://erp.peoplentech.com.bd/api/v1/course-videos/${slug}`
-        );
+        const res = await fetch(`${API_BASE_URL}/course-videos/${slug}`);
         const data = await res.json();
         if (data.success) {
           setModules(data.data);

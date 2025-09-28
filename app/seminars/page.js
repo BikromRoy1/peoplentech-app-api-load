@@ -54,7 +54,7 @@ export const Zoom = (props) => (
 // Seminar fetch function
 async function fetchSeminars() {
   const res = await fetch(`${API_BASE_URL}/seminars`, {
-    cache: 'force-cache', // SSG caching
+    cache: 'no-store', // SSG caching
   });
   if (!res.ok) throw new Error('Failed to fetch seminars');
   const data = await res.json();
