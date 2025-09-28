@@ -1,4 +1,5 @@
 'use client';
+import { API_BASE_URL } from '@/app/lib/config';
 import DepartmentSectionTitle from '@/components/DepartmentSectionTitle/DepartmentSectionTitle';
 import { useEffect, useState } from 'react';
 import { FaQuoteLeft } from 'react-icons/fa6';
@@ -11,9 +12,7 @@ const PostGraduateTextReview = () => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const res = await fetch(
-          'https://erp.peoplentech.com.bd/api/v1/pgd/student-review'
-        );
+        const res = await fetch(`${API_BASE_URL}/pgd/student-review`);
         const data = await res.json();
         setReviews(data?.data || []);
       } catch (error) {

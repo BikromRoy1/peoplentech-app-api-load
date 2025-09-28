@@ -29,7 +29,7 @@ function TeamSkeleton() {
 async function getTeamMembers() {
   const res = await fetch(`${API_BASE_URL}/our-team`, {
     // Static Generation
-    next: { revalidate: 0 },
+    cache: 'no-store',
   });
   if (!res.ok) throw new Error('Failed to fetch team data');
   return res.json();
