@@ -97,7 +97,7 @@ const UpcomingBatches = async () => {
                     </span>
                   </div>
                   <h4 className='text-[19px] leading-7 font-semibold mb-[15px] hover:text-primary transition-all duration-300 ease-in-out'>
-                    <Link href={`/course/${course.slug}`}>{course?.name}</Link>
+                    <Link href={`/courses/${course.slug}`}>{course?.name}</Link>
                   </h4>
                   <div className='flex items-center justify-between'>
                     <div>
@@ -160,7 +160,7 @@ const UpcomingBatches = async () => {
                   </a>
                   <Link
                     className='text-[#162726] border border-[#E0E5EB] font-semibold text-[15px] rounded-full py-[5px] px-[20px] hover:border-primary transition-all duration-300 ease-in-out'
-                    href={`/course/${course.slug}`}
+                    href={`/courses/${course.slug}`}
                   >
                     View Details
                   </Link>

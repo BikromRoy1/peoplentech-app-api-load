@@ -460,7 +460,7 @@ export default function CoursePagination({ courses }) {
                   </div>
                   <div className='p-[20px] mb-[20px] border-b border-[#E0E5EB]'>
                     <h4 className='text-[19px] leading-7 font-semibold mb-[15px] hover:text-primary transition-all duration-300 ease-in-out'>
-                      <Link href={`/course/${course?.slug}`}>
+                      <Link href={`/courses/${course?.slug}`}>
                         {course?.name}
                       </Link>
                     </h4>
@@ -503,7 +503,7 @@ export default function CoursePagination({ courses }) {
                     </a>
                     <Link
                       className='text-[#162726] border border-[#E0E5EB] font-semibold text-[15px] rounded-full py-[5px] px-[20px] hover:border-primary transition-all duration-300 ease-in-out'
-                      href={`/course/${course?.slug}`}
+                      href={`/courses/${course?.slug}`}
                     >
                       Details
                     </Link>

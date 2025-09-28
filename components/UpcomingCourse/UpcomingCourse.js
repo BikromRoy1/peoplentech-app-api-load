@@ -1,11 +1,10 @@
-import { FaStar } from 'react-icons/fa';
+import { API_BASE_URL } from '@/app/lib/config';
+import Link from 'next/link';
+import { FaStar, FaUsers } from 'react-icons/fa';
 import { FaRegClone, FaRegFileLines } from 'react-icons/fa6';
 import { IoArrowForwardSharp } from 'react-icons/io5';
 import { RiTimerLine } from 'react-icons/ri';
 import SectionTitle from '../SectionTitle/SectionTitle';
-import { API_BASE_URL } from '@/app/lib/config';
-import Link from 'next/link';
-import { FaUsers } from 'react-icons/fa';
 
 async function getCourses() {
   const res = await fetch(`${API_BASE_URL}/upcoming-courses`, {
@@ -93,7 +92,7 @@ const UpcomingCourse = async () => {
                   </span>
                 </div>
                 <h4 className='text-[19px] leading-7 font-semibold mb-[15px] hover:text-primary transition-all duration-300 ease-in-out'>
-                  <Link href={`/course/${course.slug}`}>{course?.name}</Link>
+                  <Link href={`/courses/${course.slug}`}>{course?.name}</Link>
                 </h4>
                 <div className='flex items-center justify-between'>
                   <div>
@@ -156,7 +155,7 @@ const UpcomingCourse = async () => {
                 </a>
                 <Link
                   className='text-[#162726] border border-[#E0E5EB] font-semibold text-[15px] rounded-full py-[5px] px-[20px] hover:border-primary transition-all duration-300 ease-in-out'
-                  href={`/course/${course.slug}`}
+                  href={`/courses/${course.slug}`}
                 >
                   View Details
                 </Link>
