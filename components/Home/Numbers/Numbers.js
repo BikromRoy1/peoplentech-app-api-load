@@ -211,7 +211,7 @@ const Numbers = () => {
                 </div>
               </div>
               <div className='mt-7'>
-                <Link href='/about' className='primary-btn'>
+                <Link href='/about-us' className='primary-btn'>
                   Read More
                   <IoArrowForwardSharp className='ml-2' />
                 </Link>

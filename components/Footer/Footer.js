@@ -19,7 +19,7 @@ const Footer = () => {
         }}
       >
         <div className='mx-auto px-4 sm:px-6 container lg:px-8'>
-          <div className='grid md:grid-cols-12 divide-y md:divide-y-0 lg:divide-x divide-white divide-opacity-10 justify-between gap-10'>
+          <div className='grid md:grid-cols-12  lg:divide-x divide-white divide-opacity-10 justify-between gap-3 md:gap-10'>
             <div className='md:col-span-6 lg:col-span-4'>
               <Link href='/' className='block mb-7'>
                 <Image
@@ -79,16 +79,16 @@ const Footer = () => {
                 <ul className='space-y-4'>
                   <li>
                     <a
-                      href='/about'
-                      className='font-medium text-base text-white'
+                      href='/about-us'
+                      className='font-medium text-base text-white hover:text-primary transition duration-300 ease-in-out '
                     >
                       About Us
                     </a>
                   </li>
                   <li>
                     <Link
-                      href='/team'
-                      className='font-medium text-base text-white'
+                      href='/our-team'
+                      className='font-medium text-base text-white hover:text-primary transition duration-300 ease-in-out'
                     >
                       Our Team
                     </Link>
@@ -96,18 +96,24 @@ const Footer = () => {
                   <li>
                     <Link
                       href='/faculty'
-                      className='font-medium text-base text-white'
+                      className='font-medium text-base text-white hover:text-primary transition duration-300 ease-in-out'
                     >
                       Our Mentors
                     </Link>
                   </li>
                   <li>
-                    <a href='#' className='font-medium text-base text-white'>
+                    <a
+                      href='#'
+                      className='font-medium text-base text-white hover:text-primary transition duration-300 ease-in-out'
+                    >
                       Apply for Trainer
                     </a>
                   </li>
                   <li>
-                    <a href='#' className='font-medium text-base text-white'>
+                    <a
+                      href='#'
+                      className='font-medium text-base text-white hover:text-primary transition duration-300 ease-in-out'
+                    >
                       Join Our Team
                     </a>
                   </li>
@@ -123,7 +129,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href='/seminars'
-                      className='font-medium text-base text-white'
+                      className='font-medium text-base text-white hover:text-primary transition duration-300 ease-in-out'
                     >
                       Join Free Seminars
                     </Link>
@@ -131,30 +137,39 @@ const Footer = () => {
                   <li>
                     <Link
                       href='/success-stories'
-                      className='font-medium text-base text-white'
+                      className='font-medium text-base text-white hover:text-primary transition duration-300 ease-in-out'
                     >
                       Success Story
                     </Link>
                   </li>
                   <li>
-                    <a href='#' className='font-medium text-base text-white'>
+                    <a
+                      href='#'
+                      className='font-medium text-base text-white hover:text-primary transition duration-300 ease-in-out'
+                    >
                       Privacy Policy
                     </a>
                   </li>
                   <li>
-                    <a href='#' className='font-medium text-base text-white'>
+                    <a
+                      href='#'
+                      className='font-medium text-base text-white hover:text-primary transition duration-300 ease-in-out'
+                    >
                       Refund Policy
                     </a>
                   </li>
                   <li>
-                    <a href='#' className='font-medium text-base text-white'>
+                    <a
+                      href='#'
+                      className='font-medium text-base text-white hover:text-primary transition duration-300 ease-in-out'
+                    >
                       Terms and Conditions
                     </a>
                   </li>
                   <li>
                     <Link
                       href='/blog'
-                      className='font-medium text-base text-white'
+                      className='font-medium text-base text-white hover:text-primary transition duration-300 ease-in-out'
                     >
                       Blog
                     </Link>

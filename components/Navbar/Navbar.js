@@ -33,10 +33,10 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              href='/about'
+              href='/about-us'
               aria-label='live'
               className={`font-semibold tracking-wide text-[15px] transition-colors duration-200 ${
-                pathname === '/about'
+                pathname === '/about-us'
                   ? 'text-primary font-bold'
                   : 'text-gray-700 hover:text-primary'
               }`}
@@ -186,10 +186,10 @@ const Navbar = () => {
                     </li>
                     <li>
                       <Link
-                        href='/about'
+                        href='/about-us'
                         aria-label='live'
                         className={`font-semibold tracking-wide text-[15px] transition-colors duration-200 ${
-                          pathname === '/about'
+                          pathname === '/about-us'
                             ? 'text-primary font-bold'
                             : 'text-gray-700 hover:text-primary'
                         }`}
