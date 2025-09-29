@@ -51,159 +51,161 @@
 
 // export default Department;
 
-import SectionTitle from '@/components/SectionTitle/SectionTitle';
-import Link from 'next/link';
+import SectionTitle from "@/components/SectionTitle/SectionTitle";
+import Link from "next/link";
 
 const Department = () => {
   return (
-    <section className='pb-[100px] pt-[20px]'>
-      <div className='mx-auto px-4 sm:px-6 container lg:px-8'>
-        <SectionTitle title='Browse By Departments' subtitle='Our Department' />
-        <div className='grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4'>
-          <div className='bg-[#F2F4F7] rounded-[10px] p-2.5 transition-transform duration-300 hover:-translate-y-[10px]'>
+    <section className="pb-[100px] pt-[20px]">
+      <div className="mx-auto px-4 sm:px-6 container lg:px-8">
+        <SectionTitle title="Browse By Departments" subtitle="Our Department" />
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
+          <div className="bg-[#F2F4F7] rounded-[10px] p-2.5 transition-transform duration-300 hover:-translate-y-[10px]">
             <div>
               <img
-                className='w-full h-[200px] object-cover object-center rounded-[10px]'
-                src='/image/Department/category-img-1.jpg'
-                alt='Department'
+                className="w-full h-[200px] object-cover object-center rounded-[10px]"
+                src="/image/Department/category-img-1.jpg"
+                alt="Department"
               />
             </div>
-            <div className='mt-2.5'>
+            <div className="mt-2.5">
               <Link
-                className='py-[11px] px-[16px] bg-[#9bddff] block rounded-[10px] text-[17px] text-[#162726] font-semibold w-full transition duration-300 hover:bg-primary hover:text-white '
-                href='/post-graduate-diploma'
+                className="py-[11px] px-[16px] bg-[#9bddff] block rounded-[10px] text-[17px] text-[#162726] font-semibold w-full transition duration-300 hover:bg-primary hover:text-white "
+                href="/post-graduate-diploma"
               >
-                <span className='flex justify-center'>
+                <span className="flex justify-center">
                   Post Graduate Diploma
                 </span>
               </Link>
             </div>
           </div>
-          <div className='bg-[#F2F4F7] rounded-[10px] p-2.5 transition-transform duration-300 hover:-translate-y-[10px]'>
+          <div className="bg-[#F2F4F7] rounded-[10px] p-2.5 transition-transform duration-300 hover:-translate-y-[10px]">
             <div>
               <img
-                className='w-full h-[200px] object-cover object-center rounded-[10px]'
-                src='/image/Department/category-img-2.jpg'
-                alt='Department'
+                className="w-full h-[200px] object-cover object-center rounded-[10px]"
+                src="/image/Department/category-img-2.jpg"
+                alt="Department"
               />
             </div>
-            <div className='mt-2.5'>
+            <div className="mt-2.5">
               <a
-                target='_blank'
-                className='py-[11px] px-[16px] bg-[#9bddff] block rounded-[10px] text-[17px] text-[#162726] font-semibold w-full transition duration-300 hover:bg-primary hover:text-white '
-                href='https://peoplentech.net/'
+                target="_blank"
+                className="py-[11px] px-[16px] bg-[#9bddff] block rounded-[10px] text-[17px] text-[#162726] font-semibold w-full transition duration-300 hover:bg-primary hover:text-white "
+                href="https://peoplentech.net/"
               >
-                <span className='flex justify-center'>
+                <span className="flex justify-center">
                   Software Development
                 </span>
               </a>
             </div>
           </div>
-          <div className='bg-[#F2F4F7] rounded-[10px] p-2.5 transition-transform duration-300 hover:-translate-y-[10px]'>
+          <div className="bg-[#F2F4F7] rounded-[10px] p-2.5 transition-transform duration-300 hover:-translate-y-[10px]">
             <div>
               <img
-                className='w-full h-[200px] object-cover object-center rounded-[10px]'
-                src='/image/Department/category-img-9.jpg'
-                alt='Department'
+                className="w-full h-[200px] object-cover object-center rounded-[10px]"
+                src="/image/Department/category-img-9.jpg"
+                alt="Department"
               />
             </div>
-            <div className='mt-2.5'>
+            <div className="mt-2.5">
               <Link
-                className='py-[11px] px-[16px] bg-[#9bddff] block rounded-[10px] text-[17px] text-[#162726] font-semibold w-full transition duration-300 hover:bg-primary hover:text-white '
-                href='/polytechnic'
+                className="py-[11px] px-[16px] bg-[#9bddff] block rounded-[10px] text-[17px] text-[#162726] font-semibold w-full transition duration-300 hover:bg-primary hover:text-white "
+                href="/industrial-attachment"
               >
-                <span className='flex justify-center'>Polytechnic Program</span>
+                <span className="flex justify-center">
+                  Industrial Attachment
+                </span>
               </Link>
             </div>
           </div>
-          <div className='bg-[#F2F4F7] rounded-[10px] p-2.5 transition-transform duration-300 hover:-translate-y-[10px]'>
+          <div className="bg-[#F2F4F7] rounded-[10px] p-2.5 transition-transform duration-300 hover:-translate-y-[10px]">
             <div>
               <img
-                className='w-full h-[200px] object-cover object-center rounded-[10px]'
-                src='/image/Department/category-img-4.jpg'
-                alt='Department'
+                className="w-full h-[200px] object-cover object-center rounded-[10px]"
+                src="/image/Department/category-img-4.jpg"
+                alt="Department"
               />
             </div>
-            <div className='mt-2.5'>
+            <div className="mt-2.5">
               <a
-                target='_blank'
-                className='py-[11px] px-[16px] bg-[#9bddff] block rounded-[10px] text-[17px] text-[#162726] font-semibold w-full transition duration-300 hover:bg-primary hover:text-white '
-                href='https://www.wust.edu/'
+                target="_blank"
+                className="py-[11px] px-[16px] bg-[#9bddff] block rounded-[10px] text-[17px] text-[#162726] font-semibold w-full transition duration-300 hover:bg-primary hover:text-white "
+                href="https://www.wust.edu/"
               >
-                <span className='flex justify-center'>WUST University </span>
+                <span className="flex justify-center">WUST University </span>
               </a>
             </div>
           </div>
-          <div className='bg-[#F2F4F7] rounded-[10px] p-2.5 transition-transform duration-300 hover:-translate-y-[10px]'>
+          <div className="bg-[#F2F4F7] rounded-[10px] p-2.5 transition-transform duration-300 hover:-translate-y-[10px]">
             <div>
               <img
-                className='w-full h-[200px] object-cover object-center rounded-[10px]'
-                src='/image/Department/category-img-6.jpg'
-                alt='Department'
+                className="w-full h-[200px] object-cover object-center rounded-[10px]"
+                src="/image/Department/category-img-6.jpg"
+                alt="Department"
               />
             </div>
-            <div className='mt-2.5'>
+            <div className="mt-2.5">
               <a
-                target='_blank'
-                className='py-[11px] px-[16px] bg-[#9bddff] block rounded-[10px] text-[17px] text-[#162726] font-semibold w-full transition duration-300 hover:bg-primary hover:text-white '
-                href='https://www.pntdns.com/'
+                target="_blank"
+                className="py-[11px] px-[16px] bg-[#9bddff] block rounded-[10px] text-[17px] text-[#162726] font-semibold w-full transition duration-300 hover:bg-primary hover:text-white "
+                href="https://www.pntdns.com/"
               >
-                <span className='flex justify-center'>Hosting Services</span>
+                <span className="flex justify-center">Hosting Services</span>
               </a>
             </div>
           </div>
-          <div className='bg-[#F2F4F7] rounded-[10px] p-2.5 transition-transform duration-300 hover:-translate-y-[10px]'>
+          <div className="bg-[#F2F4F7] rounded-[10px] p-2.5 transition-transform duration-300 hover:-translate-y-[10px]">
             <div>
               <img
-                className='w-full h-[200px] object-cover object-center rounded-[10px]'
-                src='/image/Department/category-img-5.jpg'
-                alt='Department'
+                className="w-full h-[200px] object-cover object-center rounded-[10px]"
+                src="/image/Department/category-img-5.jpg"
+                alt="Department"
               />
             </div>
-            <div className='mt-2.5'>
+            <div className="mt-2.5">
               <Link
-                className='py-[11px] px-[16px] bg-[#9bddff] block rounded-[10px] text-[17px] text-[#162726] font-semibold w-full transition duration-300 hover:bg-primary hover:text-white '
-                href='/short-term-courses'
+                className="py-[11px] px-[16px] bg-[#9bddff] block rounded-[10px] text-[17px] text-[#162726] font-semibold w-full transition duration-300 hover:bg-primary hover:text-white "
+                href="/short-term-courses"
               >
-                <span className='flex justify-center'>Freelancing Courses</span>
+                <span className="flex justify-center">Freelancing Courses</span>
               </Link>
             </div>
           </div>
-          <div className='bg-[#F2F4F7] rounded-[10px] p-2.5 transition-transform duration-300 hover:-translate-y-[10px]'>
+          <div className="bg-[#F2F4F7] rounded-[10px] p-2.5 transition-transform duration-300 hover:-translate-y-[10px]">
             <div>
               <img
-                className='w-full h-[200px] object-cover object-center rounded-[10px]'
-                src='/image/Department/category-img-7.jpg'
-                alt='Department'
+                className="w-full h-[200px] object-cover object-center rounded-[10px]"
+                src="/image/Department/category-img-7.jpg"
+                alt="Department"
               />
             </div>
-            <div className='mt-2.5'>
+            <div className="mt-2.5">
               <a
-                target='_blank'
-                className='py-[11px] px-[16px] bg-[#9bddff] block rounded-[10px] text-[17px] text-[#162726] font-semibold w-full transition duration-300 hover:bg-primary hover:text-white '
-                href='https://higherstudyusa.com/'
+                target="_blank"
+                className="py-[11px] px-[16px] bg-[#9bddff] block rounded-[10px] text-[17px] text-[#162726] font-semibold w-full transition duration-300 hover:bg-primary hover:text-white "
+                href="https://higherstudyusa.com/"
               >
-                <span className='flex justify-center'>
+                <span className="flex justify-center">
                   Education Consultancy
                 </span>
               </a>
             </div>
           </div>
-          <div className='bg-[#F2F4F7] rounded-[10px] p-2.5 transition-transform duration-300 hover:-translate-y-[10px]'>
+          <div className="bg-[#F2F4F7] rounded-[10px] p-2.5 transition-transform duration-300 hover:-translate-y-[10px]">
             <div>
               <img
-                className='w-full h-[200px] object-cover object-center rounded-[10px]'
-                src='/image/Department/category-img-8.jpg'
-                alt='Department'
+                className="w-full h-[200px] object-cover object-center rounded-[10px]"
+                src="/image/Department/category-img-8.jpg"
+                alt="Department"
               />
             </div>
-            <div className='mt-2.5'>
+            <div className="mt-2.5">
               <a
-                target='_blank'
-                className='py-[11px] px-[16px] bg-[#9bddff] block rounded-[10px] text-[17px] text-[#162726] font-semibold w-full transition duration-300 hover:bg-primary hover:text-white '
-                href='https://www.itesseract.com.bd/'
+                target="_blank"
+                className="py-[11px] px-[16px] bg-[#9bddff] block rounded-[10px] text-[17px] text-[#162726] font-semibold w-full transition duration-300 hover:bg-primary hover:text-white "
+                href="https://www.itesseract.com.bd/"
               >
-                <span className='flex justify-center'>
+                <span className="flex justify-center">
                   Robotics & Programming Training
                 </span>
               </a>
