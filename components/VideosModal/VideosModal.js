@@ -35,17 +35,17 @@ const VideosModal = ({ video_url, video_title }) => {
           {/* Close button */}
           <label
             htmlFor='video_modal'
-            className='btn btn-sm btn-circle absolute right-2 top-2 bg-secondary text-white border-0'
+            className='btn btn-sm btn-circle absolute right-1 top-1 bg-secondary text-white border-0'
           >
             ✕
           </label>
 
           {/* Title */}
-          <h3 className='text-base font-semibold mb-2'>{video_title}</h3>
-          <hr className='border-t-2 border-gray-300 mb-2' />
+          {/* <h3 className='text-base font-semibold mb-2'>{video_title}</h3>
+          <hr className='border-t-2 border-gray-300 mb-2' /> */}
 
           {/* Video */}
-          <div className='pt-3'>
+          <div className='pt-5'>
             {videoSrc ? (
               <iframe
                 width='100%'
