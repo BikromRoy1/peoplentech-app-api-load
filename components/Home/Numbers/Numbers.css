@@ -44,7 +44,7 @@
   z-index: 1;
 }
 
-.about-img-wrap .about-img-1 .video-btn a {
+.about-img-wrap .about-img-1 .video-btn label {
   background-color: #fff;
   color: var(--primary-color);
   display: flex;
@@ -55,14 +55,15 @@
   width: 80px;
   border-radius: 50%;
   transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
-.about-img-wrap .about-img-1 .video-btn a i {
+.about-img-wrap .about-img-1 .video-btn label i {
   margin-top: 10px;
   line-height: 1;
 }
 
-.about-img-wrap .about-img-1 .video-btn a:hover {
+.about-img-wrap .about-img-1 .video-btn label:hover {
   background-color: var(--primary-color);
   color: #fff;
 }

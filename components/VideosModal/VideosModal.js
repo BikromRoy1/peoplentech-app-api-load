@@ -35,7 +35,7 @@ const VideosModal = ({ video_url, video_title }) => {
           {/* Close button */}
           <label
             htmlFor='video_modal'
-            className='btn btn-sm btn-circle absolute right-2 top-2 bg-primary border-0'
+            className='btn btn-sm btn-circle absolute right-2 top-2 bg-secondary text-white border-0'
           >
             ✕
           </label>

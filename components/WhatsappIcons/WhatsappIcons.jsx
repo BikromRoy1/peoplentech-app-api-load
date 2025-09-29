@@ -6,7 +6,7 @@ const WhatsappIcons = () => {
       rel='noreferrer'
       className='fixed  right-0 rounded-full bottom-[86px] z-10 md:bottom-[0px] flex gap-2 items-center m-5 px-2 py-2 md:px-4 md:py-[14px] text-white'
       style={{
-        background: 'linear-gradient(226.1deg, #04a9ff 0%, #0b7fc6 100%)',
+        background: 'linear-gradient(226.1deg, #08ce33 0%, #149c52 100%)',
         zIndex: 49,
       }}
     >

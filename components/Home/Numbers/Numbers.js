@@ -1,4 +1,5 @@
 'use client';
+import VideosModal from '@/components/VideosModal/VideosModal';
 import Image from 'next/image';
 import Link from 'next/link';
 import CountUp from 'react-countup';
@@ -21,16 +22,14 @@ const Numbers = () => {
                     alt='icons'
                   />
                   <div className='video-btn'>
-                    <a
+                    <label
+                      htmlFor='video_modal'
                       className='video-popup venobox vbox-item'
-                      data-autoplay='true'
-                      data-vbtype='video'
-                      href='https://www.youtube.com/watch?v=A_yeWONPhKE&t=8s'
                     >
                       <div className='play-btn'>
                         <FaPlay />
                       </div>
-                    </a>
+                    </label>
                   </div>
                 </div>
                 <div className='about-img-2'>
@@ -220,6 +219,10 @@ const Numbers = () => {
           </div>
         </div>
       </div>
+      <VideosModal
+        video_url='https://www.youtube.com/embed/nxSFNs00AkY?si=SyEpPGAoXeFj31xZ'
+        video_title='PeopleTech Institute of IT'
+      />
     </section>
   );
 };
