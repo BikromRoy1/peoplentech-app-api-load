@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <>
       <footer
-        className=' py-20 border-y border-[#1C2134]'
+        className=' pt-20 pb-3 border-y border-[#1C2134]'
         style={{
           background:
             "url('/image/background/footer-dark-bg.jpg') no-repeat center\n" +
@@ -212,14 +212,23 @@ const Footer = () => {
               </ul>
             </div>
           </div>
+          <div className='pt-4'>
+            <a href='https://erp.peoplentech.com.bd/payment' target='_blank'>
+              <img
+                className='w-full'
+                src='/image/SSLCommerz-logo.png'
+                alt='SSLCommerz-logo'
+              />
+            </a>
+          </div>
         </div>
       </footer>
 
-      <section className='px-4 bg-[#04091e] py-5'>
+      <div className='px-4 bg-[#04091e] py-5'>
         <p className='text-base font-medium text-white text-center'>
           Copyright © 2025 – PeopleNTech Institute of IT. All Rights Reserved
         </p>
-      </section>
+      </div>
     </>
   );
 };
