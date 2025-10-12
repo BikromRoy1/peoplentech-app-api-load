@@ -1,66 +1,91 @@
+import MetaFacebookScript from "./MetaFacebookScript";
+import MetaGoogleScript from "./MetaGoogleScript";
+
 const MetaComponent = () => {
   return (
     <head>
-      <link rel='canonical' href='https://peoplentech.com.bd' />
-      <meta name='author' content='PeopleNTech' />
-      {/* <!--  Essential META Tags --> */}
-      <meta
-        property='og:title'
-        content='Professional IT Training Institute in Bangladesh - PeopleNTech'
-      />
-      <meta property='og:url' content='https://www.peoplentech.com.bd/' />
-      <meta name='twitter:card' content='summary_large_image' />
+      <meta charSet="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>
+        Professional IT Training Institute and Job Placement Center in
+        Bangladesh - PeopleNTech
+      </title>
 
-      {/* <!--  Non-Essential, But Recommended --> */}
       <meta
-        property='og:keyword'
-        content='Professional IT training, Job Placement'
+        name="description"
+        content="We PeopleNTech is offering professional IT training course job placement facility for students. We are affiliating with top notch IT company in Bangladesh etc Call- +8801611446699"
       />
       <meta
-        property='og:description'
-        content='We PeopleNTech is offering professional IT training course &amp; job placement facility for students. We are affiliating with top notch IT company in Bangladesh..'
+        name="keywords"
+        content="Professional IT training, Job Placement, IT Training in Bangladesh, IT Training in Dhaka, Software Development, Consultancy for Higher Studies, IT Consultancy"
       />
-      <meta
-        property='og:site_name'
-        content='Professional IT Training Institute in Bangladesh - PeopleNTech'
-      />
-      <meta name='twitter:image:alt' content='Alt text for image' />
+      <meta name="author" content="PeopleNTech" />
+      <meta name="robots" content="noindex, nofollow" />
+      <link rel="canonical" href="https://peoplentech.com.bd/" />
 
-      {/* <!--  Non-Essential, But Required for Analytics --> */}
-      <meta property='fb:app_id' content='your_app_id' />
-      <meta name='twitter:site' content='@website-username' />
+      <meta
+        property="og:title"
+        content="Professional IT Training Institute and Job Placement Center in Bangladesh - PeopleNTech"
+      />
+      <meta
+        property="og:description"
+        content="We PeopleNTech is offering professional IT training course, job placement facility for students. We are affiliating with top notch IT company in Bangladesh etc Call- +8801611446699"
+      />
+      <meta property="og:image" content="/image/peopelntech.com.bd.jpg" />
+      <meta property="og:image:alt" content="PeopleNTech Webpage" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:url" content="https://peoplentech.com.bd/" />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="PeopleNTech" />
+      <meta property="og:locale" content="en_US" />
 
-      {/* <!-- Open Graph / Facebook --> */}
-      <meta property='og:type' content='website' />
-      <meta property='og:url' content='https://www.peoplentech.com.bd/' />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="" />
+      <meta name="twitter:creator" content="" />
       <meta
-        property='og:title'
-        content='Professional IT Training Institute in Bangladesh - PeopleNTech'
+        name="twitter:title"
+        content=" Professional IT Training Institute and Job Placement Center in Bangladesh - PeopleNTech"
       />
       <meta
-        property='og:description'
-        content='We PeopleNTech is offering professional IT training course &amp; job placement facility for students. We are affiliating with top notch IT company in Bangladesh..'
+        name="twitter:description"
+        content="We PeopleNTech is offering professional IT training course, job placement facility for students. We are affiliating with top notch IT company in Bangladesh etc Call- +8801611446699"
       />
-      <meta
-        property='og:image'
-        content='https://peoplentech.com.bd/assets/frontend/img/Professional-IT-Training-Job-placement-Institute-in-Dhaka.png'
-      />
+      <meta name="twitter:image" content="/image/peopelntech.com.bd.jpg" />
+      <meta name="twitter:image:alt" content="PeopleNTech Webpage" />
 
-      {/* <!-- Twitter --> */}
-      <meta property='twitter:card' content='summary_large_image' />
-      <meta property='twitter:url' content='https://www.peoplentech.com.bd/' />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon/favicon-32x32.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/favicon/favicon-16x16.png"
+      />
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/favicon/apple-touch-icon.png"
+      />
+      <link rel="manifest" href="/favicon/site.webmanifest" />
+
+      <meta property="fb:app_id" content="1311616155545613" />
       <meta
-        property='twitter:title'
-        content='Professional IT Training Institute in Bangladesh - PeopleNTech'
+        property="article:author"
+        content="https://www.facebook.com/peoplentechbd"
       />
       <meta
-        property='twitter:description'
-        content='We PeopleNTech is offering professional IT training course &amp; job placement facility for students. We are affiliating with top notch IT company in Bangladesh..'
+        property="article:publisher"
+        content="https://www.facebook.com/peoplentechbd"
       />
-      <meta
-        property='twitter:image'
-        content='https://peoplentech.com.bd/assets/frontend/img/Professional-IT-Training-Job-placement-Institute-in-Dhaka.png'
-      />
+      {/* <MetaFacebookScript /> */}
+      <MetaFacebookScript />
+      {/* google analytics */}
+      <MetaGoogleScript />
     </head>
   );
 };

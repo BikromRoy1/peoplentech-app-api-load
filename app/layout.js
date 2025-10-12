@@ -22,11 +22,6 @@ const hindSiliguri = Hind_Siliguri({
   variable: '--font-hind-siliguri',
 });
 
-export const metadata = {
-  title: 'Professional IT Training Institute in Bangladesh - PeopleNTech',
-  description:
-    'We PeopleNTech is offering professional IT training course &amp; job placement facility for students. We are affiliating with top notch IT company in Bangladesh..',
-};
 
 export default function RootLayout({ children }) {
   return (
