@@ -1,99 +1,100 @@
-import { RiVerifiedBadgeFill } from 'react-icons/ri';
-import './University.css';
+import { RiVerifiedBadgeFill } from "react-icons/ri";
+import "./University.css";
 
 const University = () => {
   return (
-    <section className='pb-[100px]'>
-      <div className='mx-auto px-4 sm:px-6 container lg:px-8'>
-        <div className='university-background py-6 md:py-12 lg:py-16 rounded-[10px] px-5 md:px-8 lg:px-12'>
-          <div className='shape-1'></div>
-          <div className='grid grid-cols-1 gap-4 md:grid-cols-5 md:items-center md:gap-8'>
-            <div className='md:col-span-3'>
-              <div className='mb-[15px]'>
-                <a target='_blank' href='https://www.wust.edu/'>
+    <section className="pb-[100px]">
+      <div className="mx-auto px-4 sm:px-6 container lg:px-8">
+        <div className="university-background py-6 md:py-12 lg:py-16 rounded-[10px] px-5 md:px-8 lg:px-12">
+          <div className="shape-1"></div>
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-5 md:items-center md:gap-8">
+            <div className="md:col-span-3">
+              <div className="mb-[15px]">
+                <a target="_blank" href="https://www.wust.edu/">
                   <img
-                    className='w-2/5'
-                    src='/image/certificate/accrediated.png'
-                    alt='certificate'
+                    className="w-2/5"
+                    src="/image/certificate/accrediated.png"
+                    alt="certificate"
                   />
                 </a>
               </div>
-              <div className='bg-white p-[30px] rounded-[10px]'>
+              <div className="bg-white p-[30px] rounded-[10px]">
                 <div>
                   <span></span>
-                  <h2 className='text-[18px] md:text-[20px] lg:text-[22px] font-semibold leading-tight mb-3'>
+                  <h2 className="text-[18px] md:text-[20px] lg:text-[22px] font-semibold leading-tight mb-3">
                     Global Academic Collaboration with WUST
                   </h2>
-                  <p className='text-[14px] text-[#6C706F] mb-5'>
-                    University of Science & Technology (WUST) is a top-ranked
-                    public university in China, known for excellence in
-                    engineering, science, and medicine. It offers global
-                    academic programs and attracts students from over 100
-                    countries through innovation and research-based education.
+                  <p className="text-[15px] text-gray-600 mb-5 leading-relaxed">
+                    Washington University of Science and Technology (WUST) is
+                    one of the fastest growing universities in the USA, known
+                    for excellence in technology and management. It offers
+                    global academic programs and attracts students from over 100
+                    countries through innovation, industrial-experience and
+                    research-based education.
                   </p>
                 </div>
-                <div className='border-b border-[#E0E5EB] pb-[15px] mb-[25px] flex items-center justify-between flex-wrap gap-3'>
+                <div className="border-b border-[#0e1013] pb-[15px] mb-[25px] flex items-center justify-between flex-wrap gap-3">
                   <ul>
-                    <li className='text-[#162726] mb-[10px] font-medium text-[15px] flex items-center gap-1.5'>
-                      <RiVerifiedBadgeFill className='text-primary' />
+                    <li className="text-[#162726] mb-[10px] font-medium text-[15px] flex items-center gap-1.5">
+                      <RiVerifiedBadgeFill className="text-primary" />
                       Globally ranked programs
                     </li>
-                    <li className='text-[#162726] mb-[10px] font-medium text-[15px] flex items-center gap-1.5'>
-                      <RiVerifiedBadgeFill className='text-primary' />
+                    <li className="text-[#162726] mb-[10px] font-medium text-[15px] flex items-center gap-1.5">
+                      <RiVerifiedBadgeFill className="text-primary" />
                       International student community
                     </li>
                   </ul>
                   <ul>
-                    <li className='text-[#162726] mb-[10px] font-medium text-[15px] flex items-center gap-1.5'>
-                      <RiVerifiedBadgeFill className='text-primary' />
+                    <li className="text-[#162726] mb-[10px] font-medium text-[15px] flex items-center gap-1.5">
+                      <RiVerifiedBadgeFill className="text-primary" />
                       State-of-the-art labs, research centers
                     </li>
-                    <li className='text-[#162726] mb-[10px] font-medium text-[15px] flex items-center gap-1.5'>
-                      <RiVerifiedBadgeFill className='text-primary' />
+                    <li className="text-[#162726] mb-[10px] font-medium text-[15px] flex items-center gap-1.5">
+                      <RiVerifiedBadgeFill className="text-primary" />
                       Dual-degree opportunities
                     </li>
                   </ul>
                 </div>
-                <div className='flex items-center justify-start md:justify-between lg:justify-between gap-2 flex-wrap'>
-                  <div className='bg-[#F2F4F7] border border-[#E0E5EB] rounded-[10px] w-[100px] h-[70px] flex justify-center items-center'>
+                <div className="flex items-center justify-start md:justify-between lg:justify-between gap-2 flex-wrap">
+                  <div className="bg-[#F2F4F7] border border-[#E0E5EB] rounded-[10px] w-[100px] h-[70px] flex justify-center items-center">
                     <img
-                      src='/image/certificate/wust-1.png'
-                      alt='critifications'
+                      src="/image/certificate/wust-1.png"
+                      alt="critifications"
                     />
                   </div>
-                  <div className='bg-[#F2F4F7] border border-[#E0E5EB] rounded-[10px] w-[100px] h-[70px] flex justify-center items-center'>
+                  <div className="bg-[#F2F4F7] border border-[#E0E5EB] rounded-[10px] w-[100px] h-[70px] flex justify-center items-center">
                     <img
-                      src='/image/certificate/wust-2.png'
-                      alt='critifications'
+                      src="/image/certificate/wust-2.png"
+                      alt="critifications"
                     />
                   </div>
-                  <div className='bg-[#F2F4F7] border border-[#E0E5EB] rounded-[10px] w-[100px] h-[70px] flex justify-center items-center'>
+                  <div className="bg-[#F2F4F7] border border-[#E0E5EB] rounded-[10px] w-[100px] h-[70px] flex justify-center items-center">
                     <img
-                      src='/image/certificate/wust-3.png'
-                      alt='critifications'
+                      src="/image/certificate/wust-3.png"
+                      alt="critifications"
                     />
                   </div>
-                  <div className='bg-[#F2F4F7] border border-[#E0E5EB] rounded-[10px] w-[100px] h-[70px] flex justify-center items-center'>
+                  <div className="bg-[#F2F4F7] border border-[#E0E5EB] rounded-[10px] w-[100px] h-[70px] flex justify-center items-center">
                     <img
-                      src='/image/certificate/wust-4.png'
-                      alt='critifications'
+                      src="/image/certificate/wust-4.png"
+                      alt="critifications"
                     />
                   </div>
-                  <div className='bg-[#F2F4F7] border border-[#E0E5EB] rounded-[10px] w-[100px] h-[70px] flex justify-center items-center'>
+                  <div className="bg-[#F2F4F7] border border-[#E0E5EB] rounded-[10px] w-[100px] h-[70px] flex justify-center items-center">
                     <img
-                      src='/image/certificate/wust-5.png'
-                      alt='critifications'
+                      src="/image/certificate/wust-5.png"
+                      alt="critifications"
                     />
                   </div>
                 </div>
               </div>
             </div>
-            <div className='md:col-span-2'>
-              <div className='bg-white h-[455px] w-full p-[5px] rounded-[15px]'>
+            <div className="md:col-span-2">
+              <div className="bg-white h-[455px] w-full p-[5px] rounded-[15px]">
                 <img
-                  className='rounded-[10px] w-full h-full object-cover'
-                  src='/image/background/cta-img.jpg'
-                  alt='image'
+                  className="rounded-[10px] w-full h-full object-cover"
+                  src="/image/background/cta-img.jpg"
+                  alt="image"
                 />
               </div>
             </div>

@@ -1,55 +1,71 @@
 const FounderMs = () => {
   return (
-    <section className='pb-[90px] pt-[90px]'>
-      <div className='mx-auto px-4 sm:px-6 container lg:px-8'>
-        <div className='grid grid-cols-1 gap-5 md:grid-cols-7 md:gap-11'>
-          <div className='md:col-span-2'>
+    <section className="pb-[90px] pt-[90px]">
+      <div className="mx-auto px-4 sm:px-6 container lg:px-8">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-7 md:gap-11">
+          <div className="md:col-span-2">
             <div>
               <img
-                className='max-w-full h-auto'
-                src='/image/icons/CEO-Message.png'
-                alt='CEO'
+                className="max-w-full h-auto"
+                src="/image/icons/CEO-Message.png"
+                alt="CEO"
               />
             </div>
           </div>
-          <div className='md:col-span-5'>
+          <div className="md:col-span-5">
             <div>
-              <p className='text-gray-500 text-[16px] mb-4 font-normal'>
-                It gives me great pleasure to inform you that we are our Clients
-                are in the US mainstream IT world Can help build IT career and
-                so far we are 80 1000 to over 80000 trainees in mainstream IT I
-                was able to get hired. 200k clients per year Satisfaction is the
-                main tool through which we are Measure performance, and we hold
-                ourselves, ours As clients, to the highest quality standards.
-                This is constantly evolving In the marketplace, our top
-                certified trainers by our clients about their own professions
+              <p className="text-gray-600 text-[16px] mb-4 font-normal leading-relaxed text-justify">
+                It gives me great pleasure to share that PeopleNTech has
+                established itself as a trusted name in the mainstream U.S. IT
+                industry, helping thousands of students and professionals build
+                successful IT careers. To date, we have proudly trained over
+                60,000 individuals, empowering them to secure rewarding
+                positions across diverse technology sectors.
               </p>
-              <p className='text-gray-500 text-[16px] mb-4 font-normal'>
-                Our most important assets include the broad knowledge base,
-                deep-rooted professionalism and strong commitment of our
-                highly-qualified, diverse staff and trainers. PeopleEnTech, the
-                global leader in IT training and job placement, is at the core
-                of who we are and what we do. From our executive training to our
-                subject matter experts, and quality assurance team to our senior
-                management, the PeopleNTech team is committed to providing the
-                highest quality training and unparalleled service to our
-                clients.
+              <p className="text-gray-600 text-[16px] mb-4 font-normal leading-relaxed text-justify">
+                At PeopleNTech, client and student satisfaction is the
+                cornerstone of our success. Each year, we serve more than
+                100,000 clients worldwide, and our measure of achievement lies
+                in their trust, growth, and success. Our reputation is built on
+                quality, consistency, and a commitment to excellence—values that
+                define every aspect of our work.{" "}
               </p>
-              <p className='text-gray-500 text-[16px] mb-4 font-normal'>
-                As we continue to grow, each new day gives us an opportunity to
-                work together, pursue new opportunities, and improve upon the
-                past. We establish deep relationships with our clients by
-                learning their needs and capabilities, so that we can offer
-                practical solutions with a clear vision, because we believe that
-                every person in society has talents and we are here to explore
-                them and show them.
+              <p className="text-gray-600 text-[16px] mb-4 font-normal leading-relaxed text-justify">
+                At PeopleNTech, client and student satisfaction is the
+                cornerstone of our success. Each year, we serve more than
+                200,000 clients worldwide, and our measure of achievement lies
+                in their trust, growth, and success. Our reputation is built on
+                quality, consistency, and a commitment to excellence—values that
+                define every aspect of our work.{" "}
               </p>
-              <div className='mt-8'>
-                <h4 className='text-primary text-[18px] font-semibold mb-1'>
-                  Engineer Abubokor Hanip
+              <p className="text-gray-600 text-[16px] mb-4 font-normal leading-relaxed text-justify">
+                Our greatest assets are our highly qualified trainers and
+                diverse team members, whose professionalism, deep knowledge, and
+                passion for teaching drive everything we do. From our executive
+                trainers and subject matter experts to our quality assurance
+                specialists and management team, everyone at PeopleNTech shares
+                one vision — to provide world-class IT training and job
+                placement services that make a real difference.
+              </p>
+              <p className="text-gray-600 text-[16px] mb-4 font-normal leading-relaxed text-justify">
+                As we continue to grow and evolve in a rapidly changing digital
+                landscape, every new day brings opportunities to learn,
+                innovate, and collaborate. We strive to build lasting
+                relationships with our clients and students by understanding
+                their needs and offering practical, future-ready solutions.
+              </p>
+              <p className="text-gray-600 text-[16px] mb-4 font-normal leading-relaxed text-justify">
+                At PeopleNTech, we believe that every individual has unique
+                potential — our purpose is to help uncover it, nurture it, and
+                turn it into success.
+              </p>
+              <h5 className="text-gray-600 font-medium">Message from the Founder & CEO</h5>
+              <div className="mt-6">
+                <h4 className="text-primary text-3xl font-semibold mb-1 leading-5">
+                  Engr. Abubokor Hanip
                 </h4>
-                <p className='text-[#4b5563] font-medium text-[14px]'>
-                  Founder and CEO
+                <p className="text-gray-600 font-medium text-[14px] mt-4">
+                  Founder & CEO, PeopleNTech
                 </p>
               </div>
             </div>
